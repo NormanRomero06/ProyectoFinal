@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/__bg__inicio_empresa_ek2_shape.xml" value="0.1405" />
+        <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/__bg__pantalla_login_empresa_ek2_shape.xml" value="0.1405" />
+        <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/__bg__propuestas_de_la_empresa_ek2_shape.xml" value="0.1405" />
+        <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/__bg__visor_de_las_propuestas_ek2_shape.xml" value="0.1405" />
+        <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/_bg__creador_de_nueva_oferta_ek2_shape.xml" value="0.1405" />
+        <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/_bg__informacion_de_la_empresa_ek3_shape.xml" value="0.1405" />
+        <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/_bg__informacion_de_una_propuesta_ek2_shape.xml" value="0.1405" />
+        <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/login_container_ek1_shape.xml" value="0.1405" />
+        <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/activity_main.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
