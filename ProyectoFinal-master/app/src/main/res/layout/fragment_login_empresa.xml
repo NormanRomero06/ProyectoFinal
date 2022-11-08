@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginEmpresa">
+
+    <View
+        android:id="@+id/_bg__pantalla_login_empleado_ek2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/_bg__pantalla_login_empleado_ek2_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/nombre_app_ek1"
+        android:layout_width="wrap_content"
+        android:layout_height="238dp"
+        android:background="@drawable/nombre_app_ek1_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/i__1__1_ek1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="i__1__1_ek1"
+        android:src="@drawable/i__1__1_ek1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/login_container_ek2"
+        android:layout_width="360dp"
+        android:layout_height="490dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/login_container_ek2_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/login_usuario"
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="175dp"
+        android:gravity="center"
+        android:text="Login Empresa"
+        android:textColor="@color/login_color"
+        android:textSize="44sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etUsuario"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:hint="Ingrese Su Usuario"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/login_usuario" />
+
+    <EditText
+        android:id="@+id/etPw"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:hint="Ingrese Su Contraseña"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etUsuario" />
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/rectangle_3_ek3_shape"
+        android:text="Ingresar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etPw" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

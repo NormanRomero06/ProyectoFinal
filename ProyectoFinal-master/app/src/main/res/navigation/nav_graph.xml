@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_bienvenido">
+
+    <fragment
+        android:id="@+id/fragment_bienvenido"
+        android:name="ni.edu.uca.infopegue.fragment_bienvenido"
+        android:label="fragment_bienvenido"
+        tools:layout="@layout/fragment_bienvenido" >
+        <action
+            android:id="@+id/action_fragment_bienvenido_to_loginCliente"
+            app:destination="@id/loginCliente" />
+        <action
+            android:id="@+id/action_fragment_bienvenido_to_loginEmpresa"
+            app:destination="@id/loginEmpresa" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginCliente"
+        android:name="ni.edu.uca.infopegue.loginCliente"
+        android:label="fragment_login_cliente"
+        tools:layout="@layout/fragment_login_cliente" >
+        <action
+            android:id="@+id/action_loginCliente_to_visorOfertas"
+            app:destination="@id/visorOfertas" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginEmpresa"
+        android:name="ni.edu.uca.infopegue.loginEmpresa"
+        android:label="fragment_login_empresa"
+        tools:layout="@layout/fragment_login_empresa" >
+        <action
+            android:id="@+id/action_loginEmpresa_to_propuestasEmpresa"
+            app:destination="@id/propuestasEmpresa" />
+    </fragment>
+    <fragment
+        android:id="@+id/visorOfertas"
+        android:name="ni.edu.uca.infopegue.visorOfertas"
+        android:label="fragment_visor_ofertas"
+        tools:layout="@layout/fragment_visor_ofertas" >
+        <action
+            android:id="@+id/action_visorOfertas_to_informacionEmpleado"
+            app:destination="@id/informacionEmpleado" />
+        <action
+            android:id="@+id/action_visorOfertas_to_informacionPropuesta"
+            app:destination="@id/informacionPropuesta" />
+    </fragment>
+    <fragment
+        android:id="@+id/informacionEmpleado"
+        android:name="ni.edu.uca.infopegue.InformacionEmpleado"
+        android:label="fragment_informacion_empleado"
+        tools:layout="@layout/fragment_informacion_empleado" />
+    <fragment
+        android:id="@+id/informacionPropuesta"
+        android:name="ni.edu.uca.infopegue.informacionPropuesta"
+        android:label="fragment_informacion_propuesta"
+        tools:layout="@layout/fragment_informacion_propuesta" />
+    <fragment
+        android:id="@+id/propuestasEmpresa"
+        android:name="ni.edu.uca.infopegue.PropuestasEmpresa"
+        android:label="fragment_propuestas_empresa"
+        tools:layout="@layout/fragment_propuestas_empresa" >
+        <action
+            android:id="@+id/action_propuestasEmpresa_to_informacionEmpresa"
+            app:destination="@id/informacionEmpresa" />
+        <action
+            android:id="@+id/action_propuestasEmpresa_to_ofertasPropuestas"
+            app:destination="@id/ofertasPropuestas" />
+    </fragment>
+    <fragment
+        android:id="@+id/informacionEmpresa"
+        android:name="ni.edu.uca.infopegue.InformacionEmpresa"
+        android:label="fragment_informacion_empresa"
+        tools:layout="@layout/fragment_informacion_empresa" />
+    <fragment
+        android:id="@+id/ofertasPropuestas"
+        android:name="ni.edu.uca.infopegue.OfertasPropuestas"
+        android:label="fragment_ofertas_propuestas"
+        tools:layout="@layout/fragment_ofertas_propuestas" />
+</navigation>
