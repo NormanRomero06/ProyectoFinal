@@ -78,5 +78,14 @@
         android:id="@+id/ofertasPropuestas"
         android:name="ni.edu.uca.infopegue.OfertasPropuestas"
         android:label="fragment_ofertas_propuestas"
-        tools:layout="@layout/fragment_ofertas_propuestas" />
+        tools:layout="@layout/fragment_ofertas_propuestas" >
+        <action
+            android:id="@+id/action_ofertasPropuestas_to_crudofertas"
+            app:destination="@id/crudofertas" />
+    </fragment>
+    <fragment
+        android:id="@+id/crudofertas"
+        android:name="ni.edu.uca.infopegue.crudofertas"
+        android:label="fragment_crudofertas"
+        tools:layout="@layout/fragment_crudofertas" />
 </navigation>
