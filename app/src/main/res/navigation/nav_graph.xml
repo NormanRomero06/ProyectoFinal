@@ -56,7 +56,11 @@
         android:id="@+id/informacionPropuesta"
         android:name="ni.edu.uca.infopegue.informacionPropuesta"
         android:label="fragment_informacion_propuesta"
-        tools:layout="@layout/fragment_informacion_propuesta" />
+        tools:layout="@layout/fragment_informacion_propuesta" >
+        <action
+            android:id="@+id/action_informacionPropuesta_to_respuestasEmpresa"
+            app:destination="@id/respuestasEmpresa" />
+    </fragment>
     <fragment
         android:id="@+id/propuestasEmpresa"
         android:name="ni.edu.uca.infopegue.PropuestasEmpresa"
@@ -82,10 +86,31 @@
         <action
             android:id="@+id/action_ofertasPropuestas_to_crudofertas"
             app:destination="@id/crudofertas" />
+        <action
+            android:id="@+id/action_ofertasPropuestas_to_fragmentNuevaOferta"
+            app:destination="@id/fragmentNuevaOferta" />
+        <action
+            android:id="@+id/action_ofertasPropuestas_to_solicitudesDeEmpleado"
+            app:destination="@id/solicitudesDeEmpleado" />
     </fragment>
     <fragment
         android:id="@+id/crudofertas"
         android:name="ni.edu.uca.infopegue.crudofertas"
         android:label="fragment_crudofertas"
         tools:layout="@layout/fragment_crudofertas" />
+    <fragment
+        android:id="@+id/fragmentNuevaOferta"
+        android:name="ni.edu.uca.infopegue.FragmentNuevaOferta"
+        android:label="fragment_nueva_oferta"
+        tools:layout="@layout/fragment_nueva_oferta" />
+    <fragment
+        android:id="@+id/solicitudesDeEmpleado"
+        android:name="ni.edu.uca.infopegue.SolicitudesDeEmpleado"
+        android:label="fragment_solicitudes_de_empleado"
+        tools:layout="@layout/fragment_solicitudes_de_empleado" />
+    <fragment
+        android:id="@+id/respuestasEmpresa"
+        android:name="ni.edu.uca.infopegue.RespuestasEmpresa"
+        android:label="fragment_respuestas_empresa"
+        tools:layout="@layout/fragment_respuestas_empresa" />
 </navigation>
