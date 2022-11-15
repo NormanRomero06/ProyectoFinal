@@ -32,9 +32,5 @@ class OfertasCliente : Fragment(){
     }
 
     private fun iniciar() {
-
-
-
-
     }
 }

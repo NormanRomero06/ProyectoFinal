@@ -6,9 +6,18 @@
         <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable-v24/rectangle_1_ek3_shape.xml" value="0.191" />
         <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable-v24/rectangle_7_shape.xml" value="0.191" />
         <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_bienvenido.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_crud_ofertas.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_crudofertas.xml" value="0.33" />
+        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_datos_cliente.xml" value="0.25" />
+        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_datos_empresa.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_info_oferta.xml" value="0.33" />
         <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_login_cliente.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_login_empresa.xml" value="0.14722222222222223" />
+        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_login_empresa.xml" value="0.22" />
+        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_nueva_oferta.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_ofertas_cliente.xml" value="0.22" />
+        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_ofertas_empresa.xml" value="0.14722222222222223" />
+        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_respuestas_ofertas_empresa.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_soliicitud_ofertas_cliente.xml" value="0.358695652173913" />
         <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable-v24/line_16_ek4_shape.xml" value="0.152" />
         <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/activity_main.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_bienvenido.xml" value="0.1" />

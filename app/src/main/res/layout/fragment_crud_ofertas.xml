@@ -65,25 +65,23 @@
         android:id="@+id/image_6_ek2"
         android:layout_width="68dp"
         android:layout_height="63dp"
-        android:layout_marginEnd="120dp"
         android:contentDescription="image_6_ek2"
         android:src="@drawable/image_6_ek2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/_avatar_1_ek2"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/_image_5_ek3"
+        app:layout_constraintStart_toStartOf="@id/_avatar_1_ek2"
         app:layout_constraintTop_toTopOf="@+id/rectangle_6_ek4"
-        app:layout_constraintVertical_bias="0.47" />
+        />
 
     <ImageView
         android:id="@+id/_avatar_1_ek2"
         android:layout_width="61dp"
         android:layout_height="64dp"
-        android:contentDescription="_avatar_1_ek2"
         android:src="@drawable/_avatar_1_ek2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/_image_5_ek3"
-        app:layout_constraintStart_toStartOf="@id/image_6_ek2"
-        app:layout_constraintTop_toTopOf="@+id/rectangle_6_ek4" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_6_ek4"
+        android:layout_marginStart="30dp"/>
 
     <ImageView
         android:id="@+id/_image_5_ek3"
