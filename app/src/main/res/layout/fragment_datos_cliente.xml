@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InformacionEmpresa">
+    tools:context=".DatosCliente">
 
     <View
         android:id="@+id/_bg__informacion_del_empleado_ek2"
@@ -31,15 +31,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:gravity="center"
-        android:text="Información personal de la Empresa"
+        android:text="Información personal del empleado"
         android:textColor="@color/vista_de_respuestas_color"
-        android:textSize="30sp"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/_image_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -61,13 +61,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/_flecha_1"
         android:layout_width="28dp"
         android:layout_height="20dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="7dp"
-        android:contentDescription="_flecha_1"
         android:src="@drawable/_flecha_1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

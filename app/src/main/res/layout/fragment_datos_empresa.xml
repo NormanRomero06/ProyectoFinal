@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InformacionEmpleado">
+    tools:context=".DatosEmpresa">
 
     <View
         android:id="@+id/_bg__informacion_del_empleado_ek2"
@@ -31,9 +31,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:gravity="center"
-        android:text="Información personal del empleado"
+        android:text="Información personal de la Empresa"
         android:textColor="@color/vista_de_respuestas_color"
-        android:textSize="34sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

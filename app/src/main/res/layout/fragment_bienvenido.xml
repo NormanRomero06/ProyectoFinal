@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment_bienvenido">
+    tools:context=".BienvenidoFragment">
 
     <View
         android:id="@+id/_bg__pantalla_de_bienvenida_ek2"
@@ -50,7 +50,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/btnCliente"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
         app:layout_constraintTop_toTopOf="@+id/personas_1" />
 
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/btnEmpresa"
         android:layout_width="160dp"
         android:layout_height="wrap_content"

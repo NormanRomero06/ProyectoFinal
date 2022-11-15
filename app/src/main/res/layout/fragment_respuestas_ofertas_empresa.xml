@@ -4,52 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".crudofertas">
+    tools:context=".RespuestasDeEmpresa">
 
-    <EditText
-        android:id="@+id/etInformacion"
-        android:layout_width="350dp"
+    <View
+        android:id="@+id/_bg__solicitudes_de_empleado_ek2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="180dp"
-        />
-    <EditText
-        android:id="@+id/etInformacion2"
-        android:layout_width="350dp"
+        android:background="@drawable/_bg__solicitudes_de_empleado_ek2_shape" />
+
+    <TextView
+        android:id="@+id/tvRespuestas"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="Bandeja de Respuestas"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:layout_marginTop="50sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="220dp"
-        />
-    <EditText
-        android:id="@+id/etInformacion3"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="260dp"
-        />
-    <EditText
-        android:id="@+id/etInformacion4"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="300dp"
-        />
-    <EditText
-        android:id="@+id/etInformacion5"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="340dp"
         />
 
     <View
@@ -92,40 +66,17 @@
         android:layout_marginStart="300dp"
         android:contentDescription="_image_5_ek3"
         android:src="@drawable/_image_5_ek3"
-       app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/rectangle_6_ek4" />
 
-    <LinearLayout
-        android:id="@+id/LlBtns"
-        android:layout_width="180dp"
-        android:layout_height="65dp"
-        app:layout_constraintBottom_toBottomOf="@+id/rectangle_6_ek4"
-        android:layout_marginBottom="150dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-    <ImageView
-        android:id="@+id/borrar_1"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:src="@drawable/editar" />
-
-    <ImageView
-        android:id="@+id/lapiz_1"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:src="@drawable/borrar" />
-
-    <ImageView
-        android:id="@+id/btnLimpiar"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:background="@drawable/limpiar"
-        />
-    </LinearLayout>
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvSolicitudes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
