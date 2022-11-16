@@ -46,6 +46,7 @@ class LoginCliente : Fragment() {
                 } else {
                     Toast.makeText(this.context, "Datos erroneos", Toast.LENGTH_SHORT).show()
                 }
+
             }
         } catch (ex: Exception){
 
