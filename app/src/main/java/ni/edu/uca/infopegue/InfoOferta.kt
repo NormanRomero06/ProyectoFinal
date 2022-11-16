@@ -27,6 +27,7 @@ class InfoOferta : Fragment(){
 
         binding = FragmentInfoOfertaBinding.inflate(layoutInflater)
         iniciar()
+        Acciones()
         return binding.root
     }
 
@@ -35,5 +36,17 @@ class InfoOferta : Fragment(){
 
 
 
+    }
+    private fun Acciones() {
+
+        binding.IvPersona.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.PantallaDatosCliente)
+        }
+        binding.IvInicio.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.PantallaOfertasCliente)
+        }
+        binding.IvMail.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.PantallaRespuestasDeOfertas)
+        }
     }
 }

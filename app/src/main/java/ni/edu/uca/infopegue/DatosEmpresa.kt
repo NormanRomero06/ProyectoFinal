@@ -9,7 +9,7 @@ import androidx.navigation.Navigation
 import ni.edu.uca.infopegue.databinding.FragmentDatosEmpresaBinding
 
 
-class DatosEmpresa : Fragment(){
+class DatosEmpresa : Fragment() {
     private lateinit var binding: FragmentDatosEmpresaBinding
 
 
@@ -27,11 +27,18 @@ class DatosEmpresa : Fragment(){
 
         binding = FragmentDatosEmpresaBinding.inflate(layoutInflater)
         iniciar()
+        Atras()
         return binding.root
     }
 
     private fun iniciar() {
 
 
+    }
+
+    private fun Atras() {
+        binding.IvAtras.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.PantallaOfertasEmpresa)
+        }
     }
 }

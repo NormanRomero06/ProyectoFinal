@@ -27,10 +27,16 @@ class DatosCliente : Fragment(){
 
         binding = FragmentDatosClienteBinding.inflate(layoutInflater)
         iniciar()
+        Atras()
         return binding.root
     }
 
     private fun iniciar() {
 
+    }
+    private fun Atras(){
+        binding.IvAtras.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.PantallaOfertasCliente)
+        }
     }
 }

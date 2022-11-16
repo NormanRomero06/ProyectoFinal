@@ -77,6 +77,9 @@
         <action
             android:id="@+id/action_PantallaOfertasEmpresa_to_PantallaRespuestasDeOfertas"
             app:destination="@id/PantallaRespuestasDeOfertas" />
+        <action
+            android:id="@+id/action_PantallaOfertasEmpresa_to_nuevaOferta"
+            app:destination="@id/PantallaNuevaOferta" />
     </fragment>
     <fragment
         android:id="@+id/PantallaCrudOferta"
@@ -102,4 +105,9 @@
         android:name="ni.edu.uca.infopegue.SolicitudesDeCliente"
         android:label="fragment_soliicitud_ofertas_cliente"
         tools:layout="@layout/fragment_soliicitud_ofertas_cliente" />
+    <fragment
+        android:id="@+id/PantallaNuevaOferta"
+        android:name="ni.edu.uca.infopegue.NuevaOferta"
+        android:label="fragment_nueva_oferta"
+        tools:layout="@layout/fragment_nueva_oferta" />
 </navigation>

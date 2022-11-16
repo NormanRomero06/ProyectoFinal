@@ -27,11 +27,24 @@ class CrudOfertas : Fragment(){
 
         binding = FragmentCrudOfertasBinding.inflate(layoutInflater)
         iniciar()
+        Acciones()
         return binding.root
     }
 
     private fun iniciar() {
 
 
+    }
+    private fun Acciones() {
+
+        binding.IvPersona.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.PantallaDatosEmpresa)
+        }
+        binding.IvInicio.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.PantallaOfertasEmpresa)
+        }
+        binding.IvMail.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.PantallaSolicitudesCliente)
+        }
     }
 }
