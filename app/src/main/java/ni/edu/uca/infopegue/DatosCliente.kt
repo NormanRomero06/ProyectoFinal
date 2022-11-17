@@ -38,5 +38,8 @@ class DatosCliente : Fragment(){
         binding.IvAtras.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.PantallaOfertasCliente)
         }
+        binding.ivEditar.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.PantallaCrudCliente)
+        }
     }
 }
