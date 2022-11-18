@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CrudCliente"
+    tools:context=".CrudEmpresa"
     tools:layout_editor_absoluteX="3dp"
     tools:layout_editor_absoluteY="-148dp">
 
@@ -12,74 +12,38 @@
         android:id="@+id/tvInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
         android:gravity="center"
-        android:text="Edición personal del empleado"
+        android:text="Edición personal de la Empresa"
         android:textColor="@color/vista_de_respuestas_color"
-        android:textSize="34sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/etPrimerApellido"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="188dp"
-        android:layout_marginTop="236dp"
-        android:gravity="start"
-        android:hint="Primer Apellido:"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/etEdad"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="188dp"
-        android:layout_marginTop="336dp"
-        android:gravity="start"
-        android:hint="Edad"
-        android:inputType="number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
-        android:id="@+id/tvPrimerNombre"
+        android:id="@+id/tvNombreEmpresa"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="150dp"
         android:gravity="start"
-        android:text="Primer Nombre:"
+        android:text="Nombre Empresa:"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/etPrimerNombre"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="188dp"
-        android:layout_marginTop="116dp"
-        android:gravity="start"
-        android:hint="Primer Nombre"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
-        android:id="@+id/tvSegundoNombre"
+        android:id="@+id/tvDirecEmpresa"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="184dp"
+        android:layout_marginTop="208dp"
         android:gravity="start"
-        android:text="Segundo Nombre:"
+        android:text="Dirección de la empresa:"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,135 +54,122 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="188dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="208dp"
         android:gravity="start"
-        android:hint="Segundo Nombre"
+        android:hint="Dirección"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/etPrimerNombre"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="140dp"
+        android:gravity="start"
+        android:hint="Nombre Original"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etJefeEmpresa"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="276dp"
+        android:gravity="start"
+        android:hint="Representante"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     <TextView
-        android:id="@+id/tvPrimerApellido"
+        android:id="@+id/tvJefeEmpresa"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="244dp"
+        android:layout_marginTop="280dp"
         android:gravity="start"
-        android:text="Primer Apellido:"
+        android:text="Representante Legal:"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvSegundoApellido"
+        android:id="@+id/tvContacto"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="292dp"
+        android:layout_marginTop="336dp"
         android:gravity="start"
-        android:text="Segundo Apellido:"
+        android:text="Número de Contacto:"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/etSegundoApellido"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="188dp"
-        android:layout_marginTop="284dp"
-        android:gravity="start"
-        android:hint="Segundo Apellido"
-        android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvEdad"
+        android:id="@+id/tvCorreoEmpresa"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="348dp"
+        android:layout_marginTop="412dp"
         android:gravity="start"
-        android:text="Edad:"
+        android:text="Correo Empresa:"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etProfesion"
+        android:id="@+id/etDescripEmpresa"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="188dp"
-        android:layout_marginTop="396dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="464dp"
         android:gravity="start"
-        android:hint="Profesion"
-        android:inputType="textPersonName"
+        android:hint="Descripción"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDescripEmpresa"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="464dp"
+        android:gravity="start"
+        android:text="Descripción de la Empresa:"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etCorreoPersonal"
+        android:id="@+id/etContacto"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="188dp"
-        android:layout_marginTop="448dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="336dp"
+        android:gravity="start"
+        android:hint="Contacto"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etCorreoEmpresa"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="400dp"
         android:gravity="start"
         android:hint="Correo"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvProfesion"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="408dp"
-        android:gravity="start"
-        android:text="Profesión:"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvCorreoPersonal"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="460dp"
-        android:gravity="start"
-        android:text="Correo Personal:"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvDescripPersonal"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="504dp"
-        android:gravity="start"
-        android:text="Descripción Personal:"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/etDescripPersonal"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="188dp"
-        android:layout_marginTop="504dp"
-        android:gravity="start"
-        android:hint="Descripción Personal"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -274,7 +225,7 @@
 
         <ImageView
             android:id="@+id/btnGuardar"
-            android:layout_width="60dp"
+            android:layout_width="61dp"
             android:layout_height="50dp"
             android:src="@drawable/editar" />
 
@@ -290,6 +241,5 @@
             android:layout_height="50dp"
             android:background="@drawable/limpiar" />
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
