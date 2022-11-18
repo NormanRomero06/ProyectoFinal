@@ -27,9 +27,15 @@ class OfertasCliente : Fragment(){
         iniciar()
         Acciones()
         return binding.root
+
+
+
     }
 
     private fun iniciar() {
+        val adapter = ItemOfEmpresaAdapter {}
+
+        binding.rcvPropuesta.adapter = adapter
 
     }
 
