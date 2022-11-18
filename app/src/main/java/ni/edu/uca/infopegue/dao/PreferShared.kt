@@ -55,12 +55,12 @@ class PreferShared(val context: Context) {
         return storage.getString(SHARED_USER_FAPELLIDO, "")!!
     }
 
-    fun getFSapellido(): String {
+    fun getSapellido(): String {
         return storage.getString(SHARED_USER_SAPELLIDO, "")!!
     }
 
     fun getEdad(): Int {
-        return storage.getInt(SHARED_USER_EDAD, -1)
+        return storage.getInt(SHARED_USER_EDAD, 0)
     }
 
     fun getProfesion(): String {

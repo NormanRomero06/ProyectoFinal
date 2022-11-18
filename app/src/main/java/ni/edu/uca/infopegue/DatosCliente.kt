@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import ni.edu.uca.infopegue.dao.ShareObjectAdp
+import ni.edu.uca.infopegue.dao.ShareObjectAdp.Companion.preferShared
 import ni.edu.uca.infopegue.databinding.FragmentDatosClienteBinding
 
 
@@ -32,7 +34,28 @@ class DatosCliente : Fragment(){
     }
 
     private fun iniciar() {
+     with(binding){
+         var Pnombre = preferShared.getFnombre()
+         tvPrimerNombre.text = Pnombre
 
+         var Snombre = preferShared.getSnombre()
+         tvSegundoNombre.text = Snombre
+
+         var Papellido = preferShared.getFapellido()
+         tvPrimerApellido.text = Papellido
+
+         var Sapellido = preferShared.getSapellido()
+         tvSegundoApellido.text = Sapellido
+
+         var Edad = preferShared.getEdad()
+         tvEdad.text = Edad.toString()
+
+         var Profesion = preferShared.getProfesion()
+         tvProfesion.text = Profesion
+
+         var Descripcion = preferShared.getDescripcion()
+         tvDescripPersonal.text = Descripcion
+     }
     }
     private fun Atras(){
         binding.IvAtras.setOnClickListener {

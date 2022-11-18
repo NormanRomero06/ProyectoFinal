@@ -57,7 +57,7 @@
         android:layout_marginTop="196dp"
         android:gravity="start"
         android:hint="Segundo Nombre"
-        android:inputType="text"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -69,7 +69,7 @@
         android:layout_marginTop="140dp"
         android:gravity="start"
         android:hint="Primer Nombre"
-        android:inputType="text"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -81,7 +81,7 @@
         android:layout_marginTop="256dp"
         android:gravity="start"
         android:hint="Primer Apellido:"
-        android:inputType="text"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -119,7 +119,7 @@
         android:layout_marginTop="308dp"
         android:gravity="start"
         android:hint="Segundo Apellido"
-        android:inputType="text"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -144,7 +144,7 @@
         android:layout_marginTop="360dp"
         android:gravity="start"
         android:hint="Edad"
-        android:inputType="text"
+        android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -169,7 +169,7 @@
         android:layout_marginTop="420dp"
         android:gravity="start"
         android:hint="Profesion"
-        android:inputType="text"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

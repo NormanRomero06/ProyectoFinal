@@ -28,6 +28,9 @@ class CrudCliente : Fragment() {
         binding = FragmentCrudClienteBinding.inflate(layoutInflater)
         Guardar()
         Acciones()
+        AccionClean()
+        BorrarDatos()
+        CargarDatos()
         return binding.root
     }
 
@@ -77,10 +80,43 @@ class CrudCliente : Fragment() {
 
         }
 
-
-
+    }
+    private fun AccionClean(){
+        binding.btnLimpiar.setOnClickListener { limpiar()}
     }
 
+    private fun limpiar() {
+            with(binding) {
+            etPrimerNombre.setText("")
+                etSegundoNombre.setText("")
+                etPrimerApellido.setText("")
+                etSegundoApellido.setText("")
+                etEdad.setText("")
+                etDescripPersonal.setText("")
+                etProfesion.setText("")
+
+            }
+            Toast.makeText(this.context,"Campos limpios", Toast.LENGTH_SHORT).show()
+        }
+
+     private fun BorrarDatos(){
+     binding.btnEliminar.setOnClickListener {
+         preferShared.wipe()
+         Toast.makeText(this.context,"Datos Borrados", Toast.LENGTH_SHORT).show()
+         limpiar()
+     }
+     }
+    private fun CargarDatos(){
+        with(binding){
+            etPrimerNombre.setText(preferShared.getFnombre())
+            etSegundoNombre.setText(preferShared.getSnombre())
+            etPrimerApellido.setText(preferShared.getFapellido())
+            etSegundoApellido.setText(preferShared.getSapellido())
+            etEdad.setText(preferShared.getEdad().toString())
+            etProfesion.setText(preferShared.getProfesion())
+            etDescripPersonal.setText(preferShared.getDescripcion())
+        }
+    }
 
     private fun Acciones() {
 
