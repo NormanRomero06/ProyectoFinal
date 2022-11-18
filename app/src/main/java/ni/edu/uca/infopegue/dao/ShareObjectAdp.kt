@@ -11,4 +11,6 @@ class ShareObjectAdp: Application(){
         super.onCreate()
         preferShared = PreferShared(applicationContext)
     }
+
 }
+

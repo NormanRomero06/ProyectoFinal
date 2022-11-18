@@ -47,9 +47,8 @@ class CrudCliente : Fragment() {
 
             if (binding.etSegundoNombre.text.toString().isNotEmpty()) {
                 preferShared.saveSnombre(binding.etSegundoNombre.text.toString())
-            } else {
-                Toast.makeText(this.context, "Inserte Segundo Nombre", Toast.LENGTH_SHORT).show()
             }
+
             if (binding.etPrimerApellido.text.toString().isNotEmpty()) {
                 preferShared.saveFapellido(binding.etPrimerApellido.text.toString())
             } else {
@@ -57,8 +56,6 @@ class CrudCliente : Fragment() {
             }
             if (binding.etSegundoApellido.text.toString().isNotEmpty()) {
                 preferShared.saveSapellido(binding.etSegundoApellido.text.toString())
-            } else {
-                Toast.makeText(this.context, "Inserte Segudo Apellido", Toast.LENGTH_SHORT).show()
             }
             if (binding.etEdad.text.toString().isNotEmpty()) {
                 preferShared.saveEdad(binding.etEdad.text.toString().toInt())
@@ -70,6 +67,13 @@ class CrudCliente : Fragment() {
             } else {
                 Toast.makeText(this.context, "Inserte Profesion", Toast.LENGTH_SHORT).show()
             }
+
+            if (binding.etCorreoPersonal.text.toString().isNotEmpty()) {
+                preferShared.saveCorreo(binding.etCorreoPersonal.text.toString())
+            } else {
+                Toast.makeText(this.context, "Digite un correo", Toast.LENGTH_SHORT).show()
+            }
+
             if (binding.etDescripPersonal.text.toString().isNotEmpty()) {
                 preferShared.saveDescripcion(binding.etDescripPersonal.text.toString())
             } else {
@@ -81,39 +85,56 @@ class CrudCliente : Fragment() {
         }
 
     }
-    private fun AccionClean(){
-        binding.btnLimpiar.setOnClickListener { limpiar()}
+
+    private fun AccionClean() {
+        binding.btnLimpiar.setOnClickListener { limpiar() }
     }
 
-    private fun limpiar() {
-            with(binding) {
+    fun limpiar() {
+        with(binding) {
             etPrimerNombre.setText("")
-                etSegundoNombre.setText("")
-                etPrimerApellido.setText("")
-                etSegundoApellido.setText("")
-                etEdad.setText("")
-                etDescripPersonal.setText("")
-                etProfesion.setText("")
+            etSegundoNombre.setText("")
+            etPrimerApellido.setText("")
+            etSegundoApellido.setText("")
+            etEdad.setText("")
+            etProfesion.setText("")
+            etCorreoPersonal.setText("")
+            etDescripPersonal.setText("")
+
+
+
+        }
+        Toast.makeText(this.context, "Campos limpios", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun BorrarDatos() {
+        binding.btnEliminar.setOnClickListener {
+            with(binding) {
+                preferShared.RemoveNombre(etPrimerNombre.text.toString())
+                preferShared.RemoveNombre2(etSegundoNombre.text.toString())
+                preferShared.RemoveApellido(etPrimerApellido.text.toString())
+                preferShared.RemoveApellido2(etSegundoApellido.text.toString())
+                preferShared.RemoveEdad(etEdad.text.toString().toInt())
+                preferShared.RemoveProfesion(etProfesion.text.toString())
+                preferShared.RemoveCorreo(etCorreoPersonal.text.toString())
+                preferShared.RemoveDescripcion(etDescripPersonal.text.toString())
 
             }
-            Toast.makeText(this.context,"Campos limpios", Toast.LENGTH_SHORT).show()
-        }
+            Toast.makeText(this.context, "Datos Borrados", Toast.LENGTH_SHORT).show()
+            limpiar()
 
-     private fun BorrarDatos(){
-     binding.btnEliminar.setOnClickListener {
-         preferShared.wipe()
-         Toast.makeText(this.context,"Datos Borrados", Toast.LENGTH_SHORT).show()
-         limpiar()
-     }
-     }
-    private fun CargarDatos(){
-        with(binding){
+        }
+    }
+
+    private fun CargarDatos() {
+        with(binding) {
             etPrimerNombre.setText(preferShared.getFnombre())
             etSegundoNombre.setText(preferShared.getSnombre())
             etPrimerApellido.setText(preferShared.getFapellido())
             etSegundoApellido.setText(preferShared.getSapellido())
             etEdad.setText(preferShared.getEdad().toString())
             etProfesion.setText(preferShared.getProfesion())
+            etCorreoPersonal.setText(preferShared.getCorreo())
             etDescripPersonal.setText(preferShared.getDescripcion())
         }
     }
@@ -121,10 +142,10 @@ class CrudCliente : Fragment() {
     private fun Acciones() {
 
         binding.IvPersona.setOnClickListener {
-            Navigation.findNavController(binding.root).navigate(R.id.PantallaDatosEmpresa)
+            Navigation.findNavController(binding.root).navigate(R.id.PantallaDatosCliente)
         }
         binding.IvInicio.setOnClickListener {
-            Navigation.findNavController(binding.root).navigate(R.id.PantallaOfertasEmpresa)
+            Navigation.findNavController(binding.root).navigate(R.id.PantallaOfertasCliente)
         }
         binding.IvMail.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.PantallaSolicitudesCliente)

@@ -98,7 +98,11 @@
         android:id="@+id/PantallaDatosEmpresa"
         android:name="ni.edu.uca.infopegue.DatosEmpresa"
         android:label="fragment_datos_empresa"
-        tools:layout="@layout/fragment_datos_empresa" />
+        tools:layout="@layout/fragment_datos_empresa" >
+        <action
+            android:id="@+id/action_PantallaDatosEmpresa_to_crudEmpresa"
+            app:destination="@id/PantallaCrudEmpresa" />
+    </fragment>
     <fragment
         android:id="@+id/PantallaRespuestasDeOfertas"
         android:name="ni.edu.uca.infopegue.RespuestasDeEmpresa"
@@ -119,4 +123,9 @@
         android:name="ni.edu.uca.infopegue.CrudCliente"
         android:label="fragment_crud_cliente"
         tools:layout="@layout/fragment_crud_cliente" />
+    <fragment
+        android:id="@+id/PantallaCrudEmpresa"
+        android:name="ni.edu.uca.infopegue.CrudEmpresa"
+        android:label="fragment_crud_empresa"
+        tools:layout="@layout/fragment_crud_empresa" />
 </navigation>

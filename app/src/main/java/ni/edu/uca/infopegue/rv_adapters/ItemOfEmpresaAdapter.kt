@@ -1,16 +1,17 @@
-package ni.edu.uca.infopegue
+package ni.edu.uca.infopegue.rv_adapters
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import ni.edu.uca.infopegue.data.Ofertas
+import ni.edu.uca.infopegue.entidades.Ofertas
 import ni.edu.uca.infopegue.databinding.ItemofempresaBinding
 
-class ItemOfEmpresaAdapter(private val onItemClicked: (Ofertas) -> Unit): ListAdapter<Ofertas, ItemOfEmpresaAdapter.ItemOfEmpresaViewHolder>(DiffCallback) {
+class ItemOfEmpresaAdapter(private val onItemClicked: (Ofertas) -> Unit): ListAdapter<Ofertas, ItemOfEmpresaAdapter.ItemOfEmpresaViewHolder>(
+    DiffCallback
+) {
 
     private lateinit var context: Context
 

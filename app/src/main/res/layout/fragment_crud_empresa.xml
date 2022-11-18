@@ -50,26 +50,26 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etSegundoNombre"
+        android:id="@+id/etDireccion"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="188dp"
         android:layout_marginTop="208dp"
         android:gravity="start"
         android:hint="Dirección"
-        android:inputType="textPersonName"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etPrimerNombre"
+        android:id="@+id/etNombre"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="188dp"
         android:layout_marginTop="140dp"
         android:gravity="start"
         android:hint="Nombre Original"
-        android:inputType="textPersonName"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

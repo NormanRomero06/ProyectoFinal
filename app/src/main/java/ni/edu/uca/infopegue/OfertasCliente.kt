@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import ni.edu.uca.infopegue.databinding.FragmentOfertasClienteBinding
+import ni.edu.uca.infopegue.rv_adapters.ItemOfEmpresaAdapter
 
 class OfertasCliente : Fragment(){
     private lateinit var binding: FragmentOfertasClienteBinding
