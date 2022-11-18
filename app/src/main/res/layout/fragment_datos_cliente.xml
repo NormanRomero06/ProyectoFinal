@@ -228,8 +228,8 @@
         android:id="@+id/ivEditar"
         android:layout_width="60dp"
         android:layout_height="50dp"
-        android:layout_marginStart="348dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="335dp"
+        android:layout_marginTop="6dp"
         android:src="@drawable/editar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

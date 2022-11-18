@@ -4,6 +4,7 @@
     package="ni.edu.uca.infopegue">
 
     <application
+        android:name=".dao.ShareObjectAdp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"

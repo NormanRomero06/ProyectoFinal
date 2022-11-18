@@ -248,13 +248,13 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/borrar_1"
+            android:id="@+id/btnGuardar"
             android:layout_width="60dp"
             android:layout_height="50dp"
             android:src="@drawable/editar" />
 
         <ImageView
-            android:id="@+id/lapiz_1"
+            android:id="@+id/btnEliminar"
             android:layout_width="60dp"
             android:layout_height="50dp"
             android:src="@drawable/borrar" />
