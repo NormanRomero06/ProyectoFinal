@@ -16,6 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <View
         android:id="@+id/rectangle_4_ek3"
         android:layout_width="wrap_content"
@@ -23,8 +24,8 @@
         android:background="@drawable/rectangle_4_ek3_shape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
-
 
     <TextView
         android:id="@+id/tvInfo"
@@ -223,22 +224,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvDescripPersonal"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="192dp"
-        android:layout_marginTop="640dp"
-        android:gravity="start"
-        android:text="Descripción Personal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDescripPersonal"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="192dp"
+            android:layout_marginTop="640dp"
+            android:gravity="start"
+            android:scrollbars="vertical"
+            android:text="Descripción Personal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
 
     <TextView
+        android:id="@+id/tvDesc"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="640dp"
+        android:layout_marginTop="636dp"
         android:gravity="start"
         android:text="Descripción Personal:"
         android:textSize="16sp"
