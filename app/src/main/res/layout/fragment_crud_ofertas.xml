@@ -7,13 +7,54 @@
     tools:context=".CrudOfertas">
 
     <TextView
+        android:id="@+id/nueva_oferta"
+        android:layout_width="367dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Edición de Oferta"
+        android:textColor="@color/vista_de_respuestas_color"
+        android:textSize="44sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/tvNombreOferta"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="184dp"
         android:text="Nombre de la Oferta"
         android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="140dp"
+        android:text="Nombre de la Oferta:"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="240dp"
+        android:text="Descripción de la Oferta:"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,60 +65,41 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="300dp"
         android:text="Descripción de la Oferta"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/etNombreOferta"
+    <TextView
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="384dp"
+        android:text="Contacto:"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/etInformacion2"
+    <TextView
+        android:id="@+id/tvContacto"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="432dp"
+        android:text="Contacto"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="220dp"
-        />
-    <EditText
-        android:id="@+id/etInformacion3"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="260dp"
-        />
-    <EditText
-        android:id="@+id/etInformacion4"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="300dp"
-        />
-    <EditText
-        android:id="@+id/etInformacion5"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="340dp"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/rectangle_6_ek4"
@@ -130,13 +152,13 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/borrar_1"
+            android:id="@+id/btnGuardar"
             android:layout_width="60dp"
             android:layout_height="50dp"
             android:src="@drawable/editar" />
 
         <ImageView
-            android:id="@+id/lapiz_1"
+            android:id="@+id/btnEliminar"
             android:layout_width="60dp"
             android:layout_height="50dp"
             android:src="@drawable/borrar" />
@@ -145,8 +167,8 @@
             android:id="@+id/btnLimpiar"
             android:layout_width="60dp"
             android:layout_height="50dp"
-            android:background="@drawable/limpiar"
-            />
+            android:background="@drawable/limpiar"/>
+
     </LinearLayout>
 
 
