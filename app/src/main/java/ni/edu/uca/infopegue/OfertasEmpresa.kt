@@ -6,12 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.recyclerview.widget.LinearLayoutManager
+import ni.edu.uca.infopegue.dao.ShareObjectAdp.Companion.preferShared
 import ni.edu.uca.infopegue.databinding.FragmentOfertasEmpresaBinding
+import ni.edu.uca.infopegue.entidades.Oferta
+import ni.edu.uca.infopegue.rv_adapter.ofertaAdapter
 
 class OfertasEmpresa : Fragment(){
     private lateinit var binding: FragmentOfertasEmpresaBinding
-    val nombreClave:String = "UCA"
-    val pwdClave:String = "Damo1"
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +27,6 @@ class OfertasEmpresa : Fragment(){
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         binding = FragmentOfertasEmpresaBinding.inflate(layoutInflater)
         iniciar()
         Acciones()
@@ -33,8 +34,25 @@ class OfertasEmpresa : Fragment(){
     }
 
     private fun iniciar() {
+    binding.IvInicio.setOnClickListener {
+        Navigation.findNavController(binding.root).navigate(R.id.PantallaNuevaOferta)
+    }
 
+     var arreglo = preferShared.getArray()
+     var list = arrayListOf<Oferta>()
 
+        for(Keys in arreglo.keys){
+            if (!Keys.equals("A")){
+                var oferta: Oferta = arreglo[Keys]!!
+                oferta.key = Keys
+                list.add(oferta)
+            }
+        }
+        with(binding.rcvOfertas){
+            layoutManager = LinearLayoutManager(context)
+            setHasFixedSize(true)
+            adapter = ofertaAdapter(list,binding.root)
+        }
 
     }
     private fun Acciones() {

@@ -6,7 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import ni.edu.uca.infopegue.dao.ShareObjectAdp
+import ni.edu.uca.infopegue.dao.ShareObjectAdp.Companion.preferShared
 import ni.edu.uca.infopegue.databinding.FragmentNuevaOfertaBinding
+import ni.edu.uca.infopegue.entidades.Oferta
 
 class NuevaOferta : Fragment(){
     private lateinit var binding: FragmentNuevaOfertaBinding
@@ -31,8 +34,36 @@ class NuevaOferta : Fragment(){
     }
 
     private fun iniciar() {
+        with(binding) {
+            btnCrear.setOnClickListener {
+                var nombreOf = etNombreOferta.text.toString()
+                var descripcioOf = etInformacion2.text.toString()
+                var contactoOf = etContacto.text.toString()
+                var ubicacionOf = etUbicacion.text.toString()
+                var requisitosOf = etRequisitos.text.toString()
 
 
+                var arreglo = HashMap<String, Oferta>()
+                arreglo = preferShared.getArray()
+                var oferta: Oferta =
+                    Oferta(nombreOf, descripcioOf, contactoOf, ubicacionOf, requisitosOf)
+
+                var newKey = ShareObjectAdp.preferShared.createKey()
+                var oldKey: String = ""
+                for (llave in arreglo.keys) {
+                    oldKey = llave
+                }
+                with(preferShared) {
+                    saveKey(oldKey, newKey)
+                    saveNameOf(newKey, nombreOf)
+                    saveDescripcionOf(newKey, descripcioOf)
+                    saveContactoOf(newKey, contactoOf)
+                    saveUbicacionOf(newKey, ubicacionOf)
+                    saveRequisitoOf(newKey, requisitosOf)
+                }
+
+            }
+        }
     }
     private fun Acciones() {
 
