@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import ni.edu.uca.infopegue.dao.ShareObjectAdp
 import ni.edu.uca.infopegue.dao.ShareObjectAdp.Companion.preferShared
 import ni.edu.uca.infopegue.databinding.FragmentNuevaOfertaBinding
 import ni.edu.uca.infopegue.entidades.Oferta
@@ -48,7 +47,7 @@ class NuevaOferta : Fragment(){
                 var oferta: Oferta =
                     Oferta(nombreOf, descripcioOf, contactoOf, ubicacionOf, requisitosOf)
 
-                var newKey = ShareObjectAdp.preferShared.createKey()
+                var newKey = preferShared.createKey()
                 var oldKey: String = ""
                 for (llave in arreglo.keys) {
                     oldKey = llave

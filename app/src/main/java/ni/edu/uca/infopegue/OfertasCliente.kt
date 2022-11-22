@@ -6,7 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.recyclerview.widget.LinearLayoutManager
+import ni.edu.uca.infopegue.dao.ShareObjectAdp
 import ni.edu.uca.infopegue.databinding.FragmentOfertasClienteBinding
+import ni.edu.uca.infopegue.entidades.Oferta
+import ni.edu.uca.infopegue.rv_adapter.ofertaAdapter
 
 class OfertasCliente : Fragment(){
     private lateinit var binding: FragmentOfertasClienteBinding
@@ -33,7 +37,21 @@ class OfertasCliente : Fragment(){
     }
 
     private fun iniciar() {
+        var arreglo = ShareObjectAdp.preferShared.getArray()
+        var list = arrayListOf<Oferta>()
 
+        for(Keys in arreglo.keys){
+            if (!Keys.equals("A")){
+                var oferta: Oferta = arreglo[Keys]!!
+                oferta.key = Keys
+                list.add(oferta)
+            }
+        }
+        with(binding.rcvPropuesta){
+            layoutManager = LinearLayoutManager(context)
+            setHasFixedSize(true)
+            adapter = ofertaAdapter(list,binding.root)
+        }
 
     }
 
@@ -43,7 +61,7 @@ class OfertasCliente : Fragment(){
             Navigation.findNavController(binding.root).navigate(R.id.PantallaDatosCliente)
         }
         binding.IvInicio.setOnClickListener {
-            Navigation.findNavController(binding.root).navigate(R.id.PantallaOfertasCliente)
+            Navigation.findNavController(binding.root).navigate(R.id.PantallaInfoOferta)
         }
         binding.IvMail.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.PantallaRespuestasDeOfertas)

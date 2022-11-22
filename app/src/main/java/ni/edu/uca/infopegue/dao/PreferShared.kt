@@ -5,6 +5,7 @@ import ni.edu.uca.infopegue.entidades.Oferta
 
 class PreferShared(val context: Context) {
 
+    // SHARED EMPLEADO
     val SHARED_NAME = "BdInfoPegue"
     val SHARED_USER_FNAME = "Fnombre"
     val SHARED_USER_SNAME = "Snombre"
@@ -266,23 +267,30 @@ class PreferShared(val context: Context) {
 
     fun getKey(key: String): String {
         return storage.getString(key, "")!!
-
     }
-    fun RemoveNombreOf(Key: String, toString: String) {
-        return storage.edit().remove(SHARED_OFERTA_NOMBREOF).apply()
+    fun RemoveNombreOf(toString: String) {
+       storage.edit().remove(SHARED_OFERTA_NOMBREOF).apply()
     }
     fun RemoveDescripcionf(toString: String) {
-        return storage.edit().remove(SHARED_OFERTA_DESCRIPCIONOF).apply()
+       return  storage.edit().remove(SHARED_OFERTA_DESCRIPCIONOF).apply()
     }
     fun RemoveContactoOf(toString: String) {
-        return storage.edit().remove(SHARED_OFERTA_CONTACTOF).apply()
+      storage.edit().remove(SHARED_OFERTA_CONTACTOF).apply()
     }
     fun RemoveUbicacionOf(toString: String) {
-        return storage.edit().remove(SHARED_OFERTA_UBICACION).apply()
+       storage.edit().remove( SHARED_OFERTA_UBICACION).apply()
     }
     fun RemoveRequisitosOf(toString: String) {
-        return storage.edit().remove(SHARED_OFERTA_REQUISITOS).apply()
+        storage.edit().remove(SHARED_OFERTA_REQUISITOS).apply()
     }
+    fun RemoveKeyOf(toString: String) {
+        storage.edit().remove(SHARED_OFERTA_KEY).apply()
+    }
+
+    //SharedPreferences preferences = getSharedPreferences("testShared", MODE_PRIVATE);
+    //        preferences.edit().clear().apply();
+
+    //PreferenceManager.getDefaultSharedPreferences(context).edit().remove("testShared").apply();
 
     fun getArray(): HashMap<String, Oferta> {
         var tempKey = SHARED_OFERTA_KEY

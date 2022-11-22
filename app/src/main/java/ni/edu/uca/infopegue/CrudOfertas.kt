@@ -7,12 +7,14 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import ni.edu.uca.infopegue.dao.ShareObjectAdp
 import ni.edu.uca.infopegue.dao.ShareObjectAdp.Companion.preferShared
 import ni.edu.uca.infopegue.databinding.FragmentCrudOfertasBinding
 
 
 class CrudOfertas : Fragment() {
     private lateinit var binding: FragmentCrudOfertasBinding
+    var ObtenerKeys: String = ""
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,8 +32,24 @@ class CrudOfertas : Fragment() {
         binding = FragmentCrudOfertasBinding.inflate(layoutInflater)
         iniciar()
         Acciones()
+        load()
         return binding.root
     }
+
+    private fun load() {
+        val tempKey = preferShared.getTempKey()
+
+        with(binding) {
+            etNombreOferta.setText(preferShared.getNombreOf(tempKey))
+            etContacto.setText(preferShared.getContactoOf(tempKey))
+            etRequisitos.setText(preferShared.getRequisitoOf(tempKey))
+            etUbicacion.setText(preferShared.getUbicacionOf(tempKey))
+            etDescripOferta.setText(preferShared.getDescripcionOf(tempKey))
+            ObtenerKeys = preferShared.getKey(tempKey)
+
+        }
+    }
+
 
     private fun iniciar() {
         val tempKey: String = preferShared.getTempKey()
@@ -53,16 +71,11 @@ class CrudOfertas : Fragment() {
 
             }
         }
+
         binding.btnEliminar.setOnClickListener {
             var arreglo = preferShared.getArray()
             arreglo[tempKey]!!.eliminado  = true
-            with(binding) {
-                preferShared.RemoveNombreOf(etNombreOferta.text.toString())
-                preferShared.RemoveDescripcionf(etDescripOferta.text.toString())
-                preferShared.RemoveRequisitosOf(etRequisitos.text.toString())
-                preferShared.RemoveUbicacionOf(etUbicacion.text.toString())
-                preferShared.RemoveContactoOf(etContacto.text.toString())
-            }
+            preferShared.wipe()
             Toast.makeText(this.context, "Datos Borrados", Toast.LENGTH_SHORT).show()
             var ktemp = "A"
             var y:String = ""

@@ -73,12 +73,15 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvPropuesta"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_width="410dp"
+        android:layout_height="420dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/VwVista" />
+        app:layout_constraintTop_toBottomOf="@+id/VwVista"
+        app:layout_constraintBottom_toTopOf="@+id/rectangle_6_ek4"
+        tools:listitem="@layout/rv_ofertasu" />
+    />
 
 
 
