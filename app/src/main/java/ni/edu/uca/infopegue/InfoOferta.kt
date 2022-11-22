@@ -35,8 +35,9 @@ class InfoOferta : Fragment(){
 
     private fun iniciar() {
         var arreglo = ShareObjectAdp.preferShared.getArray()
-        val tempKey = ShareObjectAdp.preferShared.getTempKey()
+        var tempKey = ShareObjectAdp.preferShared.getTempKey()
         var list = arrayListOf<Oferta>()
+        //var key = ShareObjectAdp.preferShared.getKey(tempKey)
 
 
 

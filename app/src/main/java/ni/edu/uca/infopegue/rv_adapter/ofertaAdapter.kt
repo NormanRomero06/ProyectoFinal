@@ -1,8 +1,10 @@
 package ni.edu.uca.infopegue.rv_adapter
 
+import android.icu.lang.UCharacter.GraphemeClusterBreak.V
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.navigation.Navigation
@@ -35,7 +37,7 @@ class ofertaAdapter(private val ofertaList: List<Oferta>, currentView: View) :
         private var tvRequisitosOf = view.findViewById<TextView>(R.id.tvRequisitosRV)
         private var tvUbicacionOf = view.findViewById<TextView>(R.id.tvUbicacionRV)
         private var fragEmpresa = view.findViewById<ConstraintLayout>(R.id.fraEmpresa)
-
+        private var btninfo = view.findViewById<ImageView>(R.id.ivInfo)
 
 
         fun load(oferta: Oferta) {
@@ -44,13 +46,21 @@ class ofertaAdapter(private val ofertaList: List<Oferta>, currentView: View) :
             tvRequisitosOf.text = "Requisitos necesarios: " + oferta.requisito
             tvUbicacionOf.text = "Ubicacion: " + oferta.ubicacion
             tvContactoOf.text = "Contacto: " + oferta.contactoOf
+            btninfo.setOnClickListener {
+                preferShared.SaveTempKey(oferta.key)
+                Navigation.findNavController(view).navigate(R.id.PantallaInfoOferta)
+
+            }
             fragEmpresa.setOnClickListener {
                 preferShared.SaveTempKey(oferta.key)
                 Navigation.findNavController(view).navigate(R.id.PantallaCrudOferta)
 
             }
-
-
         }
+    }
+
+    fun cargar(oferta: Oferta){
+        //private var nombreO = view.findViewById<TextView>(R.id.etNombreOferta)
+
     }
 }
