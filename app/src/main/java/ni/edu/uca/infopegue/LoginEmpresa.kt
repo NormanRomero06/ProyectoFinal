@@ -39,8 +39,8 @@ class LoginEmpresa : Fragment() {
 
         try {
             binding.btnIngresar.setOnClickListener {
-                val nameTemp: String = binding.etUsuario.text.toString()
-                val pwdTemp: String = binding.etPw.text.toString()
+                val nameTemp: String = binding.TfUsuario.editText?.text.toString()
+                val pwdTemp: String = binding.TfPw.editText?.text.toString()
 
                 if (nameTemp == nombreClave && pwdTemp == pwdClave) {
                     Navigation.findNavController(binding.root).navigate(R.id.PantallaOfertasEmpresa)

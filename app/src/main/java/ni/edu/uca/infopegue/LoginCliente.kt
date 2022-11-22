@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.doOnAttach
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import ni.edu.uca.infopegue.R
@@ -27,19 +28,21 @@ class LoginCliente : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
+
     ): View? {
 
         binding = FragmentLoginClienteBinding.inflate(layoutInflater)
         iniciar()
         return binding.root
+
     }
 
     private fun iniciar() {
 
         try {
             binding.btnIngresar.setOnClickListener {
-                val nameTemp: String = binding.etUsuario.text.toString()
-                val pwdTemp: String = binding.etPw.text.toString()
+                val nameTemp = binding.TfUsuario.editText?.text.toString()
+                val pwdTemp: String = binding.TfPw.editText?.text.toString()
 
                 if (nameTemp == nombreClave && pwdTemp == pwdClave) {
                     Navigation.findNavController(binding.root).navigate(R.id.PantallaOfertasCliente)

@@ -8,10 +8,9 @@
 
     <View
         android:id="@+id/VwVista"
-        android:layout_width="386dp"
-        android:layout_height="133dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/nombre_app_ek2_shape"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@drawable/rectangle_6_ek4_shape"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
