@@ -1,0 +1,210 @@
+Index: app/src/main/java/ni/edu/uca/infopegue/OfertasCliente.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ni.edu.uca.infopegue\r\n\r\nimport android.os.Bundle\r\nimport android.view.LayoutInflater\r\nimport android.view.View\r\nimport android.view.ViewGroup\r\nimport androidx.fragment.app.Fragment\r\nimport androidx.navigation.Navigation\r\nimport ni.edu.uca.infopegue.databinding.FragmentOfertasClienteBinding\r\nimport ni.edu.uca.infopegue.rv_adapters.ItemOfEmpresaAdapter\r\n\r\nclass OfertasCliente : Fragment(){\r\n    private lateinit var binding: FragmentOfertasClienteBinding\r\n\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        arguments?.let {\r\n\r\n        }\r\n    }\r\n\r\n    override fun onCreateView(\r\n        inflater: LayoutInflater, container: ViewGroup?,\r\n        savedInstanceState: Bundle?\r\n    ): View? {\r\n\r\n        binding = FragmentOfertasClienteBinding.inflate(layoutInflater)\r\n        iniciar()\r\n        Acciones()\r\n        return binding.root\r\n\r\n\r\n\r\n    }\r\n\r\n    private fun iniciar() {\r\n        val adapter = ItemOfEmpresaAdapter {}\r\n\r\n        binding.rcvPropuesta.adapter = adapter\r\n\r\n    }\r\n\r\n    private fun Acciones() {\r\n\r\n        binding.IvPersona.setOnClickListener {\r\n            Navigation.findNavController(binding.root).navigate(R.id.PantallaDatosCliente)\r\n        }\r\n        binding.IvInicio.setOnClickListener {\r\n            Navigation.findNavController(binding.root).navigate(R.id.PantallaOfertasCliente)\r\n        }\r\n        binding.IvMail.setOnClickListener {\r\n            Navigation.findNavController(binding.root).navigate(R.id.PantallaRespuestasDeOfertas)\r\n        }\r\n    }\r\n\r\n\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/ni/edu/uca/infopegue/OfertasCliente.kt b/app/src/main/java/ni/edu/uca/infopegue/OfertasCliente.kt
+--- a/app/src/main/java/ni/edu/uca/infopegue/OfertasCliente.kt	(revision 48bda20f027984c59aedaf517b2885fabcea0852)
++++ b/app/src/main/java/ni/edu/uca/infopegue/OfertasCliente.kt	(date 1668834934767)
+@@ -7,7 +7,6 @@
+ import androidx.fragment.app.Fragment
+ import androidx.navigation.Navigation
+ import ni.edu.uca.infopegue.databinding.FragmentOfertasClienteBinding
+-import ni.edu.uca.infopegue.rv_adapters.ItemOfEmpresaAdapter
+ 
+ class OfertasCliente : Fragment(){
+     private lateinit var binding: FragmentOfertasClienteBinding
+@@ -34,9 +33,7 @@
+     }
+ 
+     private fun iniciar() {
+-        val adapter = ItemOfEmpresaAdapter {}
+ 
+-        binding.rcvPropuesta.adapter = adapter
+ 
+     }
+ 
+Index: app/src/main/res/layout/fragment_ofertas_empresa.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    tools:context=\".OfertasEmpresa\">\r\n\r\n    <TextView\r\n        android:id=\"@+id/tvOfertas\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"80dp\"\r\n        android:text=\"Ofertas Propuestas\"\r\n        android:textAlignment=\"center\"\r\n        android:textColor=\"@color/vista_de_respuestas_color\"\r\n        android:textSize=\"40dp\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n\r\n    <ImageView\r\n        android:id=\"@+id/IvNuevo\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"20dp\"\r\n        android:layout_marginEnd=\"32dp\"\r\n        android:src=\"@drawable/_boton_agregar_1\"\r\n        app:layout_constraintBottom_toTopOf=\"@+id/tvOfertas\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:layout_constraintVertical_bias=\"1.0\" />\r\n\r\n    <View\r\n        android:id=\"@+id/rectangle_6_ek4\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"80dp\"\r\n        android:background=\"@drawable/rectangle_6_ek4_shape\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\" />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/IvInicio\"\r\n        android:layout_width=\"68dp\"\r\n        android:layout_height=\"63dp\"\r\n        android:src=\"@drawable/image_6_ek2\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"@id/IvMail\"\r\n        app:layout_constraintStart_toStartOf=\"@id/IvPersona\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/rectangle_6_ek4\"\r\n        />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/IvPersona\"\r\n        android:layout_width=\"61dp\"\r\n        android:layout_height=\"64dp\"\r\n        android:src=\"@drawable/_avatar_1_ek2\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/rectangle_6_ek4\"\r\n        android:layout_marginStart=\"30dp\"/>\r\n\r\n    <ImageView\r\n        android:id=\"@+id/IvMail\"\r\n        android:layout_width=\"68dp\"\r\n        android:layout_height=\"63dp\"\r\n        android:layout_marginStart=\"300dp\"\r\n        android:src=\"@drawable/_image_5_ek3\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/rectangle_6_ek4\" />\r\n\r\n    <androidx.recyclerview.widget.RecyclerView\r\n        android:id=\"@+id/rcvOfertas\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"280dp\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_ofertas_empresa.xml b/app/src/main/res/layout/fragment_ofertas_empresa.xml
+--- a/app/src/main/res/layout/fragment_ofertas_empresa.xml	(revision 48bda20f027984c59aedaf517b2885fabcea0852)
++++ b/app/src/main/res/layout/fragment_ofertas_empresa.xml	(date 1668833803857)
+@@ -78,7 +78,8 @@
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="280dp"
+-        app:layout_constraintTop_toTopOf="parent" />
++        app:layout_constraintTop_toTopOf="parent"
++        tools:layout_editor_absoluteX="0dp" />
+ 
+ 
+ </androidx.constraintlayout.widget.ConstraintLayout>
+Index: app/src/main/java/ni/edu/uca/infopegue/entidades/Ofertas.kt
+===================================================================
+diff --git a/app/src/main/java/ni/edu/uca/infopegue/entidades/Ofertas.kt b/app/src/main/java/ni/edu/uca/infopegue/entidades/Ofertas.kt
+deleted file mode 100644
+--- a/app/src/main/java/ni/edu/uca/infopegue/entidades/Ofertas.kt	(revision 48bda20f027984c59aedaf517b2885fabcea0852)
++++ /dev/null	(revision 48bda20f027984c59aedaf517b2885fabcea0852)
+@@ -1,7 +0,0 @@
+-package ni.edu.uca.infopegue.entidades
+-
+-data class Ofertas(
+-    val nombreEmpresa: String,
+-    val numOferta: Int,
+-    val nombreOferta: String
+-)
+Index: app/src/main/java/ni/edu/uca/infopegue/rv_adapters/ItemOfEmpresaAdapter.kt
+===================================================================
+diff --git a/app/src/main/java/ni/edu/uca/infopegue/rv_adapters/ItemOfEmpresaAdapter.kt b/app/src/main/java/ni/edu/uca/infopegue/rv_adapters/ItemOfEmpresaAdapter.kt
+deleted file mode 100644
+--- a/app/src/main/java/ni/edu/uca/infopegue/rv_adapters/ItemOfEmpresaAdapter.kt	(revision 48bda20f027984c59aedaf517b2885fabcea0852)
++++ /dev/null	(revision 48bda20f027984c59aedaf517b2885fabcea0852)
+@@ -1,65 +0,0 @@
+-package ni.edu.uca.infopegue.rv_adapters
+-
+-import android.content.Context
+-import android.view.LayoutInflater
+-import android.view.ViewGroup
+-import androidx.recyclerview.widget.DiffUtil
+-import androidx.recyclerview.widget.ListAdapter
+-import androidx.recyclerview.widget.RecyclerView
+-import ni.edu.uca.infopegue.entidades.Ofertas
+-import ni.edu.uca.infopegue.databinding.ItemofempresaBinding
+-
+-class ItemOfEmpresaAdapter(private val onItemClicked: (Ofertas) -> Unit): ListAdapter<Ofertas, ItemOfEmpresaAdapter.ItemOfEmpresaViewHolder>(
+-    DiffCallback
+-) {
+-
+-    private lateinit var context: Context
+-
+-    class ItemOfEmpresaViewHolder (private var binding: ItemofempresaBinding) :
+-        RecyclerView.ViewHolder(binding.root) {
+-
+-        fun bind(ofertas: Ofertas, context:Context) {
+-            binding.tvNombreEmpresa.text = context.getString(ofertas.nombreEmpresa.length)
+-            binding.tvTelefono.text = context.getString(ofertas.numOferta)
+-            binding.tvNombreOferta.text = context.getString(ofertas.nombreOferta.length)
+-        }
+-    }
+-
+-    override fun onCreateViewHolder(
+-        parent: ViewGroup,
+-        viewType: Int
+-    ): ItemOfEmpresaViewHolder {
+-        context = parent.context
+-        return ItemOfEmpresaViewHolder(
+-            ItemofempresaBinding.inflate(
+-                LayoutInflater.from(parent.context), parent, false
+-            )
+-        )
+-    }
+-
+-    override fun onBindViewHolder(holder: ItemOfEmpresaViewHolder, position: Int) {
+-        val current = getItem(position)
+-        holder.itemView.setOnClickListener {
+-            onItemClicked(current)
+-        }
+-        holder.bind(current, context)
+-    }
+-
+-    companion object {
+-        private val DiffCallback = object : DiffUtil.ItemCallback<Ofertas>() {
+-            override fun areItemsTheSame(oldItem: Ofertas, newItem: Ofertas): Boolean {
+-                return (oldItem.nombreEmpresa == newItem.nombreEmpresa ||
+-                        oldItem.numOferta == newItem.numOferta ||
+-                        oldItem.nombreOferta == newItem.nombreOferta
+-                        )
+-            }
+-
+-            override fun areContentsTheSame(oldItem: Ofertas, newItem: Ofertas): Boolean {
+-                return oldItem == newItem
+-            }
+-        }
+-    }
+-
+-}
+-
+-
+Index: app/src/main/java/ni/edu/uca/infopegue/entidades/Oferta.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/ni/edu/uca/infopegue/entidades/Oferta.kt b/app/src/main/java/ni/edu/uca/infopegue/entidades/Oferta.kt
+new file mode 100644
+--- /dev/null	(date 1668834756296)
++++ b/app/src/main/java/ni/edu/uca/infopegue/entidades/Oferta.kt	(date 1668834756296)
+@@ -0,0 +1,6 @@
++package ni.edu.uca.infopegue.entidades
++
++class Oferta(
++    //val nombreOferta:String, val
++) {
++}
+\ No newline at end of file
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"GradleMigrationSettings\" migrationVersion=\"1\" />\r\n  <component name=\"GradleSettings\">\r\n    <option name=\"linkedExternalProjectsSettings\">\r\n      <GradleProjectSettings>\r\n        <option name=\"testRunner\" value=\"GRADLE\" />\r\n        <option name=\"distributionType\" value=\"LOCAL\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"gradleHome\" value=\"$PROJECT_DIR$/../../../../Gradle\" />\r\n        <option name=\"gradleJvm\" value=\"Android Studio default JDK\" />\r\n        <option name=\"modules\">\r\n          <set>\r\n            <option value=\"$PROJECT_DIR$\" />\r\n            <option value=\"$PROJECT_DIR$/app\" />\r\n          </set>\r\n        </option>\r\n      </GradleProjectSettings>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/gradle.xml b/.idea/gradle.xml
+--- a/.idea/gradle.xml	(revision 48bda20f027984c59aedaf517b2885fabcea0852)
++++ b/.idea/gradle.xml	(date 1668834837674)
+@@ -5,9 +5,9 @@
+     <option name="linkedExternalProjectsSettings">
+       <GradleProjectSettings>
+         <option name="testRunner" value="GRADLE" />
+-        <option name="distributionType" value="LOCAL" />
++        <option name="distributionType" value="DEFAULT_WRAPPED" />
+         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+-        <option name="gradleHome" value="$PROJECT_DIR$/../../../../Gradle" />
++        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../gradle-7.5.1" />
+         <option name="gradleJvm" value="Android Studio default JDK" />
+         <option name="modules">
+           <set>
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DesignSurface\">\r\n    <option name=\"filePathToZoomLevelMap\">\r\n      <map>\r\n        <entry key=\"..\\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_crud_cliente.xml\" value=\"0.25416666666666665\" />\r\n        <entry key=\"..\\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_crud_empresa.xml\" value=\"0.25416666666666665\" />\r\n        <entry key=\"..\\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_crud_ofertas.xml\" value=\"0.264\" />\r\n        <entry key=\"..\\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_datos_cliente.xml\" value=\"0.25416666666666665\" />\r\n        <entry key=\"..\\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_datos_empresa.xml\" value=\"0.25416666666666665\" />\r\n        <entry key=\"..\\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_nueva_oferta.xml\" value=\"0.264\" />\r\n        <entry key=\"..\\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_respuestas_ofertas_empresa.xml\" value=\"0.2\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/__bg__inicio_empresa_ek2_shape.xml\" value=\"0.1405\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/__bg__pantalla_login_empresa_ek2_shape.xml\" value=\"0.1405\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/__bg__propuestas_de_la_empresa_ek2_shape.xml\" value=\"0.1405\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/__bg__visor_de_las_propuestas_ek2_shape.xml\" value=\"0.1405\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/_bg__creador_de_nueva_oferta_ek2_shape.xml\" value=\"0.1405\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/_bg__informacion_de_la_empresa_ek3_shape.xml\" value=\"0.1405\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/_bg__informacion_de_una_propuesta_ek2_shape.xml\" value=\"0.1405\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/login_container_ek1_shape.xml\" value=\"0.1405\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/activity_main.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_bienvenido.xml\" value=\"0.21666666666666667\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_crud_cliente.xml\" value=\"0.264\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_crud_empresa.xml\" value=\"0.21666666666666667\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_crud_ofertas.xml\" value=\"0.16666666666666666\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_datos_cliente.xml\" value=\"0.16666666666666666\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_datos_empresa.xml\" value=\"0.16666666666666666\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_login_cliente.xml\" value=\"0.16666666666666666\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_login_empresa.xml\" value=\"0.16666666666666666\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_nueva_oferta.xml\" value=\"0.21666666666666667\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_ofertas_cliente.xml\" value=\"0.264\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_ofertas_empresa.xml\" value=\"0.2\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/itemofempresa.xml\" value=\"0.2\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_11\" default=\"true\" project-jdk-name=\"Android Studio default JDK\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 48bda20f027984c59aedaf517b2885fabcea0852)
++++ b/.idea/misc.xml	(date 1668833813551)
+@@ -5,10 +5,9 @@
+       <map>
+         <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_crud_cliente.xml" value="0.25416666666666665" />
+         <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_crud_empresa.xml" value="0.25416666666666665" />
+-        <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_crud_ofertas.xml" value="0.264" />
+         <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_datos_cliente.xml" value="0.25416666666666665" />
+         <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_datos_empresa.xml" value="0.25416666666666665" />
+-        <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_nueva_oferta.xml" value="0.264" />
++        <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_nueva_oferta.xml" value="0.25416666666666665" />
+         <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_respuestas_ofertas_empresa.xml" value="0.2" />
+         <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/__bg__inicio_empresa_ek2_shape.xml" value="0.1405" />
+         <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/__bg__pantalla_login_empresa_ek2_shape.xml" value="0.1405" />
+@@ -25,11 +24,14 @@
+         <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_crud_ofertas.xml" value="0.16666666666666666" />
+         <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_datos_cliente.xml" value="0.16666666666666666" />
+         <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_datos_empresa.xml" value="0.16666666666666666" />
++        <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_info_oferta.xml" value="0.16666666666666666" />
+         <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_login_cliente.xml" value="0.16666666666666666" />
+         <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_login_empresa.xml" value="0.16666666666666666" />
+         <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_nueva_oferta.xml" value="0.21666666666666667" />
+         <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_ofertas_cliente.xml" value="0.264" />
+         <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_ofertas_empresa.xml" value="0.2" />
++        <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_respuestas_ofertas_empresa.xml" value="0.16666666666666666" />
++        <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_soliicitud_ofertas_cliente.xml" value="0.16666666666666666" />
+         <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/itemofempresa.xml" value="0.2" />
+       </map>
+     </option>
