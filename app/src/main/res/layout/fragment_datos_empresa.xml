@@ -15,8 +15,10 @@
         android:background="@drawable/_bg__informacion_del_empleado_ek2_shape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <View
         android:id="@+id/rectangle_4_ek3"
@@ -25,32 +27,32 @@
         android:background="@drawable/rectangle_4_ek3_shape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
-
 
     <TextView
         android:id="@+id/tvInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="32dp"
         android:gravity="center"
         android:text="Información personal de la Empresa"
         android:textColor="@color/vista_de_respuestas_color"
         android:textSize="30sp"
-        android:textStyle="bold"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/camara_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:contentDescription="camara_1"
-        android:src="@drawable/camara_1"
+        android:id="@+id/empreIcon"
+        android:layout_width="218dp"
+        android:layout_height="111dp"
+        android:layout_marginTop="116dp"
+        android:src="@drawable/iconempresa"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,10 +68,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/tvContacto"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="464dp"
+        android:gravity="start"
+        android:text="Contacto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="296dp"
+        android:layout_marginTop="264dp"
         android:gravity="start"
         android:text="Nombre Empresa:"
         android:textSize="16sp"
@@ -82,7 +95,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="192dp"
-        android:layout_marginTop="296dp"
+        android:layout_marginTop="264dp"
         android:gravity="start"
         android:text="Nombre Original"
         app:layout_constraintStart_toStartOf="parent"
@@ -92,7 +105,7 @@
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="316dp"
         android:gravity="start"
         android:text="Dirección de la Empresa:"
         android:textSize="16sp"
@@ -101,10 +114,44 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/tvDirecEmpresa"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="336dp"
+        android:gravity="start"
+        android:text="Dirección"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="484dp"
+        android:layout_marginTop="380dp"
+        android:gravity="start"
+        android:text="Representante Legal:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvJefeEmpresa"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="392dp"
+        android:gravity="start"
+        android:text="Representante"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="452dp"
         android:gravity="start"
         android:text="Número de Contacto:"
         android:textSize="16sp"
@@ -116,7 +163,7 @@
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="552dp"
+        android:layout_marginTop="520dp"
         android:gravity="start"
         android:text="Correo Empresa:"
         android:textSize="16sp"
@@ -128,7 +175,7 @@
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="612dp"
+        android:layout_marginTop="580dp"
         android:gravity="start"
         android:text="Descripción de la Empresa:"
         android:textSize="16sp"
@@ -137,47 +184,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="412dp"
-        android:gravity="start"
-        android:text="Representante Legal:"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvDirecEmpresa"
+        android:id="@+id/tvDescripEmpresa"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="192dp"
-        android:layout_marginTop="368dp"
+        android:layout_marginTop="588dp"
         android:gravity="start"
-        android:text="Dirección"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvJefeEmpresa"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="192dp"
-        android:layout_marginTop="424dp"
-        android:gravity="start"
-        android:text="Representante"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvContacto"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="192dp"
-        android:layout_marginTop="496dp"
-        android:gravity="start"
-        android:text="Contacto"
+        android:text="Descripción"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -186,30 +199,21 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="192dp"
-        android:layout_marginTop="552dp"
+        android:layout_marginTop="520dp"
         android:gravity="start"
         android:text="Correo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvDescripEmpresa"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="192dp"
-        android:layout_marginTop="620dp"
-        android:gravity="start"
-        android:text="Descripción"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/ivEditar"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="335dp"
-        android:layout_marginTop="6dp"
+        android:layout_width="43dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="336dp"
+        android:layout_marginTop="116dp"
         android:src="@drawable/editar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

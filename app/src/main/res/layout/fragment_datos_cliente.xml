@@ -31,24 +31,25 @@
         android:id="@+id/tvInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         android:gravity="center"
         android:text="Información personal del empleado"
         android:textColor="@color/vista_de_respuestas_color"
         android:textSize="34sp"
-        android:textStyle="bold"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/camara_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:src="@drawable/camara_1"
+        android:id="@+id/userIcon"
+        android:layout_width="260dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="128dp"
+        android:src="@drawable/usericon"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -62,26 +63,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
-        android:id="@+id/tvEdad"
+        android:id="@+id/tvDescripPersonal"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="192dp"
-        android:layout_marginTop="488dp"
+        android:layout_marginTop="620dp"
         android:gravity="start"
-        android:text="Edad"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="264dp"
-        android:gravity="start"
-        android:text="Primer Nombre:"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:scrollbars="vertical"
+        android:text="Descripción Personal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -90,7 +81,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="192dp"
-        android:layout_marginTop="264dp"
+        android:layout_marginTop="244dp"
         android:gravity="start"
         android:text="Primer Nombre"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,7 +91,7 @@
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="300dp"
         android:gravity="start"
         android:text="Segundo Nombre:"
         android:textSize="16sp"
@@ -113,7 +104,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="192dp"
-        android:layout_marginTop="324dp"
+        android:layout_marginTop="304dp"
         android:gravity="start"
         android:text="Segundo Nombre"
         app:layout_constraintStart_toStartOf="parent"
@@ -123,7 +114,7 @@
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="380dp"
+        android:layout_marginTop="360dp"
         android:gravity="start"
         android:text="Primer Apellido:"
         android:textSize="16sp"
@@ -136,7 +127,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="192dp"
-        android:layout_marginTop="380dp"
+        android:layout_marginTop="360dp"
         android:gravity="start"
         android:text="Primer Apellido"
         app:layout_constraintStart_toStartOf="parent"
@@ -146,7 +137,7 @@
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="436dp"
+        android:layout_marginTop="416dp"
         android:gravity="start"
         android:text="Segundo Apellido:"
         android:textSize="16sp"
@@ -159,7 +150,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="192dp"
-        android:layout_marginTop="436dp"
+        android:layout_marginTop="416dp"
         android:gravity="start"
         android:text="Segundo Apellido"
         app:layout_constraintStart_toStartOf="parent"
@@ -169,7 +160,7 @@
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="488dp"
+        android:layout_marginTop="468dp"
         android:gravity="start"
         android:text="Edad:"
         android:textSize="16sp"
@@ -178,25 +169,24 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvProfesion1"
-        android:layout_width="140dp"
+        android:id="@+id/tvEdad"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="548dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="468dp"
         android:gravity="start"
-        android:text="Profesión:"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:text="Edad"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/tvProfesion1"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="596dp"
+        android:layout_marginTop="528dp"
         android:gravity="start"
-        android:text="Correo Personal:"
+        android:text="Profesión:"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -207,9 +197,21 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="192dp"
-        android:layout_marginTop="548dp"
+        android:layout_marginTop="528dp"
         android:gravity="start"
         android:text="Profesión"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="576dp"
+        android:gravity="start"
+        android:text="Correo Personal:"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -218,33 +220,18 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="192dp"
-        android:layout_marginTop="596dp"
+        android:layout_marginTop="576dp"
         android:gravity="start"
         android:text="Correo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
-        <TextView
-            android:id="@+id/tvDescripPersonal"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="192dp"
-            android:layout_marginTop="640dp"
-            android:gravity="start"
-            android:scrollbars="vertical"
-            android:text="Descripción Personal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
 
     <TextView
         android:id="@+id/tvDesc"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="636dp"
+        android:layout_marginTop="616dp"
         android:gravity="start"
         android:text="Descripción Personal:"
         android:textSize="16sp"
@@ -252,12 +239,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="244dp"
+        android:gravity="start"
+        android:text="Primer Nombre:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/ivEditar"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="335dp"
-        android:layout_marginTop="6dp"
+        android:layout_width="43dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="324dp"
+        android:layout_marginTop="116dp"
         android:src="@drawable/editar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

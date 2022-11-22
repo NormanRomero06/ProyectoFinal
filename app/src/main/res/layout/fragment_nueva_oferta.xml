@@ -24,7 +24,7 @@
     <View
         android:id="@+id/rectangle_6_ek4"
         android:layout_width="wrap_content"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
         android:background="@drawable/rectangle_6_ek4_shape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,7 +33,7 @@
     <ImageView
         android:id="@+id/IvInicio"
         android:layout_width="68dp"
-        android:layout_height="63dp"
+        android:layout_height="50dp"
         android:src="@drawable/image_6_ek2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/IvMail"
@@ -43,7 +43,7 @@
     <ImageView
         android:id="@+id/IvPersona"
         android:layout_width="61dp"
-        android:layout_height="64dp"
+        android:layout_height="50dp"
         android:layout_marginStart="30dp"
         android:src="@drawable/_avatar_1_ek2"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,7 +53,7 @@
     <ImageView
         android:id="@+id/IvMail"
         android:layout_width="68dp"
-        android:layout_height="63dp"
+        android:layout_height="50dp"
         android:layout_marginStart="300dp"
         android:src="@drawable/_image_5_ek3"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -66,11 +66,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Nueva Oferta"
+        android:text="Creación de Oferta"
         android:textAlignment="center"
         android:textColor="@color/vista_de_respuestas_color"
         android:textSize="44sp"
-        android:textStyle="bold"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -12,14 +12,14 @@
         android:id="@+id/tvInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="4dp"
         android:gravity="center"
         android:text="Edición personal del empleado"
         android:textColor="@color/vista_de_respuestas_color"
         android:textSize="34sp"
-        android:textStyle="bold"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -226,7 +226,7 @@
     <View
         android:id="@+id/rectangle_6_ek4"
         android:layout_width="wrap_content"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
         android:background="@drawable/rectangle_6_ek4_shape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -235,7 +235,7 @@
     <ImageView
         android:id="@+id/IvInicio"
         android:layout_width="68dp"
-        android:layout_height="63dp"
+        android:layout_height="50dp"
         android:src="@drawable/image_6_ek2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/IvMail"
@@ -245,7 +245,7 @@
     <ImageView
         android:id="@+id/IvPersona"
         android:layout_width="61dp"
-        android:layout_height="64dp"
+        android:layout_height="50dp"
         android:layout_marginStart="30dp"
         android:src="@drawable/_avatar_1_ek2"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -255,7 +255,7 @@
     <ImageView
         android:id="@+id/IvMail"
         android:layout_width="68dp"
-        android:layout_height="63dp"
+        android:layout_height="50dp"
         android:layout_marginStart="300dp"
         android:src="@drawable/_image_5_ek3"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -267,9 +267,10 @@
         android:id="@+id/LlBtns"
         android:layout_width="180dp"
         android:layout_height="65dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="76dp"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_6_ek4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView

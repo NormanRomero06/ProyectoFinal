@@ -3,17 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable-v24/ic_launcher_background.xml" value="0.2055" />
+        <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2055" />
+        <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2055" />
+        <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_bienvenido.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_crud_cliente.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_crud_empresa.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_crud_ofertas.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_datos_cliente.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_datos_empresa.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_info_oferta.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_info_oferta.xml" value="0.264" />
+        <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_login_cliente.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_login_empresa.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_nueva_oferta.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_ofertas_cliente.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_ofertas_empresa.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_respuestas_ofertas_empresa.xml" value="0.2" />
+        <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_soliicitud_ofertas_cliente.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/itemofempresa.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/rv_ofertas.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/rv_ofertasu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/chave/AndroidStudioProjects/ProyectoFinal/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2055" />
         <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/__bg__inicio_empresa_ek2_shape.xml" value="0.1405" />
         <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/__bg__pantalla_login_empresa_ek2_shape.xml" value="0.1405" />
         <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/__bg__propuestas_de_la_empresa_ek2_shape.xml" value="0.1405" />

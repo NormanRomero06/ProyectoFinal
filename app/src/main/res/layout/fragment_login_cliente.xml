@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="175dp"
         android:gravity="center"
-        android:text="Login Usuario"
+        android:text="Login Cliente"
         android:textColor="@color/login_color"
         android:textSize="44sp"
         android:textStyle="bold"

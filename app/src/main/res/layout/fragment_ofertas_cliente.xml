@@ -8,11 +8,12 @@
 
     <View
         android:id="@+id/VwVista"
-        android:layout_width="match_parent"
-        android:layout_height="190dp"
+        android:layout_width="386dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/nombre_app_ek2_shape"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,6 +23,7 @@
         android:layout_height="wrap_content"
         android:text="Ofertas Propuestas"
         android:textAlignment="center"
+        android:textStyle="italic"
         android:textColor="@color/black"
         android:textSize="44sp"
         app:layout_constraintBottom_toBottomOf="@+id/VwVista"
@@ -33,7 +35,7 @@
     <View
         android:id="@+id/rectangle_6_ek4"
         android:layout_width="wrap_content"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
         android:background="@drawable/rectangle_6_ek4_shape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,17 +44,16 @@
     <ImageView
         android:id="@+id/IvInicio"
         android:layout_width="68dp"
-        android:layout_height="63dp"
+        android:layout_height="50dp"
         android:src="@drawable/image_6_ek2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/IvMail"
         app:layout_constraintStart_toStartOf="@id/IvPersona"
-        app:layout_constraintTop_toTopOf="@+id/rectangle_6_ek4"
-        />
+        app:layout_constraintTop_toTopOf="@+id/rectangle_6_ek4" />
 
     <ImageView
         android:id="@+id/IvPersona"
-        android:layout_width="50dp"
+        android:layout_width="61dp"
         android:layout_height="50dp"
         android:layout_marginStart="30dp"
         android:src="@drawable/_avatar_1_ek2"
@@ -63,7 +64,7 @@
     <ImageView
         android:id="@+id/IvMail"
         android:layout_width="68dp"
-        android:layout_height="63dp"
+        android:layout_height="50dp"
         android:layout_marginStart="300dp"
         android:src="@drawable/_image_5_ek3"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -74,14 +75,14 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvPropuesta"
         android:layout_width="410dp"
-        android:layout_height="420dp"
+        android:layout_height="484dp"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/VwVista"
         app:layout_constraintBottom_toTopOf="@+id/rectangle_6_ek4"
-        tools:listitem="@layout/rv_ofertasu" />
-    />
+         />
+
 
 
 
