@@ -1,0 +1,132 @@
+Index: app/src/main/res/layout/fragment_login_empresa.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".LoginEmpresa\">\r\n\r\n    <View\r\n        android:id=\"@+id/_bg__pantalla_login_empleado_ek2\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:background=\"@drawable/_bg__pantalla_login_empleado_ek2_shape\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n    <View\r\n        android:id=\"@+id/nombre_app_ek1\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"238dp\"\r\n        android:background=\"@drawable/nombre_app_ek1_shape\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/i__1__1_ek1\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:contentDescription=\"i__1__1_ek1\"\r\n        android:src=\"@drawable/i__1__1_ek1\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n    <View\r\n        android:id=\"@+id/login_container_ek2\"\r\n        android:layout_width=\"360dp\"\r\n        android:layout_height=\"490dp\"\r\n        android:layout_marginTop=\"140dp\"\r\n        android:background=\"@drawable/login_container_ek2_shape\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.49\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/login_usuario\"\r\n        android:layout_width=\"192dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"175dp\"\r\n        android:gravity=\"center\"\r\n        android:text=\"Login Empresa\"\r\n        android:textColor=\"@color/login_color\"\r\n        android:textSize=\"44sp\"\r\n        android:textStyle=\"bold\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n    <EditText\r\n        android:id=\"@+id/etUsuario\"\r\n        android:layout_width=\"300dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"140dp\"\r\n        android:hint=\"Ingrese Su Usuario\"\r\n        android:inputType=\"text\"\r\n        android:textAlignment=\"center\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/login_usuario\" />\r\n\r\n    <EditText\r\n        android:id=\"@+id/etPw\"\r\n        android:layout_width=\"300dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"90dp\"\r\n        android:hint=\"Ingrese Su Contraseña\"\r\n        android:inputType=\"textPassword\"\r\n        android:textAlignment=\"center\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/etUsuario\" />\r\n\r\n    <Button\r\n        android:id=\"@+id/btnIngresar\"\r\n        android:layout_width=\"150dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"96dp\"\r\n        android:background=\"@drawable/rectangle_3_ek3_shape\"\r\n        android:text=\"Ingresar\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.498\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/etPw\" />\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_login_empresa.xml b/app/src/main/res/layout/fragment_login_empresa.xml
+--- a/app/src/main/res/layout/fragment_login_empresa.xml	(revision c36f028529c8fb6e150cc9616e072e3cca473675)
++++ b/app/src/main/res/layout/fragment_login_empresa.xml	(date 1668568594333)
+@@ -84,7 +84,7 @@
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="@+id/etUsuario" />
+ 
+-    <Button
++    <androidx.appcompat.widget.AppCompatButton
+         android:id="@+id/btnIngresar"
+         android:layout_width="150dp"
+         android:layout_height="wrap_content"
+Index: app/src/main/java/ni/edu/uca/infopegue/OfertasCliente.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ni.edu.uca.infopegue\r\n\r\nimport android.os.Bundle\r\nimport android.view.LayoutInflater\r\nimport android.view.View\r\nimport android.view.ViewGroup\r\nimport androidx.fragment.app.Fragment\r\nimport androidx.navigation.Navigation\r\nimport ni.edu.uca.infopegue.databinding.FragmentOfertasClienteBinding\r\n\r\nclass OfertasCliente : Fragment(){\r\n    private lateinit var binding: FragmentOfertasClienteBinding\r\n    val nombreClave:String = \"UCA\"\r\n    val pwdClave:String = \"Damo1\"\r\n\r\n\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        arguments?.let {\r\n\r\n        }\r\n    }\r\n\r\n    override fun onCreateView(\r\n        inflater: LayoutInflater, container: ViewGroup?,\r\n        savedInstanceState: Bundle?\r\n    ): View? {\r\n\r\n        binding = FragmentOfertasClienteBinding.inflate(layoutInflater)\r\n        iniciar()\r\n        return binding.root\r\n    }\r\n\r\n    private fun iniciar() {\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/ni/edu/uca/infopegue/OfertasCliente.kt b/app/src/main/java/ni/edu/uca/infopegue/OfertasCliente.kt
+--- a/app/src/main/java/ni/edu/uca/infopegue/OfertasCliente.kt	(revision c36f028529c8fb6e150cc9616e072e3cca473675)
++++ b/app/src/main/java/ni/edu/uca/infopegue/OfertasCliente.kt	(date 1668570416663)
+@@ -32,5 +32,6 @@
+     }
+ 
+     private fun iniciar() {
++
+     }
+ }
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_ofertas_cliente.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".OfertasCliente\">\r\n\r\n    <View\r\n        android:id=\"@+id/VwVista\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"190dp\"\r\n        android:background=\"@drawable/nombre_app_ek2_shape\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.0\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/tvTexto\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"Ofertas Propuestas\"\r\n        android:textAlignment=\"center\"\r\n        android:textColor=\"@color/black\"\r\n        android:textSize=\"44sp\"\r\n        app:layout_constraintBottom_toBottomOf=\"@+id/VwVista\"\r\n        app:layout_constraintEnd_toEndOf=\"@+id/VwVista\"\r\n        app:layout_constraintHorizontal_bias=\"0.0\"\r\n        app:layout_constraintStart_toStartOf=\"@id/VwVista\"\r\n        app:layout_constraintTop_toTopOf=\"@id/VwVista\" />\r\n\r\n    <View\r\n        android:id=\"@+id/rectangle_6_ek4\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"80dp\"\r\n        android:background=\"@drawable/rectangle_6_ek4_shape\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\" />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/IvInicio\"\r\n        android:layout_width=\"68dp\"\r\n        android:layout_height=\"63dp\"\r\n        android:src=\"@drawable/image_6_ek2\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"@id/IvMail\"\r\n        app:layout_constraintStart_toStartOf=\"@id/IvPersona\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/rectangle_6_ek4\"\r\n        />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/IvPersona\"\r\n        android:layout_width=\"61dp\"\r\n        android:layout_height=\"64dp\"\r\n        android:src=\"@drawable/_avatar_1_ek2\"\r\n        android:onClick=\"PantallaDatosCliente\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/rectangle_6_ek4\"\r\n        android:layout_marginStart=\"30dp\"/>\r\n\r\n    <ImageView\r\n        android:id=\"@+id/IvMail\"\r\n        android:layout_width=\"68dp\"\r\n        android:layout_height=\"63dp\"\r\n        android:layout_marginStart=\"300dp\"\r\n        android:src=\"@drawable/_image_5_ek3\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/rectangle_6_ek4\" />\r\n\r\n    <androidx.recyclerview.widget.RecyclerView\r\n        android:id=\"@+id/rcvPropuesta\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"100dp\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/VwVista\" />\r\n\r\n\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_ofertas_cliente.xml b/app/src/main/res/layout/fragment_ofertas_cliente.xml
+--- a/app/src/main/res/layout/fragment_ofertas_cliente.xml	(revision c36f028529c8fb6e150cc9616e072e3cca473675)
++++ b/app/src/main/res/layout/fragment_ofertas_cliente.xml	(date 1668568594323)
+@@ -55,7 +55,6 @@
+         android:layout_width="61dp"
+         android:layout_height="64dp"
+         android:src="@drawable/_avatar_1_ek2"
+-        android:onClick="PantallaDatosCliente"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="@+id/rectangle_6_ek4"
+Index: app/src/main/res/navigation/nav_graph.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<navigation xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:id=\"@+id/nav_graph\"\r\n    app:startDestination=\"@id/PantallaBienvenido\">\r\n    <fragment\r\n        android:id=\"@+id/PantallaBienvenido\"\r\n        android:name=\"ni.edu.uca.infopegue.BienvenidoFragment\"\r\n        android:label=\"fragment_bienvenido\"\r\n        tools:layout=\"@layout/fragment_bienvenido\" >\r\n        <action\r\n            android:id=\"@+id/action_PantallaBienvenido_to_PantallaLoginCliente\"\r\n            app:destination=\"@id/PantallaLoginCliente\" />\r\n        <action\r\n            android:id=\"@+id/action_PantallaBienvenido_to_PantallaLoginEmrpresa\"\r\n            app:destination=\"@id/PantallaLoginEmpresa\" />\r\n    </fragment>\r\n    <fragment\r\n        android:id=\"@+id/PantallaLoginCliente\"\r\n        android:name=\"ni.edu.uca.infopegue.LoginCliente\"\r\n        android:label=\"fragment_login_cliente\"\r\n        tools:layout=\"@layout/fragment_login_cliente\" >\r\n        <action\r\n            android:id=\"@+id/action_PantallaLoginCliente_to_PantallaOfertasCliente\"\r\n            app:destination=\"@id/PantallaOfertasCliente\" />\r\n    </fragment>\r\n    <fragment\r\n        android:id=\"@+id/PantallaOfertasCliente\"\r\n        android:name=\"ni.edu.uca.infopegue.OfertasCliente\"\r\n        android:label=\"fragment_ofertas_cliente\"\r\n        tools:layout=\"@layout/fragment_ofertas_cliente\" >\r\n        <action\r\n            android:id=\"@+id/action_PantallaOfertasCliente_to_PantallaInfoOferta\"\r\n            app:destination=\"@id/PantallaInfoOferta\" />\r\n        <action\r\n            android:id=\"@+id/action_PantallaOfertasCliente_to_PantallaDatosCliente\"\r\n            app:destination=\"@id/PantallaDatosCliente\" />\r\n    </fragment>\r\n    <fragment\r\n        android:id=\"@+id/PantallaInfoOferta\"\r\n        android:name=\"ni.edu.uca.infopegue.InfoOferta\"\r\n        android:label=\"fragment_info_oferta\"\r\n        tools:layout=\"@layout/fragment_info_oferta\" >\r\n        <action\r\n            android:id=\"@+id/action_PantallaInfoOferta_to_PantallaDatosCliente\"\r\n            app:destination=\"@id/PantallaDatosCliente\" />\r\n        <action\r\n            android:id=\"@+id/action_PantallaInfoOferta_to_PantallaSolicitudesCliente\"\r\n            app:destination=\"@id/PantallaSolicitudesCliente\" />\r\n    </fragment>\r\n    <fragment\r\n        android:id=\"@+id/PantallaDatosCliente\"\r\n        android:name=\"ni.edu.uca.infopegue.DatosCliente\"\r\n        android:label=\"fragment_datos_cliente\"\r\n        tools:layout=\"@layout/fragment_datos_cliente\" />\r\n    <fragment\r\n        android:id=\"@+id/PantallaLoginEmpresa\"\r\n        android:name=\"ni.edu.uca.infopegue.LoginEmpresa\"\r\n        android:label=\"fragment_login_empresa\"\r\n        tools:layout=\"@layout/fragment_login_empresa\" >\r\n        <action\r\n            android:id=\"@+id/action_PantallaLoginEmrpresa_to_PantallaOfertasEmpresa\"\r\n            app:destination=\"@id/PantallaOfertasEmpresa\" />\r\n    </fragment>\r\n    <fragment\r\n        android:id=\"@+id/PantallaOfertasEmpresa\"\r\n        android:name=\"ni.edu.uca.infopegue.OfertasEmpresa\"\r\n        android:label=\"fragment_ofertas_empresa\"\r\n        tools:layout=\"@layout/fragment_ofertas_empresa\" >\r\n        <action\r\n            android:id=\"@+id/action_PantallaOfertasEmpresa_to_PantallaCrudOferta\"\r\n            app:destination=\"@id/PantallaCrudOferta\" />\r\n        <action\r\n            android:id=\"@+id/action_PantallaOfertasEmpresa_to_PantallaDatosEmpresa\"\r\n            app:destination=\"@id/PantallaDatosEmpresa\" />\r\n        <action\r\n            android:id=\"@+id/action_PantallaOfertasEmpresa_to_PantallaRespuestasDeOfertas\"\r\n            app:destination=\"@id/PantallaRespuestasDeOfertas\" />\r\n    </fragment>\r\n    <fragment\r\n        android:id=\"@+id/PantallaCrudOferta\"\r\n        android:name=\"ni.edu.uca.infopegue.CrudOfertas\"\r\n        android:label=\"fragment_crud_ofertas\"\r\n        tools:layout=\"@layout/fragment_crud_ofertas\" >\r\n        <action\r\n            android:id=\"@+id/action_PantallaCrudOferta_to_PantallaDatosEmpresa\"\r\n            app:destination=\"@id/PantallaDatosEmpresa\" />\r\n    </fragment>\r\n    <fragment\r\n        android:id=\"@+id/PantallaDatosEmpresa\"\r\n        android:name=\"ni.edu.uca.infopegue.DatosEmpresa\"\r\n        android:label=\"fragment_datos_empresa\"\r\n        tools:layout=\"@layout/fragment_datos_empresa\" />\r\n    <fragment\r\n        android:id=\"@+id/PantallaRespuestasDeOfertas\"\r\n        android:name=\"ni.edu.uca.infopegue.RespuestasDeEmpresa\"\r\n        android:label=\"fragment_respuestas_ofertas_empresa\"\r\n        tools:layout=\"@layout/fragment_respuestas_ofertas_empresa\" />\r\n    <fragment\r\n        android:id=\"@+id/PantallaSolicitudesCliente\"\r\n        android:name=\"ni.edu.uca.infopegue.SolicitudesDeCliente\"\r\n        android:label=\"fragment_soliicitud_ofertas_cliente\"\r\n        tools:layout=\"@layout/fragment_soliicitud_ofertas_cliente\" />\r\n</navigation>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/navigation/nav_graph.xml b/app/src/main/res/navigation/nav_graph.xml
+--- a/app/src/main/res/navigation/nav_graph.xml	(revision c36f028529c8fb6e150cc9616e072e3cca473675)
++++ b/app/src/main/res/navigation/nav_graph.xml	(date 1668575081046)
+@@ -46,8 +46,8 @@
+             android:id="@+id/action_PantallaInfoOferta_to_PantallaDatosCliente"
+             app:destination="@id/PantallaDatosCliente" />
+         <action
+-            android:id="@+id/action_PantallaInfoOferta_to_PantallaSolicitudesCliente"
+-            app:destination="@id/PantallaSolicitudesCliente" />
++            android:id="@+id/action_PantallaInfoOferta_to_PantallaRespuestasDeOfertas"
++            app:destination="@id/PantallaRespuestasDeOfertas" />
+     </fragment>
+     <fragment
+         android:id="@+id/PantallaDatosCliente"
+@@ -75,8 +75,8 @@
+             android:id="@+id/action_PantallaOfertasEmpresa_to_PantallaDatosEmpresa"
+             app:destination="@id/PantallaDatosEmpresa" />
+         <action
+-            android:id="@+id/action_PantallaOfertasEmpresa_to_PantallaRespuestasDeOfertas"
+-            app:destination="@id/PantallaRespuestasDeOfertas" />
++            android:id="@+id/action_PantallaOfertasEmpresa_to_PantallaSolicitudesCliente"
++            app:destination="@id/PantallaSolicitudesCliente" />
+     </fragment>
+     <fragment
+         android:id="@+id/PantallaCrudOferta"
+@@ -102,4 +102,9 @@
+         android:name="ni.edu.uca.infopegue.SolicitudesDeCliente"
+         android:label="fragment_soliicitud_ofertas_cliente"
+         tools:layout="@layout/fragment_soliicitud_ofertas_cliente" />
++    <fragment
++        android:id="@+id/nuevaOferta"
++        android:name="ni.edu.uca.infopegue.NuevaOferta"
++        android:label="fragment_nueva_oferta"
++        tools:layout="@layout/fragment_nueva_oferta" />
+ </navigation>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_datos_cliente.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".DatosCliente\">\r\n\r\n    <View\r\n        android:id=\"@+id/_bg__informacion_del_empleado_ek2\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:background=\"@drawable/_bg__informacion_del_empleado_ek2_shape\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n    <View\r\n        android:id=\"@+id/rectangle_4_ek3\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"530dp\"\r\n        android:background=\"@drawable/rectangle_4_ek3_shape\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/tvInfo\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"50dp\"\r\n        android:gravity=\"center\"\r\n        android:text=\"Información personal del empleado\"\r\n        android:textColor=\"@color/vista_de_respuestas_color\"\r\n        android:textSize=\"34sp\"\r\n        android:textStyle=\"bold\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n    <ImageButton\r\n        android:id=\"@+id/_image_2\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginStart=\"330dp\"\r\n        android:layout_marginTop=\"660dp\"\r\n        android:layout_marginBottom=\"10dp\"\r\n        android:src=\"@drawable/_image_2\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\" />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/camara_1\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"150dp\"\r\n        android:contentDescription=\"camara_1\"\r\n        android:src=\"@drawable/camara_1\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n    <ImageButton\r\n        android:id=\"@+id/_flecha_1\"\r\n        android:layout_width=\"28dp\"\r\n        android:layout_height=\"20dp\"\r\n        android:layout_marginStart=\"10dp\"\r\n        android:layout_marginTop=\"7dp\"\r\n        android:src=\"@drawable/_flecha_1\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_datos_cliente.xml b/app/src/main/res/layout/fragment_datos_cliente.xml
+--- a/app/src/main/res/layout/fragment_datos_cliente.xml	(revision c36f028529c8fb6e150cc9616e072e3cca473675)
++++ b/app/src/main/res/layout/fragment_datos_cliente.xml	(date 1668575688040)
+@@ -39,7 +39,7 @@
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+ 
+-    <ImageButton
++    <ImageView
+         android:id="@+id/_image_2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+@@ -55,13 +55,12 @@
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="150dp"
+-        android:contentDescription="camara_1"
+         android:src="@drawable/camara_1"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+ 
+-    <ImageButton
++    <ImageView
+         android:id="@+id/_flecha_1"
+         android:layout_width="28dp"
+         android:layout_height="20dp"

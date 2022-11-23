@@ -1,0 +1,396 @@
+Index: app/src/main/res/drawable/ic_persona.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/ic_persona.xml b/app/src/main/res/drawable/ic_persona.xml
+new file mode 100644
+--- /dev/null	(date 1669142498469)
++++ b/app/src/main/res/drawable/ic_persona.xml	(date 1669142498469)
+@@ -0,0 +1,5 @@
++<vector android:height="24dp" android:tint="#000000"
++    android:viewportHeight="24" android:viewportWidth="24"
++    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
++    <path android:fillColor="@android:color/white" android:pathData="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10s10,-4.48 10,-10S17.52,2 12,2zM12,6c1.93,0 3.5,1.57 3.5,3.5S13.93,13 12,13s-3.5,-1.57 -3.5,-3.5S10.07,6 12,6zM12,20c-2.03,0 -4.43,-0.82 -6.14,-2.88C7.55,15.8 9.68,15 12,15s4.45,0.8 6.14,2.12C16.43,19.18 14.03,20 12,20z"/>
++</vector>
+Index: app/src/main/res/drawable/ic_lock.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/ic_lock.xml b/app/src/main/res/drawable/ic_lock.xml
+new file mode 100644
+--- /dev/null	(date 1669142521443)
++++ b/app/src/main/res/drawable/ic_lock.xml	(date 1669142521443)
+@@ -0,0 +1,5 @@
++<vector android:height="24dp" android:tint="#000000"
++    android:viewportHeight="24" android:viewportWidth="24"
++    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
++    <path android:fillColor="@android:color/white" android:pathData="M18,8h-1L17,6c0,-2.76 -2.24,-5 -5,-5S7,3.24 7,6v2L6,8c-1.1,0 -2,0.9 -2,2v10c0,1.1 0.9,2 2,2h12c1.1,0 2,-0.9 2,-2L20,10c0,-1.1 -0.9,-2 -2,-2zM12,17c-1.1,0 -2,-0.9 -2,-2s0.9,-2 2,-2 2,0.9 2,2 -0.9,2 -2,2zM15.1,8L8.9,8L8.9,6c0,-1.71 1.39,-3.1 3.1,-3.1 1.71,0 3.1,1.39 3.1,3.1v2z"/>
++</vector>
+Index: app/src/main/res/layout/fragment_login_cliente.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".LoginCliente\">\r\n\r\n    <View\r\n        android:id=\"@+id/_bg__pantalla_login_empleado_ek2\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:background=\"@drawable/_bg__pantalla_login_empleado_ek2_shape\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n    <View\r\n        android:id=\"@+id/nombre_app_ek1\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"238dp\"\r\n        android:background=\"@drawable/nombre_app_ek1_shape\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/i__1__1_ek1\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:contentDescription=\"i__1__1_ek1\"\r\n        android:src=\"@drawable/i__1__1_ek1\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n    <View\r\n        android:id=\"@+id/login_container_ek2\"\r\n        android:layout_width=\"360dp\"\r\n        android:layout_height=\"490dp\"\r\n        android:layout_marginTop=\"150dp\"\r\n        android:background=\"@drawable/login_container_ek2_shape\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/login_usuario\"\r\n        android:layout_width=\"192dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"175dp\"\r\n        android:gravity=\"center\"\r\n        android:text=\"Login Usuario\"\r\n        android:textColor=\"@color/login_color\"\r\n        android:textSize=\"44sp\"\r\n        android:textStyle=\"bold\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n    <EditText\r\n        android:id=\"@+id/etUsuario\"\r\n        android:layout_width=\"300dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"140dp\"\r\n        android:hint=\"Ingrese su Usuario\"\r\n        android:inputType=\"text\"\r\n        android:textAlignment=\"center\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/login_usuario\" />\r\n\r\n    <EditText\r\n        android:id=\"@+id/etPw\"\r\n        android:layout_width=\"300dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"90dp\"\r\n        android:hint=\"Ingrese su Contraseña\"\r\n        android:inputType=\"textPassword\"\r\n        android:textAlignment=\"center\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/etUsuario\" />\r\n\r\n    <androidx.appcompat.widget.AppCompatButton\r\n        android:id=\"@+id/btnIngresar\"\r\n        android:layout_width=\"150dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"100dp\"\r\n        android:background=\"@drawable/rectangle_3_ek3_shape\"\r\n        android:text=\"Ingresar\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/etPw\" />\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_login_cliente.xml b/app/src/main/res/layout/fragment_login_cliente.xml
+--- a/app/src/main/res/layout/fragment_login_cliente.xml	(revision 03553a38f913c3bf44b02cebc7a613b9ad251626)
++++ b/app/src/main/res/layout/fragment_login_cliente.xml	(date 1669145387205)
+@@ -45,6 +45,7 @@
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+ 
++
+     <TextView
+         android:id="@+id/login_usuario"
+         android:layout_width="192dp"
+@@ -59,29 +60,60 @@
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+ 
+-    <EditText
+-        android:id="@+id/etUsuario"
+-        android:layout_width="300dp"
++    <com.google.android.material.textfield.TextInputLayout
++        android:id="@+id/TfUsuario"
++        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
++        android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:layout_marginTop="140dp"
+-        android:hint="Ingrese su Usuario"
+-        android:inputType="text"
+-        android:textAlignment="center"
++        android:layout_marginTop="150dp"
++        android:hint="Usuario"
++        app:boxCornerRadiusBottomEnd="30dp"
++        app:boxCornerRadiusBottomStart="30dp"
++        app:boxCornerRadiusTopEnd="30dp"
++        app:boxCornerRadiusTopStart="30dp"
++        app:counterEnabled="true"
++        app:counterMaxLength="20"
++        app:helperText="*Required"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="@+id/login_usuario" />
++        app:layout_constraintTop_toTopOf="@+id/login_usuario"
++        app:startIconDrawable="@drawable/ic_persona">
+ 
+-    <EditText
+-        android:id="@+id/etPw"
+-        android:layout_width="300dp"
++        <com.google.android.material.textfield.TextInputEditText
++            android:layout_width="300dp"
++            android:layout_height="wrap_content"
++            android:foregroundTint="#00BCD4"
++            android:textColorHint="#00BCD4" />
++
++    </com.google.android.material.textfield.TextInputLayout>
++
++    <com.google.android.material.textfield.TextInputLayout
++        android:id="@+id/TfPw"
++        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
++        android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="90dp"
+-        android:hint="Ingrese su Contraseña"
+-        android:inputType="textPassword"
+-        android:textAlignment="center"
++        android:hint="Password"
++        app:boxCornerRadiusBottomEnd="30dp"
++        app:boxCornerRadiusBottomStart="30dp"
++        app:boxCornerRadiusTopEnd="30dp"
++        app:boxCornerRadiusTopStart="30dp"
++        app:counterEnabled="true"
++        app:counterMaxLength="20"
++        app:endIconMode="password_toggle"
++        app:helperText="*Required"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="@+id/etUsuario" />
++        app:layout_constraintTop_toTopOf="@+id/TfUsuario"
++        app:startIconDrawable="@drawable/ic_lock">
++
++        <com.google.android.material.textfield.TextInputEditText
++            android:layout_width="300dp"
++            android:layout_height="wrap_content"
++            android:inputType="textPassword" />
++
++    </com.google.android.material.textfield.TextInputLayout>
++
+ 
+     <androidx.appcompat.widget.AppCompatButton
+         android:id="@+id/btnIngresar"
+@@ -92,6 +124,7 @@
+         android:text="Ingresar"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="@+id/etPw" />
++        app:layout_constraintTop_toTopOf="@+id/TfPw" />
++
+ 
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_login_empresa.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".LoginEmpresa\">\r\n\r\n    <View\r\n        android:id=\"@+id/_bg__pantalla_login_empleado_ek2\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:background=\"@drawable/_bg__pantalla_login_empleado_ek2_shape\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n    <View\r\n        android:id=\"@+id/nombre_app_ek1\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"238dp\"\r\n        android:background=\"@drawable/nombre_app_ek1_shape\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/i__1__1_ek1\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:contentDescription=\"i__1__1_ek1\"\r\n        android:src=\"@drawable/i__1__1_ek1\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n    <View\r\n        android:id=\"@+id/login_container_ek2\"\r\n        android:layout_width=\"360dp\"\r\n        android:layout_height=\"490dp\"\r\n        android:layout_marginTop=\"140dp\"\r\n        android:background=\"@drawable/login_container_ek2_shape\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.49\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/login_usuario\"\r\n        android:layout_width=\"192dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"175dp\"\r\n        android:gravity=\"center\"\r\n        android:text=\"Login Empresa\"\r\n        android:textColor=\"@color/login_color\"\r\n        android:textSize=\"44sp\"\r\n        android:textStyle=\"bold\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n    <EditText\r\n        android:id=\"@+id/etUsuario\"\r\n        android:layout_width=\"300dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"140dp\"\r\n        android:hint=\"Ingrese Su Usuario\"\r\n        android:inputType=\"text\"\r\n        android:textAlignment=\"center\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/login_usuario\" />\r\n\r\n    <EditText\r\n        android:id=\"@+id/etPw\"\r\n        android:layout_width=\"300dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"90dp\"\r\n        android:hint=\"Ingrese Su Contraseña\"\r\n        android:inputType=\"textPassword\"\r\n        android:textAlignment=\"center\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/etUsuario\" />\r\n\r\n    <androidx.appcompat.widget.AppCompatButton\r\n        android:id=\"@+id/btnIngresar\"\r\n        android:layout_width=\"150dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"96dp\"\r\n        android:background=\"@drawable/rectangle_3_ek3_shape\"\r\n        android:text=\"Ingresar\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.498\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/etPw\" />\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_login_empresa.xml b/app/src/main/res/layout/fragment_login_empresa.xml
+--- a/app/src/main/res/layout/fragment_login_empresa.xml	(revision 03553a38f913c3bf44b02cebc7a613b9ad251626)
++++ b/app/src/main/res/layout/fragment_login_empresa.xml	(date 1669145387218)
+@@ -60,29 +60,57 @@
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+ 
+-    <EditText
+-        android:id="@+id/etUsuario"
+-        android:layout_width="300dp"
++    <com.google.android.material.textfield.TextInputLayout
++        android:id="@+id/TfUsuario"
++        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
++        android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:layout_marginTop="140dp"
+-        android:hint="Ingrese Su Usuario"
+-        android:inputType="text"
+-        android:textAlignment="center"
++        android:layout_marginTop="150dp"
++        android:hint="Usuario"
++        app:boxCornerRadiusBottomEnd="30dp"
++        app:boxCornerRadiusBottomStart="30dp"
++        app:boxCornerRadiusTopEnd="30dp"
++        app:boxCornerRadiusTopStart="30dp"
++        app:counterEnabled="true"
++        app:counterMaxLength="20"
++        app:helperText="*Required"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="@+id/login_usuario" />
++        app:layout_constraintTop_toTopOf="@+id/login_usuario"
++        app:startIconDrawable="@drawable/ic_persona">
+ 
+-    <EditText
+-        android:id="@+id/etPw"
+-        android:layout_width="300dp"
++        <com.google.android.material.textfield.TextInputEditText
++            android:layout_width="300dp"
++            android:layout_height="wrap_content" />
++
++    </com.google.android.material.textfield.TextInputLayout>
++
++    <com.google.android.material.textfield.TextInputLayout
++        android:id="@+id/TfPw"
++        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
++        android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="90dp"
+-        android:hint="Ingrese Su Contraseña"
+-        android:inputType="textPassword"
+-        android:textAlignment="center"
++        android:hint="Password"
++        app:boxCornerRadiusBottomEnd="30dp"
++        app:boxCornerRadiusBottomStart="30dp"
++        app:boxCornerRadiusTopEnd="30dp"
++        app:boxCornerRadiusTopStart="30dp"
++        app:counterEnabled="true"
++        app:counterMaxLength="20"
++        app:endIconMode="password_toggle"
++        app:helperText="*Required"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="@+id/etUsuario" />
++        app:layout_constraintTop_toTopOf="@+id/TfUsuario"
++        app:startIconDrawable="@drawable/ic_lock">
++
++        <com.google.android.material.textfield.TextInputEditText
++            android:layout_width="300dp"
++            android:layout_height="wrap_content"
++            android:inputType="textPassword" />
++
++    </com.google.android.material.textfield.TextInputLayout>
+ 
+     <androidx.appcompat.widget.AppCompatButton
+         android:id="@+id/btnIngresar"
+@@ -94,6 +122,6 @@
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="0.498"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="@+id/etPw" />
++        app:layout_constraintTop_toTopOf="@+id/TfPw" />
+ 
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_ofertas_empresa.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    tools:context=\".OfertasEmpresa\">\r\n\r\n    <TextView\r\n        android:id=\"@+id/tvOfertas\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"80dp\"\r\n        android:text=\"Ofertas Propuestas\"\r\n        android:textAlignment=\"center\"\r\n        android:textColor=\"@color/vista_de_respuestas_color\"\r\n        android:textSize=\"40dp\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n\r\n    <ImageView\r\n        android:id=\"@+id/IvNuevo\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"20dp\"\r\n        android:layout_marginEnd=\"32dp\"\r\n        android:src=\"@drawable/_boton_agregar_1\"\r\n        app:layout_constraintBottom_toTopOf=\"@+id/tvOfertas\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:layout_constraintVertical_bias=\"1.0\" />\r\n\r\n    <View\r\n        android:id=\"@+id/rectangle_6_ek4\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"80dp\"\r\n        android:background=\"@drawable/rectangle_6_ek4_shape\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\" />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/IvInicio\"\r\n        android:layout_width=\"68dp\"\r\n        android:layout_height=\"63dp\"\r\n        android:src=\"@drawable/image_6_ek2\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"@id/IvMail\"\r\n        app:layout_constraintStart_toStartOf=\"@id/IvPersona\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/rectangle_6_ek4\"\r\n        />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/IvPersona\"\r\n        android:layout_width=\"61dp\"\r\n        android:layout_height=\"64dp\"\r\n        android:src=\"@drawable/_avatar_1_ek2\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/rectangle_6_ek4\"\r\n        android:layout_marginStart=\"30dp\"/>\r\n\r\n    <ImageView\r\n        android:id=\"@+id/IvMail\"\r\n        android:layout_width=\"68dp\"\r\n        android:layout_height=\"63dp\"\r\n        android:layout_marginStart=\"300dp\"\r\n        android:src=\"@drawable/_image_5_ek3\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/rectangle_6_ek4\" />\r\n\r\n    <androidx.recyclerview.widget.RecyclerView\r\n        android:id=\"@+id/rcvOfertas\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"280dp\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_ofertas_empresa.xml b/app/src/main/res/layout/fragment_ofertas_empresa.xml
+--- a/app/src/main/res/layout/fragment_ofertas_empresa.xml	(revision 03553a38f913c3bf44b02cebc7a613b9ad251626)
++++ b/app/src/main/res/layout/fragment_ofertas_empresa.xml	(date 1669093843688)
+@@ -1,9 +1,9 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+     tools:context=".OfertasEmpresa">
+ 
+     <TextView
+@@ -49,18 +49,17 @@
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="@id/IvMail"
+         app:layout_constraintStart_toStartOf="@id/IvPersona"
+-        app:layout_constraintTop_toTopOf="@+id/rectangle_6_ek4"
+-        />
++        app:layout_constraintTop_toTopOf="@+id/rectangle_6_ek4" />
+ 
+     <ImageView
+         android:id="@+id/IvPersona"
+         android:layout_width="61dp"
+         android:layout_height="64dp"
++        android:layout_marginStart="30dp"
+         android:src="@drawable/_avatar_1_ek2"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="@+id/rectangle_6_ek4"
+-        android:layout_marginStart="30dp"/>
++        app:layout_constraintTop_toTopOf="@+id/rectangle_6_ek4" />
+ 
+     <ImageView
+         android:id="@+id/IvMail"
+@@ -75,10 +74,16 @@
+ 
+     <androidx.recyclerview.widget.RecyclerView
+         android:id="@+id/rcvOfertas"
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:layout_marginTop="280dp"
+-        app:layout_constraintTop_toTopOf="parent" />
++        android:layout_width="410dp"
++        android:layout_height="484dp"
++        android:layout_marginBottom="172dp"
++        app:layout_constraintBottom_toTopOf="@+id/rectangle_6_ek4"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="1.0"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/tvOfertas"
++        app:layout_constraintVertical_bias="0.0"
++        tools:listitem="@layout/rv_ofertas" />
+ 
+ 
+ </androidx.constraintlayout.widget.ConstraintLayout>
+Index: app/src/main/java/ni/edu/uca/infopegue/LoginCliente.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ni.edu.uca.infopegue\r\n\r\nimport android.app.Notification\r\nimport android.os.Bundle\r\nimport android.view.LayoutInflater\r\nimport android.view.View\r\nimport android.view.ViewGroup\r\nimport android.widget.Toast\r\nimport androidx.fragment.app.Fragment\r\nimport androidx.navigation.Navigation\r\nimport ni.edu.uca.infopegue.R\r\nimport ni.edu.uca.infopegue.databinding.FragmentLoginClienteBinding\r\n\r\nclass LoginCliente : Fragment() {\r\n    private lateinit var binding: FragmentLoginClienteBinding\r\n    val nombreClave: String = \"1\"\r\n    val pwdClave: String = \"1\"\r\n\r\n\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        arguments?.let {\r\n\r\n        }\r\n    }\r\n\r\n    override fun onCreateView(\r\n        inflater: LayoutInflater, container: ViewGroup?,\r\n        savedInstanceState: Bundle?\r\n    ): View? {\r\n\r\n        binding = FragmentLoginClienteBinding.inflate(layoutInflater)\r\n        iniciar()\r\n        return binding.root\r\n    }\r\n\r\n    private fun iniciar() {\r\n\r\n        try {\r\n            binding.btnIngresar.setOnClickListener {\r\n                val nameTemp: String = binding.etUsuario.text.toString()\r\n                val pwdTemp: String = binding.etPw.text.toString()\r\n\r\n                if (nameTemp == nombreClave && pwdTemp == pwdClave) {\r\n                    Navigation.findNavController(binding.root).navigate(R.id.PantallaOfertasCliente)\r\n                } else {\r\n                    Toast.makeText(this.context, \"Datos erroneos\", Toast.LENGTH_SHORT).show()\r\n                }\r\n\r\n            }\r\n        } catch (ex: Exception){\r\n\r\n        }\r\n    }\r\n}\r\n\r\n\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/ni/edu/uca/infopegue/LoginCliente.kt b/app/src/main/java/ni/edu/uca/infopegue/LoginCliente.kt
+--- a/app/src/main/java/ni/edu/uca/infopegue/LoginCliente.kt	(revision 03553a38f913c3bf44b02cebc7a613b9ad251626)
++++ b/app/src/main/java/ni/edu/uca/infopegue/LoginCliente.kt	(date 1669144319659)
+@@ -6,6 +6,7 @@
+ import android.view.View
+ import android.view.ViewGroup
+ import android.widget.Toast
++import androidx.core.view.doOnAttach
+ import androidx.fragment.app.Fragment
+ import androidx.navigation.Navigation
+ import ni.edu.uca.infopegue.R
+@@ -27,19 +28,21 @@
+     override fun onCreateView(
+         inflater: LayoutInflater, container: ViewGroup?,
+         savedInstanceState: Bundle?
++
+     ): View? {
+ 
+         binding = FragmentLoginClienteBinding.inflate(layoutInflater)
+         iniciar()
+         return binding.root
++
+     }
+ 
+     private fun iniciar() {
+ 
+         try {
+             binding.btnIngresar.setOnClickListener {
+-                val nameTemp: String = binding.etUsuario.text.toString()
+-                val pwdTemp: String = binding.etPw.text.toString()
++                val nameTemp = binding.TfUsuario.editText?.text.toString()
++                val pwdTemp: String = binding.TfPw.editText?.text.toString()
+ 
+                 if (nameTemp == nombreClave && pwdTemp == pwdClave) {
+                     Navigation.findNavController(binding.root).navigate(R.id.PantallaOfertasCliente)
+Index: app/src/main/java/ni/edu/uca/infopegue/LoginEmpresa.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ni.edu.uca.infopegue\r\n\r\nimport android.os.Bundle\r\nimport android.view.LayoutInflater\r\nimport android.view.View\r\nimport android.view.ViewGroup\r\nimport android.widget.Toast\r\nimport androidx.fragment.app.Fragment\r\nimport androidx.navigation.Navigation\r\nimport ni.edu.uca.infopegue.databinding.FragmentLoginEmpresaBinding\r\n\r\n\r\nclass LoginEmpresa : Fragment() {\r\n    private lateinit var binding: FragmentLoginEmpresaBinding\r\n    val nombreClave: String = \"1\"\r\n    val pwdClave: String = \"1\"\r\n\r\n\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        arguments?.let {\r\n\r\n        }\r\n    }\r\n\r\n    override fun onCreateView(\r\n        inflater: LayoutInflater, container: ViewGroup?,\r\n        savedInstanceState: Bundle?\r\n    ): View? {\r\n\r\n        binding = FragmentLoginEmpresaBinding.inflate(layoutInflater)\r\n        iniciar()\r\n        return binding.root\r\n    }\r\n\r\n\r\n    private fun iniciar() {\r\n\r\n\r\n        try {\r\n            binding.btnIngresar.setOnClickListener {\r\n                val nameTemp: String = binding.etUsuario.text.toString()\r\n                val pwdTemp: String = binding.etPw.text.toString()\r\n\r\n                if (nameTemp == nombreClave && pwdTemp == pwdClave) {\r\n                    Navigation.findNavController(binding.root).navigate(R.id.PantallaOfertasEmpresa)\r\n                } else {\r\n                    Toast.makeText(this.context, \"Datos erroneos\", Toast.LENGTH_SHORT).show()\r\n                }\r\n            }\r\n        } catch (ex: Exception) {\r\n\r\n        }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/ni/edu/uca/infopegue/LoginEmpresa.kt b/app/src/main/java/ni/edu/uca/infopegue/LoginEmpresa.kt
+--- a/app/src/main/java/ni/edu/uca/infopegue/LoginEmpresa.kt	(revision 03553a38f913c3bf44b02cebc7a613b9ad251626)
++++ b/app/src/main/java/ni/edu/uca/infopegue/LoginEmpresa.kt	(date 1669143453410)
+@@ -39,8 +39,8 @@
+ 
+         try {
+             binding.btnIngresar.setOnClickListener {
+-                val nameTemp: String = binding.etUsuario.text.toString()
+-                val pwdTemp: String = binding.etPw.text.toString()
++                val nameTemp: String = binding.TfUsuario.editText?.text.toString()
++                val pwdTemp: String = binding.TfPw.editText?.text.toString()
+ 
+                 if (nameTemp == nombreClave && pwdTemp == pwdClave) {
+                     Navigation.findNavController(binding.root).navigate(R.id.PantallaOfertasEmpresa)
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DesignSurface\">\r\n    <option name=\"filePathToZoomLevelMap\">\r\n      <map>\r\n        <entry key=\"..\\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_crud_cliente.xml\" value=\"0.3625\" />\r\n        <entry key=\"..\\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_crud_empresa.xml\" value=\"0.3625\" />\r\n        <entry key=\"..\\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_crud_ofertas.xml\" value=\"0.33\" />\r\n        <entry key=\"..\\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_datos_cliente.xml\" value=\"0.33\" />\r\n        <entry key=\"..\\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_datos_empresa.xml\" value=\"0.3625\" />\r\n        <entry key=\"..\\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_nueva_oferta.xml\" value=\"0.33\" />\r\n        <entry key=\"..\\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/itemofempresa.xml\" value=\"0.3625\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/__bg__inicio_empresa_ek2_shape.xml\" value=\"0.1405\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/__bg__pantalla_login_empresa_ek2_shape.xml\" value=\"0.1405\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/__bg__propuestas_de_la_empresa_ek2_shape.xml\" value=\"0.1405\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/__bg__visor_de_las_propuestas_ek2_shape.xml\" value=\"0.1405\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/_bg__creador_de_nueva_oferta_ek2_shape.xml\" value=\"0.1405\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/_bg__informacion_de_la_empresa_ek3_shape.xml\" value=\"0.1405\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/_bg__informacion_de_una_propuesta_ek2_shape.xml\" value=\"0.1405\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/login_container_ek1_shape.xml\" value=\"0.1405\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/activity_main.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_crud_ofertas.xml\" value=\"0.16666666666666666\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_datos_cliente.xml\" value=\"0.16666666666666666\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_datos_empresa.xml\" value=\"0.16666666666666666\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_login_cliente.xml\" value=\"0.16666666666666666\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_login_empresa.xml\" value=\"0.16666666666666666\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_ofertas_cliente.xml\" value=\"0.264\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/fragment_ofertas_empresa.xml\" value=\"0.2\" />\r\n        <entry key=\"..\\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/layout/itemofempresa.xml\" value=\"0.2\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_11\" default=\"true\" project-jdk-name=\"Android Studio default JDK\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 03553a38f913c3bf44b02cebc7a613b9ad251626)
++++ b/.idea/misc.xml	(date 1669145949517)
+@@ -3,12 +3,31 @@
+   <component name="DesignSurface">
+     <option name="filePathToZoomLevelMap">
+       <map>
++        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable-v24/__bg__propuestas_de_la_empresa_ek2_shape.xml" value="0.2165" />
++        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable-v24/_bg__creador_de_nueva_oferta_ek2_shape.xml" value="0.2165" />
++        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable-v24/_bg__informacion_de_la_empresa_ek3_shape.xml" value="0.2165" />
++        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable-v24/line_16_ek1_shape.xml" value="0.2165" />
++        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable-v24/line_16_ek2_shape.xml" value="0.2165" />
++        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable-v24/line_16_ek5_shape.xml" value="0.2165" />
++        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable-v24/line_16_shape.xml" value="0.2165" />
++        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable-v24/login_container_ek1_shape.xml" value="0.2165" />
++        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable-v24/login_container_ek2_shape.xml" value="0.2165" />
++        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable-v24/rectangle_4_shape.xml" value="0.2165" />
++        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable-v24/rectangle_6_ek1_shape.xml" value="0.2165" />
++        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable/border.xml" value="0.2165" />
++        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable/bordeset.xml" value="0.2165" />
++        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable/ic_lock.xml" value="0.2165" />
++        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable/ic_persona.xml" value="0.2165" />
+         <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_crud_cliente.xml" value="0.3625" />
+         <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_crud_empresa.xml" value="0.3625" />
+         <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_crud_ofertas.xml" value="0.33" />
+         <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_datos_cliente.xml" value="0.33" />
+         <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_datos_empresa.xml" value="0.3625" />
+-        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_nueva_oferta.xml" value="0.33" />
++        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_login_cliente.xml" value="0.33" />
++        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_login_empresa.xml" value="0.25" />
++        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_nueva_oferta.xml" value="0.25" />
++        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_ofertas_cliente.xml" value="0.1762917933130699" />
++        <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_ofertas_empresa.xml" value="0.22" />
+         <entry key="..\:/Users/Yizar/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/itemofempresa.xml" value="0.3625" />
+         <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/__bg__inicio_empresa_ek2_shape.xml" value="0.1405" />
+         <entry key="..\:/Users/mrome/OneDrive/Escritorio/ProyectoFinal/app/src/main/res/drawable-v24/__bg__pantalla_login_empresa_ek2_shape.xml" value="0.1405" />
