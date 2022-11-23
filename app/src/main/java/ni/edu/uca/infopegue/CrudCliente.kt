@@ -36,55 +36,53 @@ class CrudCliente : Fragment() {
 
     private fun Guardar() {
 
-        binding.btnGuardar.setOnClickListener {
+            try {
+                with(binding) {
+                    btnGuardar.setOnClickListener {
+                        val nombreF = etPrimerNombre.text.toString()
+                        val nombreS = etSegundoNombre.text.toString()
+                        val apellidoF = etPrimerApellido.text.toString()
+                        val apellidoS = etSegundoApellido.text.toString()
+                        val edad = etEdad.text.toString().toInt()
+                        val profesion = etProfesion.text.toString()
+                        val correoP = etCorreoPersonal.text.toString()
+                        val descrip = etDescripPersonal.text.toString()
+                        val Edad: Int
 
+                        if(edad <= 17) {
+                        Edad = edad
+                        if (nombreF == "" || nombreS == "" || apellidoF == "" || Edad.toString() == "" || profesion == "" || correoP == "" || descrip == "") {
+                            Toast.makeText(
+                                context,
+                                "Un campo esta vacio, y no se pudo guardar la Empresa",
+                                Toast.LENGTH_LONG
+                            ).show();
 
-            if (binding.etPrimerNombre.text.toString().isNotEmpty()) {
-                preferShared.saveFnombre(binding.etPrimerNombre.text.toString())
-            } else {
-                Toast.makeText(this.context, "Inserte Primer Nombre", Toast.LENGTH_SHORT).show()
-            }
+                        } else {
+                            Toast.makeText(context, "Menor de edad ", Toast.LENGTH_SHORT).show()
+                        }
 
-            if (binding.etSegundoNombre.text.toString().isNotEmpty()) {
-                preferShared.saveSnombre(binding.etSegundoNombre.text.toString())
-            }
+                        } else {
+                            preferShared.saveFnombre(nombreF)
+                            preferShared.saveSnombre(nombreS)
+                            preferShared.saveFapellido(apellidoF)
+                            preferShared.saveSapellido(apellidoS)
+                            preferShared.saveEdad(edad)
+                            preferShared.saveProfesion(profesion)
+                            preferShared.saveCorreo(correoP)
+                            preferShared.saveDescripcion(descrip)
+                            Toast.makeText(context, "Datos Guardados ", Toast.LENGTH_SHORT).show()
+                            limpiar()
+                        }
+                    }
+                }
 
-            if (binding.etPrimerApellido.text.toString().isNotEmpty()) {
-                preferShared.saveFapellido(binding.etPrimerApellido.text.toString())
-            } else {
-                Toast.makeText(this.context, "Inserte Primer Apellido", Toast.LENGTH_SHORT).show()
-            }
-            if (binding.etSegundoApellido.text.toString().isNotEmpty()) {
-                preferShared.saveSapellido(binding.etSegundoApellido.text.toString())
-            }
-            if (binding.etEdad.text.toString().isNotEmpty()) {
-                preferShared.saveEdad(binding.etEdad.text.toString().toInt())
-            } else {
-                Toast.makeText(this.context, "Inserte Edad", Toast.LENGTH_SHORT).show()
-            }
-            if (binding.etProfesion.text.toString().isNotEmpty()) {
-                preferShared.saveProfesion(binding.etProfesion.text.toString())
-            } else {
-                Toast.makeText(this.context, "Inserte Profesion", Toast.LENGTH_SHORT).show()
-            }
+            } catch (ex: Exception) {
+                Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show()
 
-            if (binding.etCorreoPersonal.text.toString().isNotEmpty()) {
-                preferShared.saveCorreo(binding.etCorreoPersonal.text.toString())
-            } else {
-                Toast.makeText(this.context, "Digite un correo", Toast.LENGTH_SHORT).show()
             }
-
-            if (binding.etDescripPersonal.text.toString().isNotEmpty()) {
-                preferShared.saveDescripcion(binding.etDescripPersonal.text.toString())
-            } else {
-                Toast.makeText(this.context, "Inserte Una Descripcion", Toast.LENGTH_SHORT).show()
-            }
-
-            Toast.makeText(this.context, "Datos Guardados ", Toast.LENGTH_SHORT).show()
-
         }
 
-    }
 
     private fun AccionClean() {
         binding.btnLimpiar.setOnClickListener { limpiar() }
@@ -100,8 +98,6 @@ class CrudCliente : Fragment() {
             etProfesion.setText("")
             etCorreoPersonal.setText("")
             etDescripPersonal.setText("")
-
-
 
         }
         Toast.makeText(this.context, "Campos limpios", Toast.LENGTH_SHORT).show()

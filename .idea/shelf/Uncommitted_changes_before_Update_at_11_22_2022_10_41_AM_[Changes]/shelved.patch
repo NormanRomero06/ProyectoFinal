@@ -1,0 +1,18 @@
+Index: app/src/main/java/ni/edu/uca/infopegue/rv_adapter/ofertaAdapter.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ni.edu.uca.infopegue.rv_adapter\r\n\r\nimport android.view.LayoutInflater\r\nimport android.view.View\r\nimport android.view.ViewGroup\r\nimport android.widget.TextView\r\nimport androidx.constraintlayout.widget.ConstraintLayout\r\nimport androidx.navigation.Navigation\r\nimport androidx.recyclerview.widget.RecyclerView\r\nimport ni.edu.uca.infopegue.R\r\nimport ni.edu.uca.infopegue.dao.ShareObjectAdp.Companion.preferShared\r\nimport ni.edu.uca.infopegue.entidades.Oferta\r\n\r\nclass ofertaAdapter(private val ofertaList: List<Oferta>, currentView: View) :\r\n    RecyclerView.Adapter<ofertaAdapter.OfertaHolder>() {\r\n    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OfertaHolder {\r\n        val layoutInflater = LayoutInflater.from(parent.context)\r\n        return OfertaHolder(layoutInflater.inflate(R.layout.rv_ofertas, parent, false))\r\n\r\n    }\r\n\r\n    override fun onBindViewHolder(holder: OfertaHolder, position: Int) {\r\n        val item = ofertaList[position]\r\n        holder.load(item)\r\n\r\n\r\n    }\r\n\r\n    override fun getItemCount(): Int = ofertaList.size\r\n\r\n    inner class OfertaHolder(private var view: View) : RecyclerView.ViewHolder(view) {\r\n        private var tvNombreOf = view.findViewById<TextView>(R.id.tvNombreEmpresaRV)\r\n        private var tvDescripcionOf = view.findViewById<TextView>(R.id.tvDescripcionRV)\r\n        private var tvContactoOf = view.findViewById<TextView>(R.id.tvContactoRV)\r\n        private var tvRequisitosOf = view.findViewById<TextView>(R.id.tvRequisitosRV)\r\n        private var tvUbicacionOf = view.findViewById<TextView>(R.id.tvUbicacionRV)\r\n        private var fragEmpresa = view.findViewById<ConstraintLayout>(R.id.fraEmpresa)\r\n\r\n\r\n\r\n        fun load(oferta: Oferta) {\r\n            tvNombreOf.text = \"Se necesita: \" + oferta.nombreOferta\r\n            tvDescripcionOf.text = \"Descripcion: \" + oferta.descripcionOferta\r\n            tvRequisitosOf.text = \"Requisitos necesarios: \" + oferta.requisito\r\n            tvUbicacionOf.text = \"Ubicacion: \" + oferta.ubicacion\r\n            tvContactoOf.text = \"Contacto: \" + oferta.contactoOf\r\n            fragEmpresa.setOnClickListener {\r\n                preferShared.SaveTempKey(oferta.key)\r\n                Navigation.findNavController(view).navigate(R.id.PantallaCrudOferta)\r\n\r\n            }\r\n\r\n\r\n        }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/ni/edu/uca/infopegue/rv_adapter/ofertaAdapter.kt b/app/src/main/java/ni/edu/uca/infopegue/rv_adapter/ofertaAdapter.kt
+--- a/app/src/main/java/ni/edu/uca/infopegue/rv_adapter/ofertaAdapter.kt	(revision 81c577fe56a5e63f613fc2d90690ae9c09fd99fe)
++++ b/app/src/main/java/ni/edu/uca/infopegue/rv_adapter/ofertaAdapter.kt	(date 1669134772464)
+@@ -17,6 +17,7 @@
+         val layoutInflater = LayoutInflater.from(parent.context)
+         return OfertaHolder(layoutInflater.inflate(R.layout.rv_ofertas, parent, false))
+ 
++
+     }
+ 
+     override fun onBindViewHolder(holder: OfertaHolder, position: Int) {

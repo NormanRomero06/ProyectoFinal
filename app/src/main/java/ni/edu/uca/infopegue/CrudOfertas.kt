@@ -33,6 +33,7 @@ class CrudOfertas : Fragment() {
         iniciar()
         Acciones()
         load()
+        clean()
         return binding.root
     }
 
@@ -49,8 +50,17 @@ class CrudOfertas : Fragment() {
 
         }
     }
-
-
+    private fun clean() {
+        with(binding) {
+            btnLimpiar.setOnClickListener {
+                etNombreOferta.setText("")
+                etContacto.setText("")
+                etRequisitos.setText("")
+                etUbicacion.setText("")
+                etDescripOferta.setText("")
+            }
+        }
+    }
     private fun iniciar() {
         val tempKey: String = preferShared.getTempKey()
         with(binding) {
@@ -67,10 +77,12 @@ class CrudOfertas : Fragment() {
                     saveContactoOf(tempKey, contactoOf)
                     saveUbicacionOf(tempKey, ubicacionOf)
                     saveRequisitoOf(tempKey, requisitosOf)
+
                 }
 
             }
         }
+
 
         binding.btnEliminar.setOnClickListener {
             var arreglo = preferShared.getArray()
@@ -89,6 +101,7 @@ class CrudOfertas : Fragment() {
                             saveContactoOf(x, arreglo[x]!!.contactoOf)
                             saveRequisitoOf(x, arreglo[x]!!.requisito)
                             saveUbicacionOf(x, arreglo[x]!!.ubicacion)
+                            clean()
                         }
                     }
                 }

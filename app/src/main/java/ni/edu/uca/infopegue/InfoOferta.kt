@@ -8,11 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import ni.edu.uca.infopegue.dao.ShareObjectAdp
 import ni.edu.uca.infopegue.databinding.FragmentInfoOfertaBinding
-import ni.edu.uca.infopegue.entidades.Oferta
 
-class InfoOferta : Fragment(){
+class InfoOferta : Fragment() {
     private lateinit var binding: FragmentInfoOfertaBinding
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,12 +32,7 @@ class InfoOferta : Fragment(){
     }
 
     private fun iniciar() {
-        var arreglo = ShareObjectAdp.preferShared.getArray()
         var tempKey = ShareObjectAdp.preferShared.getTempKey()
-        var list = arrayListOf<Oferta>()
-        //var key = ShareObjectAdp.preferShared.getKey(tempKey)
-
-
 
         with(binding) {
             etNombreOferta.setText(ShareObjectAdp.preferShared.getNombreOf(tempKey))
@@ -51,13 +44,7 @@ class InfoOferta : Fragment(){
 
         }
 
-                }
-
-
-
-
-
-
+    }
 
 
     private fun Acciones() {

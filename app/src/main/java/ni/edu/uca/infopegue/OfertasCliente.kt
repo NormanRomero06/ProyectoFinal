@@ -61,7 +61,7 @@ class OfertasCliente : Fragment(){
             Navigation.findNavController(binding.root).navigate(R.id.PantallaDatosCliente)
         }
         binding.IvInicio.setOnClickListener {
-            Navigation.findNavController(binding.root).navigate(R.id.PantallaInfoOferta)
+            Navigation.findNavController(binding.root).navigate(R.id.PantallaOfertasCliente)
         }
         binding.IvMail.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.PantallaRespuestasDeOfertas)

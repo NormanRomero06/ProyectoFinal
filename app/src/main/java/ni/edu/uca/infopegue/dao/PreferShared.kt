@@ -88,7 +88,7 @@ class PreferShared(val context: Context) {
     }
 
     fun getEdad(): Int {
-        return storage.getInt(SHARED_USER_EDAD, 0)
+        return storage.getInt(SHARED_USER_EDAD, 18)
     }
 
     fun getProfesion(): String {

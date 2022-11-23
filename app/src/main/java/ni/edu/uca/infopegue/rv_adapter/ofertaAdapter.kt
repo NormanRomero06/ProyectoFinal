@@ -19,6 +19,7 @@ class ofertaAdapter(private val ofertaList: List<Oferta>, currentView: View) :
         val layoutInflater = LayoutInflater.from(parent.context)
         return OfertaHolder(layoutInflater.inflate(R.layout.rv_ofertas, parent, false))
 
+
     }
 
     override fun onBindViewHolder(holder: OfertaHolder, position: Int) {

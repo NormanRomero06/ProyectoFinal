@@ -1,4 +1,6 @@
 package ni.edu.uca.infopegue
+
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -33,49 +35,38 @@ class CrudEmpresa : Fragment() {
     }
 
     private fun Guardar() {
+        try {
+            with(binding) {
+                btnGuardar.setOnClickListener {
+                    val nombreE = etNombre.text.toString()
+                    val direccionE = etDireccion.text.toString()
+                    val jefeE = etJefeEmpresa.text.toString()
+                    val contactoE = etContacto.text.toString()
+                    val correoE = etCorreoEmpresa.text.toString()
+                    val descripcionE = etDescripEmpresa.text.toString()
 
-        binding.btnGuardar.setOnClickListener {
-
-
-            if (binding.etNombre.text.toString().isNotEmpty()) {
-                ShareObjectAdp.preferShared.saveNombre(binding.etNombre.text.toString())
-            } else {
-                Toast.makeText(this.context, "Inserte Un nombre de Empresa", Toast.LENGTH_SHORT).show()
+                    if (nombreE == "" || direccionE == "" || jefeE == "" || contactoE == "" || correoE == "" || descripcionE == "") {
+                        Toast.makeText(
+                            context,
+                            "Un campo esta vacio, y no se pudo guardar la Empresa",
+                            Toast.LENGTH_LONG
+                        ).show();
+                    } else {
+                        ShareObjectAdp.preferShared.saveNombre(nombreE)
+                        ShareObjectAdp.preferShared.saveDireccion(direccionE)
+                        ShareObjectAdp.preferShared.saveRepresentante(jefeE)
+                        ShareObjectAdp.preferShared.saveContacto(contactoE)
+                        ShareObjectAdp.preferShared.saveCorreoEm(correoE)
+                        ShareObjectAdp.preferShared.saveDescripcionEm(descripcionE)
+                        Toast.makeText(context, "Datos Guardados ", Toast.LENGTH_SHORT).show()
+                        limpiar()
+                    }
+                }
             }
 
-            if (binding.etDireccion.text.toString().isNotEmpty()) {
-                ShareObjectAdp.preferShared.saveDireccion(binding.etDireccion.text.toString())
-            }else {
-                Toast.makeText(this.context,"Inserte una Direccion", Toast.LENGTH_SHORT).show()
-            }
-
-            if (binding.etJefeEmpresa.text.toString().isNotEmpty()) {
-                ShareObjectAdp.preferShared.saveRepresentante(binding.etJefeEmpresa.text.toString())
-            } else {
-                Toast.makeText(this.context, "Inserte Un representante", Toast.LENGTH_SHORT).show()
-            }
-            if (binding.etContacto.text.toString().isNotEmpty()) {
-                ShareObjectAdp.preferShared.saveContacto(binding.etContacto.text.toString())
-            } else {
-                Toast.makeText(this.context, "Digite un numero", Toast.LENGTH_SHORT).show()
-            }
-
-            if (binding.etCorreoEmpresa.text.toString().isNotEmpty()) {
-                ShareObjectAdp.preferShared.saveCorreoEm(binding.etCorreoEmpresa.text.toString())
-            } else {
-                Toast.makeText(this.context, "Digite un correo", Toast.LENGTH_SHORT).show()
-            }
-
-            if (binding.etDescripEmpresa.text.toString().isNotEmpty()) {
-                ShareObjectAdp.preferShared.saveDescripcionEm(binding.etDescripEmpresa.text.toString())
-            } else {
-                Toast.makeText(this.context, "Inserte Una Descripcion", Toast.LENGTH_SHORT).show()
-            }
-
-            Toast.makeText(this.context, "Datos Guardados ", Toast.LENGTH_SHORT).show()
-
+        } catch (ex: Exception) {
+            Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show()
         }
-
     }
 
     private fun AccionClean() {
@@ -92,14 +83,13 @@ class CrudEmpresa : Fragment() {
             etDescripEmpresa.setText("")
 
 
-
-
         }
         Toast.makeText(this.context, "Campos limpios", Toast.LENGTH_SHORT).show()
     }
 
     private fun BorrarDatos() {
         binding.btnEliminar.setOnClickListener {
+
             with(binding) {
                 ShareObjectAdp.preferShared.RemoveNombreEm(etNombre.text.toString())
                 ShareObjectAdp.preferShared.RemoveDireccion(etDireccion.text.toString())
@@ -107,13 +97,12 @@ class CrudEmpresa : Fragment() {
                 ShareObjectAdp.preferShared.RemoveContactoEm(etContacto.text.toString())
                 ShareObjectAdp.preferShared.RemoveCorreoEm(etCorreoEmpresa.text.toString())
                 ShareObjectAdp.preferShared.RemoveDescripcionEM(etDescripEmpresa.text.toString())
-
-
             }
             Toast.makeText(this.context, "Datos Borrados", Toast.LENGTH_SHORT).show()
             limpiar()
 
         }
+
     }
 
     private fun CargarDatos() {
