@@ -79,6 +79,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvEmail"
+        app:layout_constraintBottom_toTopOf="@id/rectangle_6_ek4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="120dp"
+        android:text="@string/open_gmail"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_margin="25dp"/>
+
 
     <EditText
         android:id="@+id/etNombreOferta"

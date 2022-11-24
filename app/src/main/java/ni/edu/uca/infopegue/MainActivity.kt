@@ -2,6 +2,8 @@ package ni.edu.uca.infopegue
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import ni.edu.uca.infopegue.databinding.ActivityMainBinding
 
@@ -12,6 +14,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
     }
 }

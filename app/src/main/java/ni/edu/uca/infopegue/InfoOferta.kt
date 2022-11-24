@@ -1,15 +1,22 @@
 package ni.edu.uca.infopegue
 
+import android.content.Intent
+import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import ni.edu.uca.infopegue.dao.ShareObjectAdp
 import ni.edu.uca.infopegue.databinding.FragmentInfoOfertaBinding
+import org.w3c.dom.Text
 
-class InfoOferta : Fragment() {
+class  InfoOferta : Fragment() {
     private lateinit var binding: FragmentInfoOfertaBinding
 
 
@@ -28,6 +35,10 @@ class InfoOferta : Fragment() {
         binding = FragmentInfoOfertaBinding.inflate(layoutInflater)
         iniciar()
         Acciones()
+        val email : TextView = binding.tvEmail
+        email.movementMethod = LinkMovementMethod.getInstance()
+        email.setLinkTextColor(Color.BLUE)
+
         return binding.root
     }
 
@@ -59,4 +70,5 @@ class InfoOferta : Fragment() {
             Navigation.findNavController(binding.root).navigate(R.id.PantallaRespuestasDeOfertas)
         }
     }
+
 }
