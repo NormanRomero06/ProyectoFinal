@@ -24,6 +24,9 @@
         <action
             android:id="@+id/action_PantallaLoginCliente_to_PantallaOfertasCliente"
             app:destination="@id/PantallaOfertasCliente" />
+        <action
+            android:id="@+id/action_PantallaLoginCliente_to_recuperarpw"
+            app:destination="@id/recuperarpw" />
     </fragment>
     <fragment
         android:id="@+id/PantallaOfertasCliente"
@@ -66,6 +69,9 @@
         <action
             android:id="@+id/action_PantallaLoginEmrpresa_to_PantallaOfertasEmpresa"
             app:destination="@id/PantallaOfertasEmpresa" />
+        <action
+            android:id="@+id/action_PantallaLoginEmpresa_to_recuperarpw"
+            app:destination="@id/recuperarpw" />
     </fragment>
     <fragment
         android:id="@+id/PantallaOfertasEmpresa"
@@ -128,4 +134,9 @@
         android:name="ni.edu.uca.infopegue.CrudEmpresa"
         android:label="fragment_crud_empresa"
         tools:layout="@layout/fragment_crud_empresa" />
+    <fragment
+        android:id="@+id/recuperarpw"
+        android:name="ni.edu.uca.infopegue.recuperarpw"
+        android:label="fragment_recuperarpw"
+        tools:layout="@layout/fragment_recuperarpw" />
 </navigation>
