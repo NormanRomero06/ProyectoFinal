@@ -34,6 +34,7 @@ class LoginCliente : Fragment() {
         binding = FragmentLoginClienteBinding.inflate(layoutInflater)
         iniciar()
         passOlvidad()
+
         return binding.root
 
     }
