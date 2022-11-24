@@ -33,9 +33,17 @@ class LoginCliente : Fragment() {
 
         binding = FragmentLoginClienteBinding.inflate(layoutInflater)
         iniciar()
+        passOlvidad()
         return binding.root
 
     }
+
+    private fun passOlvidad(){
+        binding.tvRecuperar.setOnClickListener {
+            Toast.makeText(context,"Clic",Toast.LENGTH_SHORT).show()
+        }
+    }
+
 
     private fun iniciar() {
 
@@ -55,6 +63,8 @@ class LoginCliente : Fragment() {
 
         }
     }
+
+
 }
 
 

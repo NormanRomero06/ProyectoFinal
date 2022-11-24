@@ -36,45 +36,46 @@ class CrudCliente : Fragment() {
 
     private fun Guardar() {
 
-            try {
-                with(binding) {
-                    btnGuardar.setOnClickListener {
-                        val nombreF = etPrimerNombre.text.toString()
-                        val nombreS = etSegundoNombre.text.toString()
-                        val apellidoF = etPrimerApellido.text.toString()
-                        val apellidoS = etSegundoApellido.text.toString()
-                        val edad = etEdad.text.toString().toInt()
-                        val profesion = etProfesion.text.toString()
-                        val correoP = etCorreoPersonal.text.toString()
-                        val descrip = etDescripPersonal.text.toString()
-                        val Edad: Int
+        try {
+            with(binding) {
+                btnGuardar.setOnClickListener {
+                    val nombreF = etPrimerNombre.text.toString()
+                    val nombreS = etSegundoNombre.text.toString()
+                    val apellidoF = etPrimerApellido.text.toString()
+                    val apellidoS = etSegundoApellido.text.toString()
+                    val edad = etEdad.text.toString().toInt()
+                    val profesion = etProfesion.text.toString()
+                    val correoP = etCorreoPersonal.text.toString()
+                    val descrip = etDescripPersonal.text.toString()
+                    if (edad <= 17) {
+                        Toast.makeText(context, "Menor de edad ", Toast.LENGTH_SHORT).show()
 
-                        if(edad <= 17) {
-                        Edad = edad
-                        if (nombreF == "" || nombreS == "" || apellidoF == "" || Edad.toString() == "" || profesion == "" || correoP == "" || descrip == "") {
+                    } else {
+
+                        if (nombreF == "" || nombreS == "" || apellidoF == "" || profesion == "" || edad.toString() == "" || correoP == "" || descrip == "") {
                             Toast.makeText(
                                 context,
                                 "Un campo esta vacio, y no se pudo guardar la Empresa",
                                 Toast.LENGTH_LONG
                             ).show();
 
-                        } else {
-                            Toast.makeText(context, "Menor de edad ", Toast.LENGTH_SHORT).show()
-                        }
 
                         } else {
+
                             preferShared.saveFnombre(nombreF)
                             preferShared.saveSnombre(nombreS)
                             preferShared.saveFapellido(apellidoF)
                             preferShared.saveSapellido(apellidoS)
-                            preferShared.saveEdad(edad)
                             preferShared.saveProfesion(profesion)
                             preferShared.saveCorreo(correoP)
+                            preferShared.saveEdad(edad)
                             preferShared.saveDescripcion(descrip)
+
                             Toast.makeText(context, "Datos Guardados ", Toast.LENGTH_SHORT).show()
                             limpiar()
                         }
                     }
+                }
                 }
 
             } catch (ex: Exception) {
