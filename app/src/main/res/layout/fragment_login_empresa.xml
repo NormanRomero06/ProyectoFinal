@@ -61,6 +61,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tvRecuperar"
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="584dp"
+        android:gravity="center"
+        android:text="¿Has olvidado tu contraseña?"
+        android:textColor="@color/login_color"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/TfUsuario"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
