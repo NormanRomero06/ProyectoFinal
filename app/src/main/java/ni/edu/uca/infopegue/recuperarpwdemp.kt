@@ -7,18 +7,18 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import ni.edu.uca.infopegue.dao.ShareObjectAdp.Companion.preferShared
-import ni.edu.uca.infopegue.databinding.FragmentRecuperarpwBinding
+import ni.edu.uca.infopegue.dao.ShareObjectAdp
+import ni.edu.uca.infopegue.databinding.FragmentRecuperarpwdempBinding
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 
-class recuperarpw : Fragment() {
+class recuperarpwdemp : Fragment() {
 
     private var param1: String? = null
     private var param2: String? = null
-    private lateinit var binding: FragmentRecuperarpwBinding
+    private lateinit var binding: FragmentRecuperarpwdempBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +32,7 @@ class recuperarpw : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentRecuperarpwBinding.inflate(layoutInflater)
+        binding = FragmentRecuperarpwdempBinding.inflate(layoutInflater)
         validacion()
         return binding.root
 
@@ -42,24 +42,29 @@ class recuperarpw : Fragment() {
         try {
             with(binding) {
                 btnCambiar.setOnClickListener {
-                    val correo = TfCorreo.editText?.text.toString()
-                    val usuario = TfUsuario.editText?.text.toString()
+                    val Correo = TfCorreo.editText?.text.toString()
+                    val Usuario = TfUsuario.editText?.text.toString()
                     val NewPass = TfPwNew.editText?.text.toString()
 
-                    if (NewPass =="") {
+                    if (NewPass == "") {
                         Toast.makeText(context, "Ingrese Nueva pass", Toast.LENGTH_SHORT)
                             .show()
                     } else {
 
-                        if (preferShared.getUser() == usuario && preferShared.getCorreo() == correo) {
-                            preferShared.RemovePass()
-                            preferShared.savePass(NewPass)
+                        if (ShareObjectAdp.preferShared.getUserE() == Usuario && ShareObjectAdp.preferShared.getCorreoEmp() == Correo) {
+                            ShareObjectAdp.preferShared.RemovePassE()
+                            ShareObjectAdp.preferShared.savePassE(NewPass)
                             Toast.makeText(context, "Nueva Pass guardada", Toast.LENGTH_SHORT)
                                 .show()
-                            Navigation.findNavController(binding.root).navigate(R.id.PantallaLoginCliente)
+                            Navigation.findNavController(binding.root)
+                                .navigate(R.id.PantallaLoginEmpresa)
 
                         } else {
-                            Toast.makeText(context, "Datos no encontrados, intente otra vez", Toast.LENGTH_SHORT)
+                            Toast.makeText(
+                                context,
+                                "Datos no encontrados, intente otra vez",
+                                Toast.LENGTH_SHORT
+                            )
                                 .show()
 
                         }
@@ -70,7 +75,6 @@ class recuperarpw : Fragment() {
         } catch (ex: Exception) {
         }
     }
-
 
 
     companion object {

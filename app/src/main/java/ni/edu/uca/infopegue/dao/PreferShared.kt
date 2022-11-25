@@ -301,14 +301,14 @@ class PreferShared(val context: Context) {
     }
 
     fun getUser(): String{
-        return storage.getString(SHARED_LOGIN_PASS,"")!!
+        return storage.getString(SHARED_LOGIN_USER,"")!!
     }
 
     fun getPass(): String{
         return storage.getString(SHARED_LOGIN_PASS, "")!!
     }
 
-    fun RemovePass(toString: String){
+    fun RemovePass(){
         return storage.edit().remove(SHARED_LOGIN_PASS).apply()
     }
     fun saveUserE(UserE:String){
@@ -319,14 +319,14 @@ class PreferShared(val context: Context) {
     }
 
     fun getUserE(): String{
-        return storage.getString(SHARED_LOGINE_PASS,"")!!
+        return storage.getString(SHARED_LOGINE_USER,"")!!
     }
 
     fun getPassE(): String{
         return storage.getString(SHARED_LOGINE_PASS, "")!!
     }
 
-    fun RemovePassE(toString: String){
+    fun RemovePassE(){
         return storage.edit().remove(SHARED_LOGINE_PASS).apply()
     }
 

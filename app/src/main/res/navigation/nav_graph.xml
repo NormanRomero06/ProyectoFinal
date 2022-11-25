@@ -70,8 +70,8 @@
             android:id="@+id/action_PantallaLoginEmrpresa_to_PantallaOfertasEmpresa"
             app:destination="@id/PantallaOfertasEmpresa" />
         <action
-            android:id="@+id/action_PantallaLoginEmpresa_to_recuperarpw"
-            app:destination="@id/recuperarpw" />
+            android:id="@+id/PantallaCreacionEmpresa"
+            app:destination="@id/nueva_empresa" />
     </fragment>
     <fragment
         android:id="@+id/PantallaOfertasEmpresa"
@@ -141,14 +141,25 @@
         tools:layout="@layout/fragment_recuperarpw" />
     <fragment
         android:id="@+id/PantallaUsurio"
-        android:name="ni.edu.uca.infopegue.new_pass"
+        android:name="ni.edu.uca.infopegue.CreacionUsuario"
         android:label="fragment_new_pass"
-        tools:layout="@layout/fragment_new_pass" >
-        <action
-            android:id="@+id/action_new_pass_to_PantallaLoginEmpresa"
-            app:destination="@id/PantallaLoginEmpresa" />
+        tools:layout="@layout/fragment_nuevo_usuario" >
         <action
             android:id="@+id/action_new_pass_to_PantallaLoginCliente"
             app:destination="@id/PantallaLoginCliente" />
+    </fragment>
+    <fragment
+        android:id="@+id/nueva_empresa"
+        android:name="ni.edu.uca.infopegue.nueva_empresa"
+        android:label="fragment_nueva_empresa"
+        tools:layout="@layout/fragment_nueva_empresa" />
+    <fragment
+        android:id="@+id/recuperarpwdemp"
+        android:name="ni.edu.uca.infopegue.recuperarpwdemp"
+        android:label="fragment_recuperarpwdemp"
+        tools:layout="@layout/fragment_recuperarpwdemp" >
+        <action
+            android:id="@+id/actioPantallaRecuperarPwdemp"
+            app:destination="@id/PantallaLoginEmpresa" />
     </fragment>
 </navigation>

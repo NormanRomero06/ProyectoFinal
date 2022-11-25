@@ -31,7 +31,6 @@ class LoginCliente : Fragment() {
 
         binding = FragmentLoginClienteBinding.inflate(layoutInflater)
         iniciar()
-
         passOlvidad()
 
         return binding.root
@@ -43,6 +42,10 @@ class LoginCliente : Fragment() {
 
         binding.tvNewCuenta.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.PantallaUsurio)
+        }
+        binding.tvRecuperar.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.recuperarpw)
+
         }
     }
 

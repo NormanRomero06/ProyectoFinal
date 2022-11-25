@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import ni.edu.uca.infopegue.dao.ShareObjectAdp.Companion.preferShared
 import ni.edu.uca.infopegue.databinding.FragmentLoginEmpresaBinding
 
 
 class LoginEmpresa : Fragment() {
     private lateinit var binding: FragmentLoginEmpresaBinding
-    val nombreClave: String = "1"
-    val pwdClave: String = "1"
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +30,18 @@ class LoginEmpresa : Fragment() {
 
         binding = FragmentLoginEmpresaBinding.inflate(layoutInflater)
         iniciar()
+        passOlvidad()
         return binding.root
+    }
+    private fun passOlvidad(){
+
+        binding.tvNewCuenta.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.PantallaCreacionEmpresa)
+        }
+        binding.tvRecuperar.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.recuperarpw)
+
+        }
     }
 
 
@@ -42,7 +53,7 @@ class LoginEmpresa : Fragment() {
                 val nameTemp: String = binding.TfUsuario.editText?.text.toString()
                 val pwdTemp: String = binding.TfPw.editText?.text.toString()
 
-                if (nameTemp == nombreClave && pwdTemp == pwdClave) {
+                if (nameTemp == preferShared.getUserE() && pwdTemp == preferShared.getPassE()) {
                     Navigation.findNavController(binding.root).navigate(R.id.PantallaOfertasEmpresa)
                 } else {
                     Toast.makeText(this.context, "Datos erroneos", Toast.LENGTH_SHORT).show()

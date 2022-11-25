@@ -1,0 +1,32 @@
+Index: app/src/main/java/ni/edu/uca/infopegue/NuevoUsuario.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ni.edu.uca.infopegue\r\n\r\nimport android.os.Bundle\r\nimport android.view.LayoutInflater\r\nimport android.view.View\r\nimport android.view.ViewGroup\r\nimport android.widget.Toast\r\nimport androidx.fragment.app.Fragment\r\nimport androidx.navigation.Navigation\r\nimport ni.edu.uca.infopegue.dao.ShareObjectAdp\r\nimport ni.edu.uca.infopegue.databinding.FragmentUsernewBinding\r\n\r\nclass NuevoUsuario : Fragment() {\r\n    private lateinit var binding: FragmentUsernewBinding\r\n\r\n\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        arguments?.let {\r\n\r\n        }\r\n    }\r\n\r\n    override fun onCreateView(\r\n        inflater: LayoutInflater, container: ViewGroup?,\r\n        savedInstanceState: Bundle?\r\n    ): View? {\r\n\r\n        binding = FragmentUsernewBinding.inflate(layoutInflater)\r\n        SaveLogin()\r\n        hola()\r\n        return binding.root\r\n    }\r\n\r\n    private fun hola() {\r\n        binding.btnNew.setOnClickListener{\r\n            Toast.makeText(context, \"Guardado\", Toast.LENGTH_SHORT).show()\r\n        }\r\n    }\r\n\r\n    private fun SaveLogin(){\r\n       binding.btnNew.setOnClickListener {\r\n           ShareObjectAdp.preferShared.saveUser(binding.TfUsuario.editText?.text.toString())\r\n           ShareObjectAdp.preferShared.savePass(binding.TfPwNew.editText?.text.toString())\r\n           ShareObjectAdp.preferShared.saveCorreo(binding.TfCorreo.editText?.text.toString())\r\n           Toast.makeText(context, \"Guardado\", Toast.LENGTH_SHORT).show()\r\n           Navigation.findNavController(binding.root).navigate(R.id.PantallaBienvenido)\r\n       }\r\n    }\r\n}
+===================================================================
+diff --git a/app/src/main/java/ni/edu/uca/infopegue/NuevoUsuario.kt b/app/src/main/java/ni/edu/uca/infopegue/NuevoUsuario.kt
+--- a/app/src/main/java/ni/edu/uca/infopegue/NuevoUsuario.kt	
++++ b/app/src/main/java/ni/edu/uca/infopegue/NuevoUsuario.kt	
+@@ -25,7 +25,6 @@
+         inflater: LayoutInflater, container: ViewGroup?,
+         savedInstanceState: Bundle?
+     ): View? {
+-
+         binding = FragmentUsernewBinding.inflate(layoutInflater)
+         SaveLogin()
+         hola()
+@@ -39,12 +38,12 @@
+     }
+ 
+     private fun SaveLogin(){
+-       binding.btnNew.setOnClickListener {
++       /*binding.btnNew.setOnClickListener {
+            ShareObjectAdp.preferShared.saveUser(binding.TfUsuario.editText?.text.toString())
+            ShareObjectAdp.preferShared.savePass(binding.TfPwNew.editText?.text.toString())
+            ShareObjectAdp.preferShared.saveCorreo(binding.TfCorreo.editText?.text.toString())
+            Toast.makeText(context, "Guardado", Toast.LENGTH_SHORT).show()
+            Navigation.findNavController(binding.root).navigate(R.id.PantallaBienvenido)
+-       }
++       }*/
+     }
+ }
+\ No newline at end of file

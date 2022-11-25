@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".new_pass">
+    tools:context=".recuperarpwdemp">
 
     <View
         android:id="@+id/_bg__pantalla_login_empleado_ek2"
@@ -50,8 +50,8 @@
         android:id="@+id/tvRecover"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Registro de Usuario"
+        android:layout_marginTop="25dp"
+        android:text="Recover Password"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25sp"
@@ -98,6 +98,7 @@
         app:boxCornerRadiusTopEnd="30dp"
         app:boxCornerRadiusTopStart="30dp"
         app:counterEnabled="true"
+        app:counterMaxLength="10"
         app:helperText="*Required"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -117,7 +118,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="Password"
+        android:hint="New Password"
         app:boxCornerRadiusBottomEnd="30dp"
         app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusTopEnd="30dp"
@@ -139,15 +140,15 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnNew"
+        android:id="@+id/btnCambiar"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:background="@drawable/rectangle_3_ek3_shape"
-        android:text="Guardar"
+        android:text="Cambiar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TfPwNew"/>
+        app:layout_constraintTop_toBottomOf="@+id/TfPwNew" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,18 @@
+Index: app/src/main/java/ni/edu/uca/infopegue/LoginCliente.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ni.edu.uca.infopegue\r\n\r\nimport android.os.Bundle\r\nimport android.view.LayoutInflater\r\nimport android.view.View\r\nimport android.view.ViewGroup\r\nimport android.widget.Toast\r\nimport androidx.fragment.app.Fragment\r\nimport androidx.navigation.Navigation\r\nimport ni.edu.uca.infopegue.dao.ShareObjectAdp.Companion.preferShared\r\nimport ni.edu.uca.infopegue.databinding.FragmentLoginClienteBinding\r\n\r\nclass LoginCliente : Fragment() {\r\n    private lateinit var binding: FragmentLoginClienteBinding\r\n\r\n\r\n\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        arguments?.let {\r\n\r\n        }\r\n    }\r\n\r\n    override fun onCreateView(\r\n        inflater: LayoutInflater, container: ViewGroup?,\r\n        savedInstanceState: Bundle?\r\n\r\n    ): View? {\r\n\r\n        binding = FragmentLoginClienteBinding.inflate(layoutInflater)\r\n        iniciar()\r\n\r\n        passOlvidad()\r\n\r\n        return binding.root\r\n\r\n    }\r\n\r\n\r\n    private fun passOlvidad(){\r\n\r\n        binding.tvNewCuenta.setOnClickListener {\r\n            Navigation.findNavController(binding.root).navigate(R.id.PantallaUsernew)\r\n        }\r\n    }\r\n\r\n\r\n    private fun iniciar() {\r\n\r\n        try {\r\n            binding.btnIngresar.setOnClickListener {\r\n                val nameTemp = binding.TfUsuario.editText?.text.toString()\r\n                val pwdTemp: String = binding.TfPw.editText?.text.toString()\r\n\r\n                if ( preferShared.getUser()== nameTemp && preferShared.getPass() ==pwdTemp ) {\r\n                    Navigation.findNavController(binding.root).navigate(R.id.PantallaOfertasCliente)\r\n                } else {\r\n                    Toast.makeText(this.context, \"Datos erroneos\", Toast.LENGTH_SHORT).show()\r\n                }\r\n\r\n            }\r\n        } catch (ex: Exception){\r\n\r\n        }\r\n    }\r\n\r\n\r\n}\r\n\r\n\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/ni/edu/uca/infopegue/LoginCliente.kt b/app/src/main/java/ni/edu/uca/infopegue/LoginCliente.kt
+--- a/app/src/main/java/ni/edu/uca/infopegue/LoginCliente.kt	
++++ b/app/src/main/java/ni/edu/uca/infopegue/LoginCliente.kt	
+@@ -30,7 +30,6 @@
+ 
+         binding = FragmentLoginClienteBinding.inflate(layoutInflater)
+         iniciar()
+-
+         passOlvidad()
+ 
+         return binding.root
