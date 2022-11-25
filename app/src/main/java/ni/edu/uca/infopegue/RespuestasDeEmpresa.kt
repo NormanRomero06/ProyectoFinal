@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import ni.edu.uca.infopegue.databinding.FragmentRespuestasOfertasEmpresaBinding
@@ -24,10 +25,15 @@ class RespuestasDeEmpresa : Fragment(){
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = FragmentRespuestasOfertasEmpresaBinding.inflate(layoutInflater)
+        binding = FragmentRespuestasOfertasEmpresaBinding.inflate(inflater, container, false)
         iniciar()
         Acciones()
+
+        val Opcion = resources.getStringArray(R.array.Opciones)
+        val arrayAdapter = ArrayAdapter(requireContext(),R.layout.dropdown_item,Opcion)
+        binding.autoCompleteTextView.setAdapter(arrayAdapter)
         return binding.root
+
     }
 
     private fun iniciar() {

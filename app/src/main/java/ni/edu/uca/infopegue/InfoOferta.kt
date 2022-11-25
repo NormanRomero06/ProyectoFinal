@@ -35,6 +35,7 @@ class  InfoOferta : Fragment() {
         binding = FragmentInfoOfertaBinding.inflate(layoutInflater)
         iniciar()
         Acciones()
+
         val email : TextView = binding.tvEmail
         email.movementMethod = LinkMovementMethod.getInstance()
         email.setLinkTextColor(Color.BLUE)
