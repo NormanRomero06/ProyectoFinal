@@ -5,5 +5,5 @@
     <string name="email_text">Solicito este puesto</string>
     <string name="email_receiver">test@gmail.com</string>
     <string name="email_subject">Solicitud de puesto</string>
-    <string name="open_gmail"><a href ="https://mail.google.com/">ENVIAR CORREO</a></string>
+    <string name="open_gmail"><a href="https://mail.google.com/">ENVIAR CORREO</a></string>
 </resources>

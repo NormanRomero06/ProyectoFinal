@@ -33,6 +33,12 @@ class PreferShared(val context: Context) {
     val SHARED_OFERTA_KEY = "A"
     val SHARED_TEMP_KEY = "R"
 
+    // SHARED PASS
+    val SHARED_LOGIN_USER = "User"
+    val SHARED_LOGIN_PASS = "Pass"
+    val SHARED_LOGINE_USER = "UserE"
+    val SHARED_LOGINE_PASS = "PassE"
+
 
     //Variable de acceso al BD
     val storage = context.getSharedPreferences(SHARED_NAME, 0)
@@ -287,10 +293,43 @@ class PreferShared(val context: Context) {
         storage.edit().remove(SHARED_OFERTA_KEY).apply()
     }
 
-    //SharedPreferences preferences = getSharedPreferences("testShared", MODE_PRIVATE);
-    //        preferences.edit().clear().apply();
+    fun saveUser(User:String){
+        storage.edit().putString(SHARED_LOGIN_USER, User).apply()
+    }
+    fun savePass(Pass:String){
+        storage.edit().putString(SHARED_LOGIN_PASS, Pass).apply()
+    }
 
-    //PreferenceManager.getDefaultSharedPreferences(context).edit().remove("testShared").apply();
+    fun getUser(): String{
+        return storage.getString(SHARED_LOGIN_PASS,"")!!
+    }
+
+    fun getPass(): String{
+        return storage.getString(SHARED_LOGIN_PASS, "")!!
+    }
+
+    fun RemovePass(toString: String){
+        return storage.edit().remove(SHARED_LOGIN_PASS).apply()
+    }
+    fun saveUserE(UserE:String){
+        storage.edit().putString(SHARED_LOGINE_USER, UserE).apply()
+    }
+    fun savePassE(PassE:String){
+        storage.edit().putString(SHARED_LOGINE_PASS, PassE).apply()
+    }
+
+    fun getUserE(): String{
+        return storage.getString(SHARED_LOGINE_PASS,"")!!
+    }
+
+    fun getPassE(): String{
+        return storage.getString(SHARED_LOGINE_PASS, "")!!
+    }
+
+    fun RemovePassE(toString: String){
+        return storage.edit().remove(SHARED_LOGINE_PASS).apply()
+    }
+
 
     fun getArray(): HashMap<String, Oferta> {
         var tempKey = SHARED_OFERTA_KEY

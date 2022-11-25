@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginCliente">
+    tools:context=".recuperarpw">
 
     <View
         android:id="@+id/_bg__pantalla_login_empleado_ek2"
@@ -39,101 +39,96 @@
         android:id="@+id/login_container_ek2"
         android:layout_width="360dp"
         android:layout_height="490dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="140dp"
         android:background="@drawable/login_container_ek2_shape"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <TextView
-        android:id="@+id/login_usuario"
-        android:layout_width="192dp"
+        android:id="@+id/tvRecover"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="175dp"
-        android:gravity="center"
-        android:text="Login Cliente"
-        android:textColor="@color/login_color"
-        android:textSize="44sp"
+        android:layout_marginTop="24dp"
+        android:text="Registro de Usuario"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvRecuperar"
-        android:layout_width="192dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="584dp"
-        android:gravity="center"
-        android:text="¿Has olvidado tu contraseña?"
-        android:textColor="@color/login_color"
-        android:textSize="15sp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <TextView
-        android:id="@+id/tvNewCuenta"
-        android:layout_width="192dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="615dp"
-        android:gravity="center"
-        android:text="¿Crear Usuario?"
-        android:textColor="@color/login_color"
-        android:textSize="15sp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/login_container_ek2" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/TfUsuario"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:hint="Usuario"
+        android:layout_marginTop="70dp"
+        android:hint="User"
         app:boxCornerRadiusBottomEnd="30dp"
         app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusTopEnd="30dp"
         app:boxCornerRadiusTopStart="30dp"
         app:counterEnabled="true"
-        app:counterMaxLength="20"
-        app:endIconMode="clear_text"
+        app:counterMaxLength="10"
         app:helperText="*Required"
-        app:helperTextTextColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/login_usuario"
+        app:layout_constraintTop_toTopOf="@+id/login_container_ek2"
         app:startIconDrawable="@drawable/ic_persona">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TfCorreo"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Email"
+        app:boxCornerRadiusBottomEnd="30dp"
+        app:boxCornerRadiusBottomStart="30dp"
+        app:boxCornerRadiusTopEnd="30dp"
+        app:boxCornerRadiusTopStart="30dp"
+        app:counterEnabled="true"
+        app:helperText="*Required"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TfUsuario"
+        app:startIconDrawable="@drawable/ic_mail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:inputType="text" />
+            android:inputType="textEmailAddress" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/TfPw"
+        android:id="@+id/TfPwNew"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="20dp"
         android:hint="Password"
         app:boxCornerRadiusBottomEnd="30dp"
         app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusTopEnd="30dp"
         app:boxCornerRadiusTopStart="30dp"
         app:counterEnabled="true"
-        app:counterMaxLength="20"
+        app:counterMaxLength="10"
         app:endIconMode="password_toggle"
         app:helperText="*Required"
-        app:helperTextTextColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/TfUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/TfCorreo"
         app:startIconDrawable="@drawable/ic_lock">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -143,17 +138,16 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnIngresar"
-        android:layout_width="140dp"
+        android:id="@+id/btnNew"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/rectangle_3_ek3_shape"
-        android:text="Ingresar"
+        android:text="Guardar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/TfPw" />
-
+        app:layout_constraintTop_toBottomOf="@+id/TfPwNew"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
