@@ -10,6 +10,7 @@ import androidx.navigation.Navigation
 import ni.edu.uca.infopegue.dao.ShareObjectAdp.Companion.preferShared
 import ni.edu.uca.infopegue.databinding.FragmentLoginClienteBinding
 
+
 class LoginCliente : Fragment() {
     private lateinit var binding: FragmentLoginClienteBinding
 
@@ -41,7 +42,7 @@ class LoginCliente : Fragment() {
     private fun passOlvidad(){
 
         binding.tvNewCuenta.setOnClickListener {
-            Navigation.findNavController(binding.root).navigate(R.id.PantallaUsernew)
+            Navigation.findNavController(binding.root).navigate(R.id.PantallaUsurio)
         }
     }
 

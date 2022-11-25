@@ -27,9 +27,6 @@
         <action
             android:id="@+id/action_PantallaLoginCliente_to_recuperarpw"
             app:destination="@id/recuperarpw" />
-        <action
-            android:id="@+id/action_PantallaLoginCliente_to_fragment_usernew"
-            app:destination="@id/PantallaUsernew" />
     </fragment>
     <fragment
         android:id="@+id/PantallaOfertasCliente"
@@ -75,9 +72,6 @@
         <action
             android:id="@+id/action_PantallaLoginEmpresa_to_recuperarpw"
             app:destination="@id/recuperarpw" />
-        <action
-            android:id="@+id/action_PantallaLoginEmpresa_to_fragment_usernew"
-            app:destination="@id/PantallaUsernew" />
     </fragment>
     <fragment
         android:id="@+id/PantallaOfertasEmpresa"
@@ -146,8 +140,15 @@
         android:label="fragment_recuperarpw"
         tools:layout="@layout/fragment_recuperarpw" />
     <fragment
-        android:id="@+id/PantallaUsernew"
-        android:name="ni.edu.uca.infopegue.fragment_usernew"
-        android:label="fragment_usernew"
-        tools:layout="@layout/fragment_usernew" />
+        android:id="@+id/PantallaUsurio"
+        android:name="ni.edu.uca.infopegue.new_pass"
+        android:label="fragment_new_pass"
+        tools:layout="@layout/fragment_new_pass" >
+        <action
+            android:id="@+id/action_new_pass_to_PantallaLoginEmpresa"
+            app:destination="@id/PantallaLoginEmpresa" />
+        <action
+            android:id="@+id/action_new_pass_to_PantallaLoginCliente"
+            app:destination="@id/PantallaLoginCliente" />
+    </fragment>
 </navigation>

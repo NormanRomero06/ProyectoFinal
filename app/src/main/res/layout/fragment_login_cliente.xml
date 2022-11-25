@@ -138,8 +138,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword" />
+            android:layout_height="wrap_content" />
 
     </com.google.android.material.textfield.TextInputLayout>
 

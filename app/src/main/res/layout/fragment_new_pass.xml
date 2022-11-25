@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".recuperarpw">
+    tools:context=".new_pass">
 
     <View
         android:id="@+id/_bg__pantalla_login_empleado_ek2"
