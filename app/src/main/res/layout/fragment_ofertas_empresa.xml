@@ -10,7 +10,7 @@
     <View
         android:id="@+id/Vista"
         android:layout_width="wrap_content"
-        android:layout_height="80dp"
+        android:layout_height="130dp"
         android:background="@drawable/rectangle_6_ek4_shape"
        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,6 +26,16 @@
         android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"
          />
+
+    <ImageView
+        android:id="@+id/ivCerrarSesion"
+        android:layout_width="43dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/off"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="490dp"
@@ -45,7 +55,7 @@
         android:id="@+id/tvOfertas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="68dp"
         android:text="Ofertas Propuestas"
         android:textAlignment="center"
         android:textColor="@color/vista_de_respuestas_color"

@@ -12,6 +12,12 @@ import ni.edu.uca.infopegue.databinding.FragmentRespuestasOfertasEmpresaBinding
 class RespuestasDeEmpresa : Fragment(){
     private lateinit var binding: FragmentRespuestasOfertasEmpresaBinding
 
+    override fun onResume() {
+        super.onResume()
+        val opciones = resources.getStringArray(R.array.Opciones)
+        val arrayAdapter = ArrayAdapter(requireContext(),R.layout.dropdown_item, opciones)
+        binding.autoCompleteTextView.setAdapter(arrayAdapter)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,20 +32,12 @@ class RespuestasDeEmpresa : Fragment(){
     ): View? {
 
         binding = FragmentRespuestasOfertasEmpresaBinding.inflate(inflater, container, false)
-        iniciar()
         Acciones()
 
-        val Opcion = resources.getStringArray(R.array.Opciones)
-        val arrayAdapter = ArrayAdapter(requireContext(),R.layout.dropdown_item,Opcion)
-        binding.autoCompleteTextView.setAdapter(arrayAdapter)
         return binding.root
 
     }
 
-    private fun iniciar() {
-
-
-    }
     private fun Acciones() {
 
         binding.IvPersona.setOnClickListener {

@@ -61,12 +61,70 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/rectangle_6_ek4" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcvSolicitudes"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tvNombreOferta"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="280dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="144dp"
+        android:gravity="start"
+        android:text="Nombre Oferta"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tvNombreEmpresa"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="188dp"
+        android:gravity="start"
+        android:text="Nombre Original"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCorreoEmpresa"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="296dp"
+        android:gravity="start"
+        android:text="Correo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvJefeEmpresa"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="244dp"
+        android:gravity="start"
+        android:text="Representante"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDescripOferta"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="336dp"
+        android:gravity="start"
+        android:text="Descripcion de Oferta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvReferencia"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="428dp"
+        android:gravity="start"
+        android:text="Referencia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

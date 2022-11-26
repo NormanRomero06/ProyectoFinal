@@ -9,6 +9,5 @@
     <string-array name="Opciones">
         <item>Aprovada</item>
         <item>Rechazada</item>
-
     </string-array>
 </resources>

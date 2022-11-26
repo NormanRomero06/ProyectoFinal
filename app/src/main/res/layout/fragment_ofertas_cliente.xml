@@ -8,11 +8,10 @@
 
     <View
         android:id="@+id/VwVista"
-        android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_width="409dp"
+        android:layout_height="160dp"
         android:background="@drawable/rectangle_6_ek4_shape"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,14 +21,14 @@
         android:layout_height="wrap_content"
         android:text="Ofertas Propuestas"
         android:textAlignment="center"
-        android:textStyle="italic"
         android:textColor="@color/black"
         android:textSize="44sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="@+id/VwVista"
         app:layout_constraintEnd_toEndOf="@+id/VwVista"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/VwVista"
-        app:layout_constraintTop_toTopOf="@id/VwVista" />
+        app:layout_constraintTop_toTopOf="@id/VwVista"
+        app:layout_constraintVertical_bias="0.693" />
 
     <View
         android:id="@+id/rectangle_6_ek4"
@@ -82,7 +81,15 @@
         app:layout_constraintBottom_toTopOf="@+id/rectangle_6_ek4"
          />
 
-
+    <ImageView
+        android:id="@+id/ivCerrarSesion"
+        android:layout_width="43dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/off"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
