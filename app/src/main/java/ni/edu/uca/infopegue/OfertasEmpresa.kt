@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -68,6 +69,10 @@ class OfertasEmpresa : Fragment(){
         }
         binding.IvNuevo.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.PantallaNuevaOferta)
+        }
+        binding.ivCerrarSesion.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.PantallaBienvenido)
+            Toast.makeText(this.context, "Se ha cerrado sesión correctamente", Toast.LENGTH_SHORT).show()
         }
     }
 }
