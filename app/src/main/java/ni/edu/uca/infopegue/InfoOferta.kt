@@ -1,8 +1,7 @@
 package ni.edu.uca.infopegue
 
-import android.content.Intent
+
 import android.graphics.Color
-import android.net.Uri
 import android.os.Bundle
 import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
@@ -11,10 +10,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
 import ni.edu.uca.infopegue.dao.ShareObjectAdp
+import ni.edu.uca.infopegue.dao.ShareObjectAdp.Companion.preferShared
 import ni.edu.uca.infopegue.databinding.FragmentInfoOfertaBinding
-import org.w3c.dom.Text
+
 
 class  InfoOferta : Fragment() {
     private lateinit var binding: FragmentInfoOfertaBinding
@@ -35,10 +34,9 @@ class  InfoOferta : Fragment() {
         binding = FragmentInfoOfertaBinding.inflate(layoutInflater)
         iniciar()
         Acciones()
+        Correo()
 
-        val email : TextView = binding.tvEmail
-        email.movementMethod = LinkMovementMethod.getInstance()
-        email.setLinkTextColor(Color.BLUE)
+
 
         return binding.root
     }
@@ -47,15 +45,21 @@ class  InfoOferta : Fragment() {
         var tempKey = ShareObjectAdp.preferShared.getTempKey()
 
         with(binding) {
-            etNombreOferta.setText(ShareObjectAdp.preferShared.getNombreOf(tempKey))
-            etContacto.setText(ShareObjectAdp.preferShared.getContactoOf(tempKey))
-            etRequisitos.setText(ShareObjectAdp.preferShared.getRequisitoOf(tempKey))
-            etUbicacion.setText(ShareObjectAdp.preferShared.getUbicacionOf(tempKey))
-            etDescripOferta.setText(ShareObjectAdp.preferShared.getDescripcionOf(tempKey))
+            etNombreOferta.setText(preferShared.getNombreOf(tempKey))
+            etContacto.setText(preferShared.getContactoOf(tempKey))
+            etRequisitos.setText(preferShared.getRequisitoOf(tempKey))
+            etUbicacion.setText(preferShared.getUbicacionOf(tempKey))
+            etDescripOferta.setText(preferShared.getDescripcionOf(tempKey))
 
 
         }
 
+    }
+    private fun Correo(){
+        val email : TextView = binding.tvEmail
+        email.movementMethod = LinkMovementMethod.getInstance()
+        email.setLinkTextColor(Color.BLUE)
+        preferShared.SaveOfertaS(binding.etNombreOferta.text.toString())
     }
 
 

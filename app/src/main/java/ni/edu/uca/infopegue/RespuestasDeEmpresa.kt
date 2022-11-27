@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import ni.edu.uca.infopegue.dao.ShareObjectAdp
 import ni.edu.uca.infopegue.databinding.FragmentRespuestasOfertasEmpresaBinding
 
 class RespuestasDeEmpresa : Fragment(){
@@ -33,9 +34,51 @@ class RespuestasDeEmpresa : Fragment(){
 
         binding = FragmentRespuestasOfertasEmpresaBinding.inflate(inflater, container, false)
         Acciones()
+        cargar()
+        respuesta()
+
 
         return binding.root
 
+    }
+
+    private fun cargar(){
+        with(binding) {
+            var Pnombre = ShareObjectAdp.preferShared.getFnombre()
+            tvPrimerNombre.text = Pnombre
+
+            var Snombre = ShareObjectAdp.preferShared.getSnombre()
+            tvSegundoNombre.text = Snombre
+
+            var Papellido = ShareObjectAdp.preferShared.getFapellido()
+            tvPrimerApellido.text = Papellido
+
+            var Sapellido = ShareObjectAdp.preferShared.getSapellido()
+            tvSegundoApellido.text = Sapellido
+
+            var Edad = ShareObjectAdp.preferShared.getEdad()
+            tvEdad.text = Edad.toString()
+
+            var Profesion = ShareObjectAdp.preferShared.getProfesion()
+            tvProfesion.text = Profesion
+
+            var Gmail = ShareObjectAdp.preferShared.getCorreo()
+            tvCorreoPersonal.text = Gmail
+
+            var oferta = ShareObjectAdp.preferShared.GetOferta()
+            tvOferta.text = oferta
+
+            var mostrar = ShareObjectAdp.preferShared.GetTexto()
+            tvReferencia.text = mostrar
+        }
+    }
+
+    private fun respuesta(){
+        binding.btnEnviar.setOnClickListener {
+            val opcion = binding.autoCompleteTextView
+            ShareObjectAdp.preferShared.SaveTexto(binding.tvReferencia.text.toString())
+            ShareObjectAdp.preferShared.SaveRespuesta(opcion.text.toString())
+        }
     }
 
     private fun Acciones() {

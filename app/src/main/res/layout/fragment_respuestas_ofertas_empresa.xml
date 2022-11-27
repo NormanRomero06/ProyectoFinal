@@ -11,9 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/_bg__solicitudes_de_empleado_ek2_shape"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tvRespuestas"
@@ -23,7 +24,7 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="35sp"
-        android:layout_marginTop="50sp"
+        android:layout_marginTop="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -75,7 +76,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="188dp"
+        android:layout_marginTop="160dp"
         android:gravity="start"
         android:text="Segundo Nombre"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,7 +87,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="108dp"
         android:gravity="start"
         android:text="Primer Nombre"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,7 +98,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="340dp"
+        android:layout_marginTop="280dp"
         android:gravity="start"
         android:text="Edad"
         app:layout_constraintStart_toStartOf="parent"
@@ -108,7 +109,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="232dp"
+        android:layout_marginTop="200dp"
         android:gravity="start"
         android:text="Primer Apellido"
         app:layout_constraintStart_toStartOf="parent"
@@ -119,7 +120,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="320dp"
         android:gravity="start"
         android:text="Profesión"
         app:layout_constraintStart_toStartOf="parent"
@@ -130,7 +131,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="448dp"
+        android:layout_marginTop="365dp"
         android:gravity="start"
         android:text="Correo"
         app:layout_constraintStart_toStartOf="parent"
@@ -141,9 +142,9 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="284dp"
+        android:layout_marginTop="240dp"
         android:gravity="start"
-        android:text="Segundo Apellido"
+        android:text="Segundo Apellido:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -152,13 +153,23 @@
         android:id="@+id/tvReferencia"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="516dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="416dp"
         android:gravity="start"
-        android:text="Referencia"
+        android:text="Referencia:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tvOferta"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="480dp"
+        android:gravity="start"
+        android:text="Oferta aplicar:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
@@ -178,6 +189,14 @@
             android:layout_weight="1"
             android:inputType="none"
             android:text="Opciones"/>
+
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Enviar"/>
+
+
 
 
     </com.google.android.material.textfield.TextInputLayout>

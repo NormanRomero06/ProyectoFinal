@@ -106,13 +106,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvDescripOferta"
+        android:id="@+id/tvDirecEmpresa"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:layout_marginTop="336dp"
         android:gravity="start"
-        android:text="Descripcion de Oferta"
+        android:text="Dirrecion"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -124,6 +124,16 @@
         android:layout_marginTop="428dp"
         android:gravity="start"
         android:text="Referencia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tvRepuesta"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="500dp"
+        android:gravity="start"
+        android:text="Repuesta"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

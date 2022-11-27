@@ -23,6 +23,9 @@ class PreferShared(val context: Context) {
     val SHARED_ENTIDAD_CONTACTO = "Contacto"
     val SHARED_ENTIDAD_CORREO = "Correo"
     val SHARED_ENTIDAD_DESCRIPCIONEM = "DescripcionEm"
+    val SHARED_EMPRESA_OFERTA ="OfertaS"
+    val SHARED_EMPRESA_RESPUESTA = "Respuesta"
+    val SHARED_EMPRESA_TEXTO = "Texto"
 
     // SHARED OFERTA
     val SHARED_OFERTA_NOMBREOF = "NombreOf"
@@ -329,6 +332,32 @@ class PreferShared(val context: Context) {
     fun RemovePassE(){
         return storage.edit().remove(SHARED_LOGINE_PASS).apply()
     }
+
+    fun SaveOfertaS(OfertaS: String){
+        storage.edit().putString(SHARED_EMPRESA_OFERTA, OfertaS).apply()
+    }
+
+    fun GetOferta(): String{
+        return storage.getString(SHARED_EMPRESA_OFERTA, "")!!
+    }
+
+    fun SaveRespuesta(RespuestaS: String){
+        storage.edit().putString(SHARED_EMPRESA_RESPUESTA, RespuestaS).apply()
+    }
+
+    fun GetRespuesta(): String{
+        return storage.getString(SHARED_EMPRESA_RESPUESTA, "")!!
+    }
+
+    fun SaveTexto(TextoS: String){
+        storage.edit().putString(SHARED_EMPRESA_TEXTO, TextoS).apply()
+    }
+
+    fun GetTexto(): String{
+        return storage.getString(SHARED_EMPRESA_TEXTO, "")!!
+    }
+
+
 
 
     fun getArray(): HashMap<String, Oferta> {
