@@ -41,7 +41,7 @@ class nueva_empresa : Fragment() {
         binding.btnNewEm.setOnClickListener {
             ShareObjectAdp.preferShared.saveUserE(binding.TfUsuario.editText?.text.toString())
             ShareObjectAdp.preferShared.savePassE(binding.TfPwNew.editText?.text.toString())
-            ShareObjectAdp.preferShared.saveCorreoEm(binding.TfCorreo.editText?.text.toString())
+            ShareObjectAdp.preferShared.saveCorreoEm(binding.TfCorreoEmp.editText?.text.toString())
             Toast.makeText(context, "Guardado", Toast.LENGTH_SHORT).show()
             Navigation.findNavController(binding.root).navigate(R.id.PantallaBienvenido)
 

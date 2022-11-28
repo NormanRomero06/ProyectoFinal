@@ -72,7 +72,7 @@ class  InfoOferta : Fragment() {
             Navigation.findNavController(binding.root).navigate(R.id.PantallaOfertasCliente)
         }
         binding.IvMail.setOnClickListener {
-            Navigation.findNavController(binding.root).navigate(R.id.PantallaRespuestasDeOfertas)
+            Navigation.findNavController(binding.root).navigate(R.id.PantallaSolicitudesCliente)
         }
     }
 

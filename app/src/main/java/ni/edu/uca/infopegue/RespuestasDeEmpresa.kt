@@ -45,38 +45,36 @@ class RespuestasDeEmpresa : Fragment(){
     private fun cargar(){
         with(binding) {
             var Pnombre = ShareObjectAdp.preferShared.getFnombre()
-            tvPrimerNombre.text = Pnombre
+            tvPrimerNombre.text ="Primer Nombre: "+ Pnombre
 
             var Snombre = ShareObjectAdp.preferShared.getSnombre()
-            tvSegundoNombre.text = Snombre
+            tvSegundoNombre.text = "Segundo Nombre: "+Snombre
 
             var Papellido = ShareObjectAdp.preferShared.getFapellido()
-            tvPrimerApellido.text = Papellido
+            tvPrimerApellido.text ="Primer Apellido: "+ Papellido
 
             var Sapellido = ShareObjectAdp.preferShared.getSapellido()
-            tvSegundoApellido.text = Sapellido
+            tvSegundoApellido.text ="Segundo Apellido: "+ Sapellido
 
             var Edad = ShareObjectAdp.preferShared.getEdad()
-            tvEdad.text = Edad.toString()
+            tvEdad.text = "Edad: " + Edad.toString()
 
             var Profesion = ShareObjectAdp.preferShared.getProfesion()
-            tvProfesion.text = Profesion
+            tvProfesion.text = "Profesion: " + Profesion
 
             var Gmail = ShareObjectAdp.preferShared.getCorreo()
-            tvCorreoPersonal.text = Gmail
+            tvCorreoPersonal.text ="Correo: " +  Gmail
 
             var oferta = ShareObjectAdp.preferShared.GetOferta()
-            tvOferta.text = oferta
+            tvOferta.text ="Oferta: "+ oferta
 
-            var mostrar = ShareObjectAdp.preferShared.GetTexto()
-            tvReferencia.text = mostrar
         }
     }
 
     private fun respuesta(){
         binding.btnEnviar.setOnClickListener {
             val opcion = binding.autoCompleteTextView
-            ShareObjectAdp.preferShared.SaveTexto(binding.tvReferencia.text.toString())
+            ShareObjectAdp.preferShared.SaveTexto(binding.etReferencia.text.toString())
             ShareObjectAdp.preferShared.SaveRespuesta(opcion.text.toString())
         }
     }
@@ -84,10 +82,10 @@ class RespuestasDeEmpresa : Fragment(){
     private fun Acciones() {
 
         binding.IvPersona.setOnClickListener {
-            Navigation.findNavController(binding.root).navigate(R.id.PantallaDatosCliente)
+            Navigation.findNavController(binding.root).navigate(R.id.PantallaDatosEmpresa)
         }
         binding.IvInicio.setOnClickListener {
-            Navigation.findNavController(binding.root).navigate(R.id.PantallaOfertasCliente)
+            Navigation.findNavController(binding.root).navigate(R.id.PantallaOfertasEmpresa)
         }
         binding.IvMail.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.PantallaRespuestasDeOfertas)

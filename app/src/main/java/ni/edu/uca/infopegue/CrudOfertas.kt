@@ -120,7 +120,7 @@ class CrudOfertas : Fragment() {
             Navigation.findNavController(binding.root).navigate(R.id.PantallaOfertasEmpresa)
         }
         binding.IvMail.setOnClickListener {
-            Navigation.findNavController(binding.root).navigate(R.id.PantallaSolicitudesCliente)
+            Navigation.findNavController(binding.root).navigate(R.id.PantallaRespuestasDeOfertas)
         }
     }
 }

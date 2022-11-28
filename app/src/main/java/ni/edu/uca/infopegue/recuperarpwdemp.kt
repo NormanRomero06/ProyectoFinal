@@ -42,7 +42,7 @@ class recuperarpwdemp : Fragment() {
         try {
             with(binding) {
                 btnCambiar.setOnClickListener {
-                    val Correo = TfCorreo.editText?.text.toString()
+                    val Correo = TfCorreoEmp.editText?.text.toString()
                     val Usuario = TfUsuario.editText?.text.toString()
                     val NewPass = TfPwNew.editText?.text.toString()
 

@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".RespuestasDeEmpresa">
 
     <View
-        android:id="@+id/_bg__solicitudes_de_empleado_ek2"
-        android:layout_width="match_parent"
+        android:id="@+id/_bg__pantalla_de_bienvenida_ek2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/_bg__solicitudes_de_empleado_ek2_shape"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/_bg__pantalla_de_bienvenida_ek2_shape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/VwVista"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:background="@drawable/rectangle_7_shape"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_6_ek4"
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/tvRespuestas"
@@ -24,11 +34,10 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="35sp"
-        android:layout_marginTop="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/VwVista"/>
 
     <View
         android:id="@+id/rectangle_6_ek4"
@@ -47,18 +56,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/IvMail"
         app:layout_constraintStart_toStartOf="@id/IvPersona"
-        app:layout_constraintTop_toTopOf="@+id/rectangle_6_ek4"
-        />
+        app:layout_constraintTop_toTopOf="@+id/rectangle_6_ek4" />
 
     <ImageView
         android:id="@+id/IvPersona"
         android:layout_width="61dp"
         android:layout_height="64dp"
+        android:layout_marginStart="30dp"
         android:src="@drawable/_avatar_1_ek2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/rectangle_6_ek4"
-        android:layout_marginStart="30dp"/>
+        app:layout_constraintTop_toTopOf="@+id/rectangle_6_ek4" />
 
     <ImageView
         android:id="@+id/IvMail"
@@ -72,113 +80,133 @@
         app:layout_constraintTop_toTopOf="@+id/rectangle_6_ek4" />
 
     <TextView
-        android:id="@+id/tvSegundoNombre"
-        android:layout_width="200dp"
+        android:id="@+id/tvPrimerNombre"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="150dp"
+        android:text="Primer Nombre"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSegundoNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
         android:gravity="start"
         android:text="Segundo Nombre"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvPrimerNombre"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="108dp"
-        android:gravity="start"
-        android:text="Primer Nombre"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvEdad"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="280dp"
-        android:gravity="start"
-        android:text="Edad"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPrimerNombre" />
 
     <TextView
         android:id="@+id/tvPrimerApellido"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
         android:gravity="start"
         android:text="Primer Apellido"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@id/tvProfesion"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="320dp"
-        android:gravity="start"
-        android:text="Profesión"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvCorreoPersonal"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="365dp"
-        android:gravity="start"
-        android:text="Correo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSegundoNombre" />
 
     <TextView
         android:id="@+id/tvSegundoApellido"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
         android:gravity="start"
         android:text="Segundo Apellido:"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/tvPrimerApellido" />
 
 
     <TextView
-        android:id="@+id/tvReferencia"
-        android:layout_width="200dp"
+        android:id="@+id/tvEdad"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="416dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
         android:gravity="start"
-        android:text="Referencia:"
+        android:text="Edad"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSegundoApellido" />
+
+    <TextView
+        android:id="@id/tvProfesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:gravity="start"
+        android:text="Profesión"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEdad" />
+
+    <TextView
+        android:id="@+id/tvCorreoPersonal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:gravity="start"
+        android:text="Correo"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvProfesion" />
 
     <TextView
         android:id="@+id/tvOferta"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="480dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
         android:gravity="start"
         android:text="Oferta aplicar:"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvCorreoPersonal" />
+
+    <TextView
+        android:id="@+id/tvReferencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:gravity="start"
+        android:text="Referencia:"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOferta" />
+
+    <EditText
+        android:id="@+id/etReferencia"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="start"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/tvReferencia"
+        app:layout_constraintTop_toBottomOf="@+id/tvOferta" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Opciones"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="108dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etReferencia">
 
         <AutoCompleteTextView
             android:id="@+id/autoCompleteTextView"
@@ -188,18 +216,20 @@
             android:layout_marginEnd="32dp"
             android:layout_weight="1"
             android:inputType="none"
-            android:text="Opciones"/>
-
-        <Button
-            android:id="@+id/btnEnviar"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="Enviar"/>
-
-
-
+            android:text="Opciones" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/rectangle_3_ek3_shape"
+        android:text="Enviar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Opciones" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -142,7 +142,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="348dp"
         android:gravity="start"
-        android:text="Edad:"
+        android:text="Edad +18:"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"

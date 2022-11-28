@@ -64,7 +64,7 @@
         android:id="@+id/tvNewCuenta"
         android:layout_width="192dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="615dp"
+        android:layout_marginTop="608dp"
         android:gravity="center"
         android:text="¿Crear Usuario?"
         android:textColor="@color/login_color"

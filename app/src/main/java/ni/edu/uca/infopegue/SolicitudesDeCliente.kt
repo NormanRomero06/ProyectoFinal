@@ -34,32 +34,32 @@ class SolicitudesDeCliente : Fragment(){
     private fun iniciar() {
         with(binding) {
             var NombreEmp = ShareObjectAdp.preferShared.getNombre()
-            tvNombreEmpresa.text = NombreEmp
+            tvNombreEmpresa.text ="Nombre Empresa: "+ NombreEmp
 
             var DireccionEmp = ShareObjectAdp.preferShared.getDireccion()
-            tvDirecEmpresa.text = DireccionEmp
+            tvDirecEmpresa.text = "Direccion: "+DireccionEmp
 
             var Repre = ShareObjectAdp.preferShared.getRepresentante()
-            tvJefeEmpresa.text = Repre
+            tvJefeEmpresa.text ="Representante: "+ Repre
 
  /*         var Contacto = ShareObjectAdp.preferShared.getContacto()
            tvContacto.text = Contacto
 */
             var CorreoEmp = ShareObjectAdp.preferShared.getCorreoEmp()
-            tvCorreoEmpresa.text = CorreoEmp
+            tvCorreoEmpresa.text ="Correo Empresa: "+ CorreoEmp
 
   /*          var DescripcionEmp = ShareObjectAdp.preferShared.getDescripcionEmp()
             tvDescripEmpresa.text = DescripcionEmp
             */
 
             var oferta = ShareObjectAdp.preferShared.GetOferta()
-            tvNombreOferta.text = oferta
+            tvNombreOferta.text = "Oferta: "+ oferta
 
             var refer = ShareObjectAdp.preferShared.GetTexto()
-            tvReferencia.text = refer
+            tvReferencia.text ="Referencia: " +  refer
 
             var respuesta = ShareObjectAdp.preferShared.GetRespuesta()
-            tvRepuesta.text = respuesta
+            tvRespuesta.text = "Respuesta: " + respuesta
 
 
         }

@@ -7,7 +7,7 @@
     <string name="open_gmail"><a href="https://mail.google.com/">ENVIAR CORREO</a></string>
     
     <string-array name="Opciones">
-        <item>Aprovada</item>
+        <item>Aprobada</item>
         <item>Rechazada</item>
     </string-array>
 </resources>
