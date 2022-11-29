@@ -21,7 +21,7 @@ class PreferShared(val context: Context) {
     val SHARED_ENTIDAD_DIRECCION = "Direccion"
     val SHARED_ENTIDAD_REPRESENTANTE = "Representante"
     val SHARED_ENTIDAD_CONTACTO = "Contacto"
-    val SHARED_ENTIDAD_CORREO = "Correo"
+    val SHARED_ENTIDAD_CORREO = "CorreoE"
     val SHARED_ENTIDAD_DESCRIPCIONEM = "DescripcionEm"
     val SHARED_EMPRESA_OFERTA ="OfertaS"
     val SHARED_EMPRESA_RESPUESTA = "Respuesta"
@@ -71,8 +71,8 @@ class PreferShared(val context: Context) {
         storage.edit().putString(SHARED_USER_PROFESION, Profesion).apply()
     }
 
-    fun saveCorreo(Correo: String) {
-        storage.edit().putString(SHARED_USER_CORREO, Correo).apply()
+    fun saveCorreo(correo: String) {
+        storage.edit().putString(SHARED_USER_CORREO, correo).apply()
     }
 
     fun saveDescripcion(Descripcion: String) {

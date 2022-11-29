@@ -54,7 +54,9 @@ class LoginCliente : Fragment() {
 
         try {
             binding.btnIngresar.setOnClickListener {
-                val nameTemp = binding.TfUsuario.editText?.text.toString()
+                Navigation.findNavController(binding.root).navigate(R.id.PantallaOfertasCliente)
+
+               val nameTemp = binding.TfUsuario.editText?.text.toString()
                 val pwdTemp: String = binding.TfPw.editText?.text.toString()
 
                 if ( preferShared.getUser()== nameTemp && preferShared.getPass() ==pwdTemp ) {
@@ -64,13 +66,16 @@ class LoginCliente : Fragment() {
                 }
 
             }
-        } catch (ex: Exception){
+        } catch (ex: Exception) {
 
         }
     }
-
-
 }
+
+
+
+
+
 
 
 

@@ -48,9 +48,6 @@ class SolicitudesDeCliente : Fragment(){
             var CorreoEmp = ShareObjectAdp.preferShared.getCorreoEmp()
             tvCorreoEmpresa.text ="Correo Empresa: "+ CorreoEmp
 
-  /*          var DescripcionEmp = ShareObjectAdp.preferShared.getDescripcionEmp()
-            tvDescripEmpresa.text = DescripcionEmp
-            */
 
             var oferta = ShareObjectAdp.preferShared.GetOferta()
             tvNombreOferta.text = "Oferta: "+ oferta
