@@ -111,7 +111,7 @@ class CrudEmpresa : Fragment() {
             etDireccion.setText(ShareObjectAdp.preferShared.getDireccion())
             etJefeEmpresa.setText(ShareObjectAdp.preferShared.getRepresentante())
             etContacto.setText(ShareObjectAdp.preferShared.getContacto())
-            etCorreoEmpresa.setText(ShareObjectAdp.preferShared.getCorreo())
+            etCorreoEmpresa.setText(ShareObjectAdp.preferShared.getCorreoEmp())
             etDescripEmpresa.setText(ShareObjectAdp.preferShared.getDescripcionEmp())
         }
     }
